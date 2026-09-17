@@ -1,0 +1,159 @@
+/// Paw by Moritz Glantz [https://codepen.io/MoritzGlantz/pen/PoEKKg]
+/// Modified by me
+$big-paw-width: 9%;
+$big-paw-height: 17%;
+$big-paw-outer-offset: 29%;
+$big-paw-top-offset: 25%;
+
+$small-paw-width: 9%;
+$small-paw-height: 16%;
+$small-paw-outer-offset: 12%;
+$small-paw-top-offset: 38%;
+
+$small-paw-rotation: 30deg;
+
+$paw-color: rgb(193, 154, 92);
+
+.kowakujo {
+    cursor: pointer;
+    position: relative;
+    
+    .paw {
+        width: 3.5rem;
+        height: 3.5rem;
+        transition-property: filter, background-color, box-shadow;
+        transition-duration: 0.5s;
+
+        &:before, &:after {
+            position: absolute;
+        }
+        
+        &:before {
+            content: '';
+            display: block;
+            top: $big-paw-top-offset;
+            left: $big-paw-outer-offset;
+            width: $big-paw-width;
+            height: $big-paw-height;
+            background: $paw-color;
+            border: 4px solid rgb(var(--button-border-color));
+            border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%;
+        }
+        
+        &:after {
+            content:'';
+            display: block;
+            top: $big-paw-top-offset;
+            right: $big-paw-outer-offset;
+            width: $big-paw-width;
+            height: $big-paw-height;
+            background: $paw-color;
+            border: 4px solid rgb(var(--button-border-color));
+            border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%;
+        }
+
+        &:nth-child(3), &:nth-child(4){
+            visibility: hidden;
+        }
+
+        &:nth-child(3) {
+            position: absolute;
+            top: -80%;
+            right: -80%;
+        }
+
+        &:nth-child(4) {
+            position: absolute;
+            top: -160%;
+        }
+    }
+    
+    .inner {
+        &:before, &:after {
+            position: absolute;
+        }
+        
+        &:before {
+            content: '';
+            display: block;
+            top: $small-paw-top-offset;
+            left: $small-paw-outer-offset;
+            width: $small-paw-width;
+            height: $small-paw-height;
+            background: $paw-color;
+            border: 4px solid rgb(var(--button-border-color));
+            border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%;
+        }
+        
+        &:after {
+            content: '';
+            display: block;
+            top: $small-paw-top-offset;
+            right: $small-paw-outer-offset;
+            width: $small-paw-width;
+            height: $small-paw-height;
+            background: $paw-color;
+            border: 4px solid rgb(var(--button-border-color));
+            border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%;
+        }
+    }
+    
+    .bottom {
+        position: absolute;
+        left: 18%;
+        bottom: 0%;
+        width: 50%;
+        height: 26%;
+        background: $paw-color;
+        border: 4px solid rgb(var(--button-border-color));
+        border-radius: 70%  70%  50%  50%  / 90%   90%   50%  50%;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -11%;
+            width: 50%;
+            height: 75%;
+            background: $paw-color;
+            border-radius: 55% 105% 68% 79% / 60% 60% 29% 50%;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -11%;
+            width: 50%;
+            height: 75%;
+            background: $paw-color;
+            border-radius: 105% 55% 79% 68% / 60% 60% 50% 29%;
+        }
+    }
+
+    &.active {
+        .paw, .inner, .bottom {
+            &::before, &::after {
+                background-color: rgb(247, 195, 168);
+            }
+        }
+
+        .paw {
+            filter: drop-shadow(0 0 4px rgb(247, 195, 168))
+                    drop-shadow(0 0 8px rgb(247, 195, 168))
+                    drop-shadow(0 0 12px rgb(247, 195, 168));
+
+            &:nth-child(3) {
+                animation: step 0.2s ease-in forwards;
+            }
+            
+            &:nth-child(4) {
+                animation: step 0.2s ease-in 0.2s forwards;
+            }
+        }
+
+        .bottom {
+            background-color: rgb(247, 195, 168);
+        }
+    }
+}

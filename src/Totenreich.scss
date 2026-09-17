@@ -1,0 +1,261 @@
+.totenreich {
+    cursor: pointer;
+    position: relative;
+
+    .lantern {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .globe {
+        z-index: 1;
+        position: relative;
+        top: -4px;
+        width: 2rem;
+        height: 2.8rem;
+        background-color: rgb(108, 206, 233);
+        border: 4px solid rgb(var(--button-border-color));
+        border-top: none;
+        border-bottom: none;
+        box-sizing: border-box;
+        box-shadow:
+            inset 0 6.5px 0 rgb(113, 131, 125),
+            inset 0 -6.5px 0 rgb(113, 131, 125);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1rem;
+            height: 1rem;
+            background-color: rgb(201, 240, 245);
+            border-radius: 100%;
+            transition: box-shadow 0.2s;
+        }
+    }
+
+    .chain {
+        position: absolute;
+        top: -21px;
+        left: 7px;
+
+        span {
+            position: absolute;
+            width: 0.2rem;
+            height: 0.6rem;
+            border: 4px solid rgb(var(--button-border-color));
+            border-radius: 30%;
+
+            &:nth-child(1) {
+                transform: rotate(90deg);
+            }
+            
+            &:nth-child(2) {
+                top: 5px;
+                left: -15px;
+                transform: rotate(60deg);
+            }
+
+            &:nth-child(3) {
+                top: 18px;
+                left: -25px;
+                transform: rotate(20deg);
+            }
+
+            &:nth-child(4) {
+                top: 35px;
+                left: -27px;
+            }
+
+            &:nth-child(5) {
+                top: 52px;
+                left: -27px;
+            }
+
+            &:nth-child(6) {
+                top: 69px;
+                left: -27px;
+            }
+
+            &:nth-child(7) {
+                top: 86px;
+                left: -27px;
+            }
+
+            &:nth-child(8) {
+                top: 103px;
+                left: -27px;
+            }
+        }
+    }
+
+    .ring {
+        position: absolute;
+        top: -24px;
+        width: 1rem;
+        height: 1rem;
+        border: 4px solid rgb(var(--button-border-color));
+        border-radius: 100%;
+    }
+
+    .roof {
+        position: relative;
+        width: 2.5rem;
+        height: 1.7rem;
+        background-color: rgb(113, 131, 125);
+        border: 4px solid rgb(var(--button-border-color));
+        border-radius: 40% 40% 5px 5px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 0.4rem;
+            height: 0.7rem;
+            background-color: rgb(var(--button-border-color));
+        }
+
+        &.bottom {
+            top: -8px;
+            width: 2.4rem;
+            height: 1.3rem;
+            border-radius: 5px 5px 40% 40%;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .eyebrow {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 2rem;
+        height: 0.5rem;
+        background-color: rgb(105, 102, 96);
+        border-radius: 100% 100% 5px 5px;
+    }
+
+    .face {
+        z-index: 2;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 0.5rem;
+        height: 1rem;
+        background-color: rgb(105, 102, 96);
+        border-radius: 0 0 100% 100%;
+    }
+
+    .eye {
+        position: absolute;
+        top: 2.5px;
+        left: -10px;
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: rgb(201, 240, 245);
+        border-radius: 0 0 100% 100%;
+        transition: box-shadow 0.2s;
+
+        &:nth-child(1) {
+            left: 10px;
+        }
+    }
+
+    .mouth {
+        z-index: 2;
+        position: absolute;
+        bottom: -16.5px;
+        width: 30px;
+        height: 10px;
+        background: linear-gradient(
+            135deg,
+            transparent 50%,
+            rgb(37, 38, 37) 50%
+        );
+        clip-path: polygon(
+            0 100%,
+            7.14% 55%,
+            14.28% 100%,
+            21.42% 45%,
+            28.57% 100%,
+            35.71% 35%,
+            42.85% 100%,
+            50% 25%,
+            57.14% 100%,
+            64.28% 35%,
+            71.42% 100%,
+            78.57% 45%,
+            85.71% 100%,
+            92.85% 55%,
+            100% 100%
+        );
+        transform: scaleY(-1);
+
+        &.bottom {
+            bottom: 27px;
+            transform: none;
+            clip-path: polygon(
+                0 100%,
+                7% 65%,
+                14% 100%,
+                25% 55%,
+                32% 100%,
+                43% 35%,
+                50% 100%,
+                57% 35%,
+                68% 100%,
+                75% 55%,
+                86% 100%,
+                93% 65%,
+                100% 100%
+            );
+        }
+    }
+
+    /// Star by Temani Afif [https://css-generators.com/starburst-shape/]
+    /// Modified by me
+    .star {
+        z-index: -1;
+        position: absolute;
+        top: -10%;
+        width: 65px;
+        aspect-ratio: 1;
+        clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 10%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%);
+        background-color: rgb(var(--button-border-color));
+
+        &.bottom {
+            top: 45%;
+            clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 10%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%);
+        }
+    }
+
+    &.active {
+        animation: shake 0.5s ease-in-out forwards;
+
+        .eye {
+            box-shadow:
+                0 0 4px rgb(187, 231, 235),
+                0 0 8px rgb(187, 231, 235);
+        }
+
+        .globe::before {
+            box-shadow:
+                0 0 4px rgb(187, 231, 235),
+                0 0 8px rgb(187, 231, 235),
+                0 0 12px rgb(187, 231, 235),
+                0 0 16px rgb(187, 231, 235),
+                0 0 20px rgb(187, 231, 235);
+        }
+    }
+}

@@ -1,0 +1,391 @@
+$color-house: rgb(185, 154, 69);
+$color-symbol: rgb(123, 194, 215);
+$color-glow: rgb(104, 220, 255);
+
+.rex {
+    cursor: pointer;
+    position: relative;
+
+    .house {
+        position: relative;
+    }
+
+    .front {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 5rem;
+
+        .windows {
+            left: 24%;
+            flex-direction: row;
+        }
+    }
+
+    .back {
+        width: 12rem;
+    }
+
+    .chimmney {
+        z-index: -1;
+        position: absolute;
+        top: -8px;
+        right: 5px;
+        width: 1rem;
+        height: 1.8rem;
+        background-color: rgb(99, 92, 77);
+        border: 4px solid rgb(var(--button-border-color));
+    }
+
+    .roof {
+        position: relative;
+        left: -1rem;
+        border-left: calc(7rem + 4px) solid transparent;
+        border-bottom: 2rem solid rgb(var(--button-border-color));
+        border-right: calc(7rem + 4px) solid transparent;
+
+        &.small {
+            top: 0.5rem;
+            left: 0.25rem;
+            border-left: calc(3.5rem + 4px) solid transparent;
+            border-bottom: 3rem solid rgb(var(--button-border-color));
+            border-right: calc(3.9rem + 4px) solid transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -3.3rem;
+                border-left: 3.5rem solid transparent;
+                border-bottom: calc(3rem - 4px) solid $color-house;
+                border-right: 3.5rem solid transparent;
+            }
+        }
+    }
+
+    .crack-wrapper {
+        z-index: 2;
+        position: absolute;
+        top: 31px;
+        right: -22px;
+        width: 5rem;
+        height: 3rem;
+        rotate: 38deg;
+        clip-path: polygon(
+            0% 0%
+            , 68% 0%
+            , 100% 75%
+            , 100% 0%
+            , 100% 100%
+            , 0% 100%
+        );
+        overflow: hidden;
+    }
+
+    /// Clip path by Temani Afif [https://css-generators.com/fancy-frame/]
+    .crack {
+        position: absolute;
+        bottom: 40px;
+        left: -60px;
+        width: 20rem;
+        height: 20rem;
+        clip-path: shape(from 34.28px 2.91px,curve to calc(1.67% + 38.67px) 19.5px with calc(0% + 40px) 1px,smooth to calc(5% + 36px) 28px,smooth to calc(8.33% + 33.33px) 12px,smooth to calc(11.67% + 30.67px) 4px,smooth to calc(15% + 28px) 18px,smooth to calc(18.33% + 25.33px) 22.5px,smooth to calc(21.67% + 22.67px) 18.5px,smooth to calc(25% + 20px) 14.5px,smooth to calc(28.33% + 17.33px) 4.5px,smooth to calc(31.67% + 14.67px) 20px,smooth to calc(35% + 12px) 23.5px,smooth to calc(38.33% + 9.33px) 18.5px,smooth to calc(41.67% + 6.67px) 19px,smooth to calc(45% + 4px) 18px,smooth to calc(48.33% + 1.33px) 17.5px,smooth to calc(51.67% + -1.33px) 21.5px,smooth to calc(55% + -4px) 31px,smooth to calc(58.33% + -6.67px) 34px,smooth to calc(61.67% + -9.33px) 36px,smooth to calc(65% + -12px) 21.5px,smooth to calc(68.33% + -14.67px) 8px,smooth to calc(71.67% + -17.33px) 21px,smooth to calc(75% + -20px) 33.5px,smooth to calc(78.33% + -22.67px) 24px,smooth to calc(81.67% + -25.33px) 21px,smooth to calc(85% + -28px) 34px,smooth to calc(88.33% + -30.67px) 35px,smooth to calc(91.67% + -33.33px) 30px,smooth to calc(95% + -36px) 24.5px,smooth to calc(98.33% + -38.67px) 13.5px,smooth to calc(100% - 39.23px) 21.62px,smooth to calc(100% - 28.06px) 22.25px,smooth to calc(100% - 28.83px) 24.63px,smooth to calc(100% - 29.06px) 36.45px,smooth to calc(100% - 10.06px) 36.45px,smooth to calc(100% - 9px) calc(2.63% + 37.89px),smooth to calc(100% - 10.5px) calc(7.89% + 33.68px),smooth to calc(100% - 4.5px) calc(13.16% + 29.47px),smooth to calc(100% - 14.5px) calc(18.42% + 25.26px),smooth to calc(100% - 16.5px) calc(23.68% + 21.05px),smooth to calc(100% - 16.5px) calc(28.95% + 16.84px),smooth to calc(100% - 18.5px) calc(34.21% + 12.63px),smooth to calc(100% - 15px) calc(39.47% + 8.42px),smooth to calc(100% - 18px) calc(44.74% + 4.21px),smooth to calc(100% - 12.5px) calc(50% + 0.00px),smooth to calc(100% - 18.5px) calc(55.26% + -4.21px),smooth to calc(100% - 18.5px) calc(60.53% + -8.42px),smooth to calc(100% - 9px) calc(65.79% + -12.63px),smooth to calc(100% - 9px) calc(71.05% + -16.84px),smooth to calc(100% - 20.5px) calc(76.32% + -21.05px),smooth to calc(100% - 28.5px) calc(81.58% + -25.26px),smooth to calc(100% - 16.5px) calc(86.84% + -29.47px),smooth to calc(100% - 8px) calc(92.11% + -33.68px),smooth to calc(100% - 15.5px) calc(97.37% + -37.89px),smooth to calc(100% - 28.7px) calc(100% - 38.76px),smooth to calc(100% - 24.47px) calc(100% - 30.24px),smooth to calc(100% - 20.63px) calc(100% - 20.96px),smooth to calc(100% - 26.49px) calc(100% - 11.41px),smooth to calc(100% - 34.13px) calc(100% - 1.93px),smooth to calc(98.33% - 38.67px) calc(100% - 16px),smooth to calc(95% - 36px) calc(100% - 18.5px),smooth to calc(91.67% - 33.33px) calc(100% - 6px),smooth to calc(88.33% - 30.67px) calc(100% - 23.5px),smooth to calc(85% - 28px) calc(100% - 23px),smooth to calc(81.67% - 25.33px) calc(100% - 22px),smooth to calc(78.33% - 22.67px) calc(100% - 24px),smooth to calc(75% - 20px) calc(100% - 15.5px),smooth to calc(71.67% - 17.33px) calc(100% - 15px),smooth to calc(68.33% - 14.67px) calc(100% - 21.5px),smooth to calc(65% - 12px) calc(100% - 30px),smooth to calc(61.67% - 9.33px) calc(100% - 26.5px),smooth to calc(58.33% - 6.67px) calc(100% - 30.5px),smooth to calc(55% - 4px) calc(100% - 29.5px),smooth to calc(51.67% - 1.33px) calc(100% - 26.5px),smooth to calc(48.33% - -1.33px) calc(100% - 30px),smooth to calc(45% - -4px) calc(100% - 26px),smooth to calc(41.67% - -6.67px) calc(100% - 14.5px),smooth to calc(38.33% - -9.33px) calc(100% - 7.5px),smooth to calc(35% - -12px) calc(100% - 4.5px),smooth to calc(31.67% - -14.67px) calc(100% - 15px),smooth to calc(28.33% - -17.33px) calc(100% - 21.5px),smooth to calc(25% - -20px) calc(100% - 15.5px),smooth to calc(21.67% - -22.67px) calc(100% - 9px),smooth to calc(18.33% - -25.33px) calc(100% - 8px),smooth to calc(15% - -28px) calc(100% - 15.5px),smooth to calc(11.67% - -30.67px) calc(100% - 13px),smooth to calc(8.33% - -33.33px) calc(100% - 9px),smooth to calc(5% - -36px) calc(100% - 5.5px),smooth to calc(1.67% - -38.67px) calc(100% - 12.5px),smooth to 35.21px calc(100% - 17.26px),smooth to 27.86px calc(100% - 15.15px),smooth to 18.09px calc(100% - 19.31px),smooth to 20.21px calc(100% - 27.72px),smooth to 16.27px calc(100% - 38.3px),smooth to 2px calc(97.37% - 37.89px),smooth to 16.5px calc(92.11% - 33.68px),smooth to 19.5px calc(86.84% - 29.47px),smooth to 19px calc(81.58% - 25.26px),smooth to 26px calc(76.32% - 21.05px),smooth to 24px calc(71.05% - 16.84px),smooth to 31px calc(65.79% - 12.63px),smooth to 24.5px calc(60.53% - 8.42px),smooth to 7px calc(55.26% - 4.21px),smooth to 1.5px calc(50% - 0px),smooth to 17px calc(44.74% - -4.21px),smooth to 26.5px calc(39.47% - -8.42px),smooth to 31px calc(34.21% - -12.63px),smooth to 29.5px calc(28.95% - -16.84px),smooth to 18.5px calc(23.68% - -21.05px),smooth to 9.5px calc(18.42% - -25.26px),smooth to 20px calc(13.16% - -29.47px),smooth to 37px calc(7.89% - -33.68px),smooth to 18px calc(2.63% - -37.89px),smooth to 16.22px 38.61px,smooth to 30.46px 34.79px,smooth to 22.99px 20px,smooth to 22.53px 6.23px,smooth to 34.28px 2.91px);
+        background-color: rgb(35, 25, 12);
+        rotate: -20deg;
+    }
+
+    .base {
+        position: relative;
+        width: 12rem;
+        height: 4rem;
+        background-color: $color-house;
+        border: 4px solid rgb(var(--button-border-color));
+        border-top: none;
+
+        &.small {
+            bottom: 0.3rem;
+            left: 0.25rem;
+            width: 5rem;
+            height: 3.5rem;
+        }
+    }
+
+    .windows {
+        position: absolute;
+        top: 37%;
+        left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        &.right {
+            left: 83%;
+        }
+    }
+
+    .window {
+        position: relative;
+        width: 0.8rem;
+        height: 1rem;
+        background-color: rgb(213, 203, 165);
+        border: 4px solid rgb(73, 61, 43);
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(73, 61, 43);
+        }
+
+        &::before {
+            width: 2px;
+            height: 1rem;
+        }
+        
+        &::after {
+            width: 1rem;
+            height: 2px;
+        }
+    }
+
+    .door {
+        position: absolute;
+        right: 6px;
+        bottom: 8px;
+        width: 1.4rem;
+        height: 1.6rem;
+        background-color: rgb(85, 67, 45);
+        border: 4px solid rgb(63, 52, 32);
+        border-bottom: none;
+    }
+
+    .ball {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: rgb(192, 41, 66);
+        border: 4px solid rgb(var(--button-border-color));
+        border-radius: 100%;
+    }
+
+    .symbol {
+        z-index: 1;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .quarter {
+        top: 80px;
+        left: 6px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 100%;
+            background-color: $color-symbol;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0.15rem;
+            left: 0.22rem;
+            width: 0.1rem;
+            height: 0.6rem;
+            border-radius: 5px;
+            border-bottom-right-radius: 100%;
+            background: $color-symbol;
+        }
+    }
+
+    .eighth {
+        top: 25px;
+        left: 50%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 100%;
+            background-color: $color-symbol;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0.15rem;
+            left: 0.22rem;
+            width: 0.1rem;
+            height: 0.6rem;
+            border-radius: 5px;
+            border-bottom-right-radius: 100%;
+            background: $color-symbol;
+        }
+
+        div {
+            position: absolute;
+            bottom: 0.35rem;
+            left: 0.3rem;
+            width: 0.1rem;
+            height: 0.4rem;
+            border-radius: 5px;
+            border-bottom-right-radius: 100%;
+            background: $color-symbol;
+            rotate: -30deg;
+        }
+    }
+
+    .sharp {
+        top: 50px;
+        left: 45px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0.1rem;
+            height: 0.6rem;
+            background-color: $color-symbol;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            width: 0.1rem;
+            height: 0.6rem;
+            background-color: $color-symbol;
+        }
+
+        div {
+            &::before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: 2px;
+                width: 0.12rem;
+                height: 0.6rem;
+                background-color: $color-symbol;
+                rotate: 83deg;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 0.12rem;
+                height: 0.6rem;
+                background-color: $color-symbol;
+                rotate: 83deg;
+            }
+        }
+    }
+
+    .double {
+        right: 10px;
+        bottom: 7px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 100%;
+            background-color: $color-symbol;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0.15rem;
+            left: 0.22rem;
+            width: 0.1rem;
+            height: 0.6rem;
+            border-radius: 5px;
+            border-bottom-right-radius: 100%;
+            background: $color-symbol;
+        }
+
+        div {
+            &:first-of-type {
+                position: absolute;
+                left: 7px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    border-radius: 100%;
+                    background-color: $color-symbol;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0.15rem;
+                    left: 0.22rem;
+                    width: 0.1rem;
+                    height: 0.6rem;
+                    border-radius: 5px;
+                    border-bottom-right-radius: 100%;
+                    background: $color-symbol;
+                }
+            }
+
+            &:last-of-type {
+                position: absolute;
+                bottom: 7.2px;
+                left: 7px;
+                width: 0.1rem;
+                height: 0.5rem;
+                border-radius: 5px;
+                border-bottom-right-radius: 100%;
+                background: $color-symbol;
+                rotate: 90deg;
+            }
+        }
+    }
+
+    &.active {
+        .symbol {
+            opacity: 1;
+            filter:
+                drop-shadow(0 0 4px $color-glow)
+                drop-shadow(0 0 8px $color-glow)
+                drop-shadow(0 0 12px $color-glow);
+        }
+
+        .ball {
+            animation: bounce 2s ease-in;
+            box-shadow:
+                0 0 4px $color-glow,
+                0 0 8px $color-glow,
+                0 0 12px $color-glow;
+        }
+    }
+}
