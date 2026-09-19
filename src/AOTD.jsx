@@ -254,8 +254,14 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 <li>Can you kill Uber Klaus?</li>
                                 <span className='choices-list-item'>
                                     <div className='choices'>
-                                        <button onClick={() => setCanXKlaus('yes')}>Yes</button>
-                                        <button onClick={() => setCanXKlaus('no')}>No</button>
+                                        <button className='symbol'
+                                            onClick={() => setCanXKlaus('yes')}>
+                                            Yes
+                                        </button>
+                                        <button className='symbol'
+                                            onClick={() => setCanXKlaus('no')}>
+                                            No
+                                        </button>
                                     </div>
                                 </span>
                             </>
