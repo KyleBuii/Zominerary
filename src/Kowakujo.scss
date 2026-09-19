@@ -157,3 +157,22 @@ $paw-color: rgb(193, 154, 92);
         }
     }
 }
+
+.note-rocks {
+    color: rgb(61, 59, 54);
+}
+
+.note-dead {
+    color: rgb(150, 35, 35);
+    text-shadow: 0 2px 2px black;
+}
+
+.parent-note-bag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.note-bag {
+    color: rgb(170, 25, 25);
+}

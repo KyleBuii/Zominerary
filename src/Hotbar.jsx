@@ -12,6 +12,7 @@ import Totenreich from './Totenreich';
 const Hotbar = () => {
     const [activeButton, setActiveButton] = useState('aotd');
     const [isSolo, setIsSolo] = useState(false);
+    const [isKnower, setIsKnower] = useState(false);
 
     const handleClick = (name) => {
         if (name === activeButton) return;
@@ -182,16 +183,18 @@ const Hotbar = () => {
             <Routes>
                 <Route path='/'
                     element={
-                        <Boarding setterSolo={setIsSolo}/>
+                        <Boarding setterSolo={setIsSolo}
+                            setterKnower={setIsKnower}/>
                     }
                 />
                 <Route path='/aotd'
                     element={
-                        <AOTD isSolo={isSolo}/>
+                        <AOTD isSolo={isSolo}
+                            isKnower={isKnower}/>
                     }/>
                 <Route path='/astra'
                     element={
-                        <Astra/>
+                        <Astra isKnower={isKnower}/>
                     }/>
                 <Route path='/paradox'
                     element={
