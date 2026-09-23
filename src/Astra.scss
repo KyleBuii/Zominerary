@@ -144,23 +144,23 @@
 
     span {
         &:nth-child(1) {
-            bottom: 10px;
-            left: 10px;
+            top: 110px;
+            right: 15px;
         }
 
         &:nth-child(2) {
             top: 110px;
-            left: 90px;
+            left: 145px;
         }
 
         &:nth-child(3) {
             top: 110px;
-            left: 145px;
+            left: 90px;
         }
 
         &:nth-child(4) {
-            top: 110px;
-            right: 15px;
+            bottom: 10px;
+            left: 10px;
         }
 
         &:nth-child(5) {

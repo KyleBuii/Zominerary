@@ -41,22 +41,22 @@ export const venus = <svg viewBox='0 0 100 100'>
         stroke='rgb(37, 44, 45)'
         strokeWidth='7'/>
     <g fill='none' strokeLinecap='round'>
-        <path d='M27 35 Q48 29 74 37'
+        <path d='M28 39 Q48 32 72 39'
             stroke='#f0ce82'
-            strokeWidth='4'
-            opacity='0.65'/>
-        <path d='M24 45 Q50 39 77 46'
-            stroke='#9a7135'
-            strokeWidth='5'
+            strokeWidth='3'
             opacity='0.7'/>
-        <path d='M25 56 Q49 49 75 57'
-            stroke='#e4bd6d'
+        <path d='M26 49 Q49 42 74 49'
+            stroke='#9a7135'
             strokeWidth='4'
-            opacity='0.6'/>
-        <path d='M29 67 Q51 60 72 67'
-            stroke='#956b32'
-            strokeWidth='5'
+            opacity='0.8'/>
+        <path d='M28 59 Q49 53 72 59'
+            stroke='#e4bd6d'
+            strokeWidth='3'
             opacity='0.65'/>
+        <path d='M34 68 Q50 63 67 67'
+            stroke='#956b32'
+            strokeWidth='4'
+            opacity='0.75'/>
     </g>
 </svg>;
 
@@ -68,7 +68,7 @@ export const earth = <svg viewBox='0 0 100 100'>
             <stop offset='100%' stopColor='#123e70'/>
         </radialGradient>
         <clipPath id='earthClip'>
-            <circle cx='50' cy='50' r='30'/>
+            <circle cx='50' cy='50' r='26.5'/>
         </clipPath>
     </defs>
     <circle cx='50' cy='50' r='30'
@@ -83,7 +83,7 @@ export const earth = <svg viewBox='0 0 100 100'>
         <path d='M61 62 L69 58 L76 63 L72 72 L63 75 L57 69 Z'/>
         <path d='M25 65 L34 62 L39 69 L34 76 L25 74 Z'/>
     </g>
-    <g fill='#d8f0e8' opacity='0.8'>
+    <g clipPath='url(#earthClip)' fill='#d8f0e8' opacity='0.8'>
         <path d='M31 28 Q38 25 44 29 L39 34 L32 33 Z'/>
         <path d='M62 27 Q69 25 74 30 L69 34 L64 32 Z'/>
         <path d='M35 70 Q42 73 47 78 L40 80 L34 76 Z'/>
@@ -125,12 +125,15 @@ export const jupiter = <svg viewBox='0 0 100 100'>
             <stop offset='50%' stopColor='#b98b67'/>
             <stop offset='100%' stopColor='#67483b'/>
         </radialGradient>
+        <clipPath id='jupiterClip'>
+            <circle cx='50' cy='50' r='27.5'/>
+        </clipPath>
     </defs>
     <circle cx='50' cy='50' r='31'
         fill='url(#jupiterGradient)'
         stroke='rgb(37, 44, 45)'
         strokeWidth='7'/>
-    <g fill='none' strokeLinecap='round'>
+    <g clipPath='url(#jupiterClip)' fill='none' strokeLinecap='round'>
         <path d='M20 34 Q49 28 80 35'
             stroke='#e6c8a7'
             strokeWidth='7'
@@ -184,9 +187,8 @@ export const saturn = <svg viewBox='0 0 100 100'>
         stroke='rgb(37, 44, 45)'
         strokeWidth='7'/>
     <g fill='#a17c43' opacity='0.55'>
-        <path d='M28 39 Q50 34 72 40 L72 45 Q50 39 28 44 Z'/>
-        <path d='M26 51 Q50 45 74 52 L74 56 Q50 50 26 56 Z'/>
-        <path d='M30 63 Q50 57 70 62 L67 67 Q50 62 32 68 Z'/>
+        <path d='M32 39 Q50 34 69 40 L70 45 Q50 39 28 44'/>
+        <path d='M30 51 Q50 45 71 52 L70 56 Q50 50 30 56'/>
     </g>
     <g transform='rotate(-12 50 53)' clipPath='url(#saturnFrontRing)'>
         <ellipse cx='50' cy='53' rx='44' ry='15'
@@ -209,22 +211,22 @@ export const uranus = <svg viewBox='0 0 100 100'>
         stroke='rgb(37, 44, 45)'
         strokeWidth='7'/>
     <g fill='none' strokeLinecap='round'>
-        <path d='M27 39 Q49 35 73 39'
+        <path d='M28 39 Q48 32 72 39'
             stroke='#bcefeb'
             strokeWidth='3'
-            opacity='0.5'/>
-        <path d='M25 48 Q50 44 75 48'
+            opacity='0.7'/>
+        <path d='M26 49 Q49 42 74 49'
             stroke='#438f98'
-            strokeWidth='3'
-            opacity='0.55'/>
-        <path d='M26 58 Q50 54 74 58'
+            strokeWidth='4'
+            opacity='0.8'/>
+        <path d='M28 59 Q49 53 72 59'
             stroke='#b3e3df'
             strokeWidth='3'
-            opacity='0.45'/>
-        <path d='M30 67 Q50 63 70 67'
+            opacity='0.65'/>
+        <path d='M34 68 Q50 63 67 67'
             stroke='#3e858e'
-            strokeWidth='3'
-            opacity='0.5'/>
+            strokeWidth='4'
+            opacity='0.75'/>
     </g>
 </svg>;
 
@@ -241,19 +243,19 @@ export const neptune = <svg viewBox='0 0 100 100'>
         stroke='rgb(37, 44, 45)'
         strokeWidth='7'/>
     <g fill='none' strokeLinecap='round'>
-        <path d='M27 39 Q48 32 73 39'
+        <path d='M28 39 Q48 32 72 39'
             stroke='#79c9e8'
             strokeWidth='3'
             opacity='0.7'/>
-        <path d='M24 49 Q49 42 76 49'
+        <path d='M26 49 Q49 42 74 49'
             stroke='#174f88'
             strokeWidth='4'
             opacity='0.8'/>
-        <path d='M27 59 Q49 53 73 59'
+        <path d='M28 59 Q49 53 72 59'
             stroke='#66acd2'
             strokeWidth='3'
             opacity='0.65'/>
-        <path d='M31 68 Q50 63 69 67'
+        <path d='M34 68 Q50 63 67 67'
             stroke='#164b80'
             strokeWidth='4'
             opacity='0.75'/>
@@ -261,7 +263,7 @@ export const neptune = <svg viewBox='0 0 100 100'>
 </svg>;
 //#endregion
 
-//#region Pillar symbols
+//#region Symbols Pillar
 export const symbolDiamond = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
         <path d='M35 50 L50 20 L65 50 L50 80 Z'/>
@@ -337,15 +339,15 @@ export const symbolMale = <svg viewBox='0 0 100 100'>
 export const symbolUmbrella = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
         <path d='M20 50 L40 30 L60 50 L40 70 Z'/>
-        <path d='M60 50 H78'/>
-        <circle cx='84' cy='50' r='7'/>
+        <path d='M60 50 H85'/>
+        <circle cx='84' cy='57' r='7'/>
     </g>
 </svg>;
 
 export const symbolTriangle = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
         <path d='M15 32 H85 L50 78 Z'/>
-        <path d='M38 55 L50 43 L62 55 L50 67 Z'/>
+        <path d='M38 55 L50 43 L62 55'/>
     </g>
 </svg>;
 
@@ -360,10 +362,10 @@ export const symbolFemale = <svg viewBox='0 0 100 100'>
 export const symbolCircle = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
         <circle cx='50' cy='50' r='29'/>
-        <path d='M27 30 L38 41'/>
-        <path d='M73 30 L62 41'/>
-        <path d='M27 70 L38 59'/>
-        <path d='M73 70 L62 59'/>
+        <path d='M30 33 L38 41'/>
+        <path d='M70 33 L62 41'/>
+        <path d='M30 67 L38 59'/>
+        <path d='M70 67 L62 59'/>
     </g>
 </svg>;
 
@@ -388,7 +390,6 @@ export const symbolLine = <svg viewBox='0 0 100 100'>
         <circle cx='50' cy='50' r='29'/>
         <path d='M21 50 H79'/>
     </g>
-    <ellipse cx='50' cy='50' rx='10' ry='5' fill='rgb(37, 44, 45)'/>
 </svg>;
 
 export const symbolHook = <svg viewBox='0 0 100 100'>
@@ -419,14 +420,10 @@ export const symbolHalfCircle = <svg viewBox='0 0 100 100'>
 
 export const symbolStar = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M50 15 V85'/>
-        <path d='M15 50 H85'/>
-        <path d='M25 25 L75 75'/>
-        <path d='M75 25 L25 75'/>
-        <path d='M50 15 L44 21 M50 15 L56 21'/>
-        <path d='M85 50 L79 44 M85 50 L79 56'/>
-        <path d='M50 85 L44 79 M50 85 L56 79'/>
-        <path d='M15 50 L21 44 M15 50 L21 56'/>
+        <path d='M50 15 V85 M47 15 H53 M47 85 H53'/>
+        <path d='M15 50 H85 M15 47 V53 M85 47 V53'/>
+        <path d='M25 25 L75 75 M22 28 L28 22 M72 78 L78 72'/>
+        <path d='M75 25 L25 75 M72 22 L78 28 M22 72 L28 78'/>
     </g>
 </svg>;
 //#endregion
@@ -464,7 +461,7 @@ export const symbolEye = <svg viewBox='0 0 100 100'>
 export const symbolLimb = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
         <path d='M25 25 V75 H75'/>
-        <circle cx='50' cy='50' r='4' fill='rgb(37, 44, 45)' stroke='none'/>
+        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
     </g>
 </svg>;
 //#endregion
@@ -473,7 +470,7 @@ export const symbolLimb = <svg viewBox='0 0 100 100'>
 export const symbolLaunch = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
         <path d='M25 25 V75 H75'/>
-        <circle cx='50' cy='50' r='4' fill='rgb(37, 44, 45)' stroke='none'/>
+        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
     </g>
 </svg>;
 
@@ -486,7 +483,7 @@ export const symbolEngine = <svg viewBox='0 0 100 100'>
 export const symbolRocket = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
         <path d='M25 25 H75 V75'/>
-        <circle cx='50' cy='50' r='4' fill='rgb(37, 44, 45)' stroke='none'/>
+        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
     </g>
 </svg>;
 

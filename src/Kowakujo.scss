@@ -158,6 +158,109 @@ $paw-color: rgb(193, 154, 92);
     }
 }
 
+.poster {
+    background-image: url(/kowakujo/poster.webp);
+
+    span {
+        &:nth-child(1) {
+            bottom: 100px;
+            left: 50px;
+        }
+
+        &:nth-child(2) {
+            bottom: 70px;
+            left: 90px;
+        }
+
+        &:nth-child(3) {
+            bottom: 100px;
+            left: 200px;
+        }
+
+        &:nth-child(4) {
+            bottom: 70px;
+            right: 90px;
+        }
+
+        &:nth-child(5) {
+            bottom: 100px;
+            right: 10px;
+        }
+    }
+}
+
+.zodiac {
+    height: 25rem !important;
+    background-image: url(/kowakujo/zodiac.webp);
+
+    .dot {
+        width: 18px;
+        height: 18px;
+        background-color: rgb(225, 220, 195);
+        border-radius: 100%;
+    }
+
+    .zodiac-rat {
+        top: 40px;
+        left: 235px;
+    }
+
+    .zodiac-ox {
+        top: 55px;
+        right: 160px;
+    }
+
+    .zodiac-tiger {
+        top: 100px;
+        right: 110px;
+    }
+
+    .zodiac-rabbit {
+        top: 165px;
+        right: 85px;
+    }
+
+    .zodiac-dragon {
+        top: 230px;
+        right: 100px;
+    }
+
+    .zodiac-snake {
+        bottom: 75px;
+        right: 145px;
+    }
+
+    .zodiac-horse {
+        bottom: 55px;
+        left: 240px;
+    }
+
+    .zodiac-goat {
+        bottom: 75px;
+        left: 160px;
+    }
+
+    .zodiac-monkey {
+        top: 230px;
+        left: 120px;
+    }
+
+    .zodiac-rooster {
+        top: 165px;
+        left: 105px;
+    }
+
+    .zodiac-dog {
+        top: 100px;
+        left: 120px;
+    }
+
+    .zodiac-pig {
+        top: 55px;
+        left: 170px;
+    }
+}
+
 .note-rocks {
     color: rgb(61, 59, 54);
 }

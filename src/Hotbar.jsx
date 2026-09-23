@@ -207,7 +207,7 @@ const Hotbar = () => {
 
                 <Route path='/kowakujo'
                     element={
-                        <Kowakujo/>
+                        <Kowakujo isKnower={isKnower}/>
                     }/>
 
                 <Route path='/rex'
