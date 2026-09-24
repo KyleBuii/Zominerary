@@ -210,7 +210,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                     </div>
                     {(codeSoulsLake.length >= 4)
                         ? <></>
-                        : <div className='codes'>
+                        : <div className='codes wrap'>
                             <button className='image'
                                 style={{ backgroundImage: 'url(/aotd/lake-souls-front.webp)' }}
                                 onClick={(event) => {
@@ -355,7 +355,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 </ul>}
                             <li>Drive to Lake</li>
                             <ul>
-                                <li>Don't activate Uber Klaus</li>
+                                <li>
+                                    Don't activate
+                                    <span className='high-value-target'> Uber Klaus</span>
+                                </li>
                                 <li>Driving over Green Spores heal Tessie and gives Essence or Salvage</li>
                             </ul>
                         </ol>
@@ -381,14 +384,20 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 {(selectedPerk === 'quick-revive') ? <li>Quick Revive — Fish</li> : <></>}
                             </ul>
                             {(isSolo) ? <></> : <li>Canister [1]</li>}
-                            <li>Tomahawk Side Easter Egg</li>
+                            <li>
+                                <span className='tomahawk'>Tomahawk </span>
+                                Side Easter Egg
+                            </li>
                         </ul>
                         <ol>
                             <li>Turn on power</li>
                             <li>Grab Jar</li>
                             <li>Drive to Farm through Plaza</li>
                             <ul>
-                                <li>Don't activate Uber Klaus</li>
+                                <li>
+                                    Don't activate
+                                    <span className='high-value-target'> Uber Klaus</span>
+                                </li>
                             </ul>
                         </ol>
                     </div>
@@ -416,16 +425,26 @@ const AOTD = ({ isSolo, isKnower }) => {
                         <ol>
                             <li>Place Jar</li>
                             <li>Turn on power</li>
-                            <li>Tomahawk Foot</li>
+                            <li>
+                                <span className='tomahawk'>Tomahawk </span>
+                                Foot
+                            </li>
                             {(isSolo)
                                 ? <></>
                                 : <>
-                                    <li>Molotov Foot</li>
+                                    <li>
+                                        <span className='molotov'>Molotov </span>
+                                        Foot
+                                    </li>
                                     <li>Grab Foot</li>
                                 </>}
                             {(canXKlaus === '')
                                 ? <>
-                                    <li>Can you kill Uber Klaus?</li>
+                                    <li>
+                                        Can you kill
+                                        <span className='high-value-target'> Uber Klaus</span>
+                                        ?
+                                    </li>
                                     <span className='choices-list-item'>
                                         <div className='choices'>
                                             <button className='symbol'
@@ -512,7 +531,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                                                     </button>
                                                 </div>}
                                         </ul>}
-                                    <li>Activate Uber Klaus</li>
+                                    <li>
+                                        Activate
+                                        <span className='high-value-target'> Uber Klaus</span>
+                                    </li>
                                     <li>Jump pad to Farm</li>
                                     <li>Shoot free Insta-Kill</li>
                                     <li>Grab Stabilizer Chip</li>
@@ -661,7 +683,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                                                 </button>
                                             </div>}
                                     </ul>}
-                                <li>Activate Uber Klaus</li>
+                                <li>
+                                    Activate
+                                    <span className='high-value-target'> Uber Klaus</span>
+                                </li>
                                 <li>Jump pad to Farm</li>
                                 <li>Shoot free Insta-Kill</li>
                                 <li>Grab Stabilizer Chip</li>
@@ -682,7 +707,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </div>
                         </div>
                         <ol>
-                            <li>Stun Klaus</li>
+                            <li>
+                                <span className='stun'>Stun </span>
+                                Klaus
+                            </li>
                             {(canXKlaus === 'no') ? <li>Teleport Tessie</li> : <></>}
                             <li>Drive to Cosmodrone</li>
                             <li>Activate Barrel</li>
@@ -691,13 +719,13 @@ const AOTD = ({ isSolo, isKnower }) => {
                             <li>Jump pad to Ashwood</li>
                             <li>Put Wisp in Mirror</li>
                             <li>Teleport Tessie</li>
-                            {(isSolo) ? <li>Grab Molotov</li> : <></>}
+                            {(isSolo) ? <li>Grab <span className='molotov'>Molotov</span></li> : <></>}
                             <li>Grab Barrel</li>
                             <li>Put Barrel in Ashwood pump</li>
                             <li>Put Barrel in Lake pump</li>
                             <li>Put Barrel in Farm pump</li>
                             {(canXKlaus === 'yes') ? <li>Grab Jar</li> : <></>}
-                            {(isSolo) ? <li>Molotov foot</li> : <></>}
+                            {(isSolo) ? <li><span className='molotov'>Molotov </span> foot</li> : <></>}
                             {(isSolo) ? <li>Grab feet</li> : <></>}
                             <li>Put Barrel at Cube</li>
                             <li>Input code</li>
@@ -709,7 +737,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                                     </button>
                                 })}
                             </div>
-                            <li>Grab Wonder Weapon</li>
+                            <li>
+                                Grab
+                                <span className='high-value-weapon'> Wonder Weapon</span>
+                            </li>
                             <li>Jump pad to Ashwood</li>
                         </ol>
                     </div>
@@ -719,7 +750,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                             <span>Cocaine & Blood</span>
                         </div>
                         <ol>
-                            <li>Shoot mirror with Wonder Weapon</li>
+                            <li>
+                                Shoot mirror with
+                                <span className='high-value-weapon'> Wonder Weapon</span>
+                            </li>
                             <li>Grab Powder</li>
                             <li>Drive to Cosmodrone</li>
                             <li>Put Powder</li>
@@ -893,7 +927,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 ? <></>
                                 : <ul>
                                     <li>Click the pictures in order.</li>
-                                    <div className='codes'>
+                                    <div className='codes wrap'>
                                         <button className='image'
                                             style={{ backgroundImage: 'url(/aotd/lake-souls-front.webp)' }}
                                             onClick={(event) => {

@@ -248,8 +248,7 @@ const Astra = ({ isKnower }) => {
                     </div>
                     {(codeOscar.length === 3)
                         ? <></>
-                        : <div>
-                            <div className='codes'>
+                        : <div className='codes wrap'>
                                 {Object.entries(mapPlanets).map(([planet, element]) => {
                                     return <button className='symbol'
                                         onClick={(event) => {
@@ -260,7 +259,6 @@ const Astra = ({ isKnower }) => {
                                         {element}
                                     </button>
                                 })}
-                            </div>
                         </div>}
                     <div className='codes'>
                         {codeOscar.map((number) => {
@@ -275,7 +273,7 @@ const Astra = ({ isKnower }) => {
                     </div>
                     <div>
                         {Object.entries(books).map(([category, book]) => (
-                            <div className='codes'
+                            <div className='codes wrap'
                                 key={category}>
                                 {book.map((name) => {
                                     return <button className='symbol long'
@@ -587,21 +585,37 @@ const Astra = ({ isKnower }) => {
                                             </button>
                                         </div>
                                     </ul>}
-                            <li>Beam OSCAR</li>
+                            <li>
+                                Beam
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
                             <li>Get Fragments [3]</li>
                             <ul>
                                 <li>Shoot Purple Crystals with Cyro Freeze</li>
                             </ul>
                             <li>Shoot blinking Lamp</li>
-                            <li>Shoot OSCAR's UFO</li>
-                            <li>Beam OSCAR</li>
+                            <li>
+                                Shoot
+                                <span className='high-value-target'> OSCAR's </span>
+                                UFO
+                            </li>
+                            <li>
+                                Beam
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
                             <li>Get Car Battery</li>
                             <ul>
                                 <li>Shoot Tessie with PAP gun</li>
                             </ul>
                             <li>Travel to Luminarium</li>
-                            <li>Use trap on OSCAR</li>
-                            <li>Grab Wonder Weapon</li>
+                            <li>
+                                Use trap on
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
+                            <li>
+                                Grab
+                                <span className='high-value-weapon'> Wonder Weapon</span>
+                            </li>
                         </ol>
                     </div>
                     {/* Test your Patience */}
@@ -622,7 +636,10 @@ const Astra = ({ isKnower }) => {
                             </div>
                         </div>
                         <ol>
-                            <li>Respawn OSCAR</li>
+                            <li>
+                                Respawn
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
                             <li>
                                 <span className='note-oscar'>
                                     Don't let OSCAR see you
@@ -666,7 +683,10 @@ const Astra = ({ isKnower }) => {
                                             </button>
                                         </div>}
                                 </ul>}
-                            <li>Tail OSCAR</li>
+                            <li>
+                                Tail
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
                             <li>
                                 <span>Wait for Thurston to say, </span>
                                 <span className='dialogue'>"Stay up there while I draw OSCAR away! And remember:"</span>
@@ -675,7 +695,7 @@ const Astra = ({ isKnower }) => {
                                 ? <></>
                                 : <ul>
                                     <li>What planets to remember?</li>
-                                    <div className='codes'>
+                                    <div className='codes wrap'>
                                         {Object.entries(mapPlanets).map(([planet, element]) => {
                                             return <button className='symbol'
                                                 onClick={(event) => {
@@ -725,7 +745,7 @@ const Astra = ({ isKnower }) => {
                             <ul>
                                 <li>What books?</li>
                                 {Object.entries(books).map(([category, book]) => (
-                                    <div className='codes'
+                                    <div className='codes wrap'
                                         key={category}>
                                         {book.map((name) => {
                                             return <button className='symbol long'
@@ -784,7 +804,10 @@ const Astra = ({ isKnower }) => {
                                     </button>
                                 })}
                             </div>
-                            <li>Torment OSCAR</li>
+                            <li>
+                                Torment
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
                         </ol>
                     </div>
                     {/* The Vampire Cosmonaut */}
@@ -797,7 +820,10 @@ const Astra = ({ isKnower }) => {
                             <li>Shoot Towers</li>
                             <li>Grab Bird</li>
                             <li>Insert Bird</li>
-                            <li>Shoot Pillars with Wonder Weapon</li>
+                            <li>
+                                Shoot Pillars with
+                                <span className='high-value-weapon'> Wonder Weapon</span>
+                            </li>
                             {(codeMarsPillar.length === 5)
                                 ? <></>
                                 : <ul>

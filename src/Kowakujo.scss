@@ -263,11 +263,17 @@ $paw-color: rgb(193, 154, 92);
 
 .note-rocks {
     color: rgb(61, 59, 54);
+    text-shadow:
+        1px 1px 2px rgb(0, 0, 0),
+        0 0 2px rgb(30, 28, 25);
 }
 
 .note-dead {
     color: rgb(150, 35, 35);
-    text-shadow: 0 2px 2px black;
+    text-shadow:
+        0 0 3px rgb(70, 0, 0),
+        0 0 6px rgb(50, 0, 0),
+        2px 2px 2px rgb(0, 0, 0);
 }
 
 .parent-note-bag {

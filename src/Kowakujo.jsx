@@ -221,7 +221,7 @@ const Kowakujo = ({ isKnower }) => {
                         <span>Paw</span>
                     </div>
                     {(locationPaw === '')
-                        ? <div className='codes'>
+                        ? <div className='codes wrap'>
                             {locationsFissure.map((location) => {
                                 return <button className='symbol long'
                                     onClick={() => handleLocationPaw(location)}
@@ -263,25 +263,25 @@ const Kowakujo = ({ isKnower }) => {
                         </div>}
                     <div>
                         <div className='codes'>
-                            {selectedMasks.slice(0, 3).map((mask) => {
+                            {selectedMasks.slice(0, 3).map((mask, maskIndex) => {
                                 return <button className='symbol'
-                                    key={`selected-masks-first-${mask}`}>
+                                    key={`selected-masks-first-${mask}-${maskIndex}`}>
                                     {mapMasks[mask]}
                                 </button>
                             })}
                         </div>
                         <div className='codes'>
-                            {selectedMasks.slice(3, 7).map((mask) => {
+                            {selectedMasks.slice(3, 7).map((mask, maskIndex) => {
                                 return <button className='symbol'
-                                    key={`selected-masks-first-${mask}`}>
+                                    key={`selected-masks-second-${mask}-${maskIndex}`}>
                                     {mapMasks[mask]}
                                 </button>
                             })}
                         </div>
                         <div className='codes'>
-                            {selectedMasks.slice(7, 12).map((mask) => {
+                            {selectedMasks.slice(7, 12).map((mask, maskIndex) => {
                                 return <button className='symbol'
-                                    key={`selected-masks-first-${mask}`}>
+                                    key={`selected-masks-third-${mask}-${maskIndex}`}>
                                     {mapMasks[mask]}
                                 </button>
                             })}
@@ -330,13 +330,13 @@ const Kowakujo = ({ isKnower }) => {
                         <span>Lights Out</span>
                     </div>
                     <div>
-                        <div className='codes'>
+                        <div className='codes wrap'>
                             <button className='symbol long'>100</button>
                             <button className='symbol long'>010</button>
                             <button className='symbol long'>001</button>
                             <button className='symbol long'>111</button>
                         </div>
-                        <div className='codes'>
+                        <div className='codes wrap'>
                             <button className='symbol long'>1267</button>
                             <button className='symbol long'>123</button>
                             <button className='symbol long'>2347</button>
@@ -349,7 +349,7 @@ const Kowakujo = ({ isKnower }) => {
                             <div className='title'>
                                 <span>Clock</span>
                             </div>
-                            <div className='codes'>
+                            <div className='codes wrap'>
                                 {[...Array(6).keys()].map((number) => {
                                     return <button className='symbol'
                                         key={`clock-hours-${number}`}
@@ -422,7 +422,7 @@ const Kowakujo = ({ isKnower }) => {
                     </div>
                     {(flagNumbers.length >= 6)
                         ? <></>
-                        : <div className='codes'>
+                        : <div className='codes wrap'>
                             {[...Array(6).keys()].map((number) => {
                                 return <button className='symbol'
                                     key={`flag-numbers-${number}`}
@@ -431,7 +431,7 @@ const Kowakujo = ({ isKnower }) => {
                                 </button>
                             })}
                         </div>}
-                    <div className='codes'>
+                    <div className='codes wrap'>
                         {Object.entries(locationNumber).map(([location, number], locationIndex) => {
                             return <div className=''
                                 key={`input-flags-location-${location}`}>
@@ -730,7 +730,7 @@ const Kowakujo = ({ isKnower }) => {
                             {(locationPaw === '')
                                 ? <ul>
                                     <li>Where is the Fissure?</li>
-                                    <div className='codes'>
+                                    <div className='codes wrap'>
                                         {locationsFissure.map((location) => {
                                             return <button className='symbol long'
                                                 onClick={() => handleLocationPaw(location)}
@@ -751,7 +751,10 @@ const Kowakujo = ({ isKnower }) => {
                             <li>Sneakily Grab Cat</li>
                             <li>Travel to War Room</li>
                             <li>Hit Cat Cube</li>
-                            <li>Grab Wonder Weapon</li>
+                            <li>
+                                Grab
+                                <span className='high-value-weapon'> Wonder Weapon</span>
+                            </li>
                         </ol>
                     </div>
                     {/* Light the Way */}
@@ -815,27 +818,27 @@ const Kowakujo = ({ isKnower }) => {
                                 </div>}
                             <li>Round 1</li>
                             <div className='codes'>
-                                {selectedMasks.slice(0, 3).map((mask) => {
+                                {selectedMasks.slice(0, 3).map((mask, maskIndex) => {
                                     return <button className='symbol'
-                                        key={`selected-masks-first-${mask}`}>
+                                        key={`selected-masks-first-${mask}-${maskIndex}`}>
                                         {mapMasks[mask]}
                                     </button>
                                 })}
                             </div>
                             <li>Round 2</li>
                             <div className='codes'>
-                                {selectedMasks.slice(3, 7).map((mask) => {
+                                {selectedMasks.slice(3, 7).map((mask, maskIndex) => {
                                     return <button className='symbol'
-                                        key={`selected-masks-first-${mask}`}>
+                                        key={`selected-masks-second-${mask}-${maskIndex}`}>
                                         {mapMasks[mask]}
                                     </button>
                                 })}
                             </div>
                             <li>Round 3</li>
                             <div className='codes'>
-                                {selectedMasks.slice(7, 12).map((mask) => {
+                                {selectedMasks.slice(7, 12).map((mask, maskIndex) => {
                                     return <button className='symbol'
-                                        key={`selected-masks-first-${mask}`}>
+                                        key={`selected-masks-third-${mask}-${maskIndex}`}>
                                         {mapMasks[mask]}
                                     </button>
                                 })}
@@ -910,13 +913,13 @@ const Kowakujo = ({ isKnower }) => {
                             <li>Solve Lights Out</li>
                             <ul>
                                 <li>Chase the Lights</li>
-                                <div className='codes'>
+                                <div className='codes wrap'>
                                     <button className='symbol long'>100</button>
                                     <button className='symbol long'>010</button>
                                     <button className='symbol long'>001</button>
                                     <button className='symbol long'>111</button>
                                 </div>
-                                <div className='codes'>
+                                <div className='codes wrap'>
                                     <button className='symbol long'>1267</button>
                                     <button className='symbol long'>123</button>
                                     <button className='symbol long'>2347</button>
@@ -1020,7 +1023,7 @@ const Kowakujo = ({ isKnower }) => {
                                 ? <></>
                                 : <ul>
                                     <li>What are the hours?</li>
-                                    <div className='codes'>
+                                    <div className='codes wrap'>
                                         {[...Array(6).keys()].map((number) => {
                                             return <button className='symbol'
                                                 key={`clock-hours-${number}`}
@@ -1096,7 +1099,7 @@ const Kowakujo = ({ isKnower }) => {
                                 ? <></>
                                 : <ul>
                                     <li>What flag numbers?</li>
-                                    <div className='codes'>
+                                    <div className='codes wrap'>
                                         {[...Array(6).keys()].map((number) => {
                                             return <button className='symbol'
                                                 key={`flag-numbers-${number}`}
@@ -1107,7 +1110,7 @@ const Kowakujo = ({ isKnower }) => {
                                     </div>
                                 </ul>}
                             <li>Input Flags</li>
-                            <div className='codes'>
+                            <div className='codes wrap'>
                                 {Object.entries(locationNumber).map(([location, number], locationIndex) => {
                                     return <div className=''
                                         key={`input-flags-location-${location}`}>

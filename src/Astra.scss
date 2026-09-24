@@ -137,6 +137,10 @@
 
 .note-oscar {
     color: rgb(130, 15, 20);
+    text-shadow:
+        0 0 3px rgb(70, 0, 0),
+        0 0 6px rgb(50, 0, 0),
+        2px 2px 2px rgb(0, 0, 0);
 }
 
 .mars {
@@ -144,43 +148,43 @@
 
     span {
         &:nth-child(1) {
-            top: 110px;
-            right: 15px;
+            top: 34.38%;
+            right: 3.13%;
         }
 
         &:nth-child(2) {
-            top: 110px;
-            left: 145px;
+            top: 34.38%;
+            left: 30.21%;
         }
 
         &:nth-child(3) {
-            top: 110px;
-            left: 90px;
+            top: 34.38%;
+            left: 18.75%;
         }
 
         &:nth-child(4) {
-            bottom: 10px;
-            left: 10px;
+            bottom: 3.13%;
+            left: 2.08%;
         }
 
         &:nth-child(5) {
-            right: 10px;
-            bottom: 10px;
+            right: 2.08%;
+            bottom: 3.13%;
         }
     }
 
     &.right-pillar {
         span {
             &:nth-child(1) {
-                top: 110px;
-                right: 15px;
+                top: 34.38%;
+                right: 3.13%;
                 left: unset;
             }
 
             &:nth-child(3) {
                 top: unset;
-                bottom: 10px;
-                left: 10px;
+                bottom: 3.13%;
+                left: 2.08%;
             }
         }
     }

@@ -8,6 +8,7 @@ import Kowakujo from './Kowakujo';
 import Paradox from './Paradox';
 import Rex from './Rex';
 import Totenreich from './Totenreich';
+import SuperEasterEgg from './SuperEasterEgg';
 
 const Hotbar = () => {
     const [activeButton, setActiveButton] = useState('aotd');
@@ -179,14 +180,28 @@ const Hotbar = () => {
                         </div>
                     </div>
                 </Link>
+                <Link to={'/superee'}>
+                    <div className={`skull ${(activeButton === 'superee') ? 'active' : ''}`}
+                        onClick={() => handleClick('superee')}>
+                        <div className='face'>
+                            <div className='eyes'>
+                                <span className='eye'></span>
+                                <span className='eye'></span>
+                            </div>
+                            <span className='nose'></span>
+                        </div>
+                        <div className='jaw'>
+                            <div className='teeth'></div>
+                        </div>
+                    </div>
+                </Link>
             </section>
             <Routes>
                 <Route path='/'
                     element={
                         <Boarding setterSolo={setIsSolo}
                             setterKnower={setIsKnower}/>
-                    }
-                />
+                    }/>
                 <Route path='/aotd'
                     element={
                         <AOTD isSolo={isSolo}
@@ -204,15 +219,17 @@ const Hotbar = () => {
                     element={
                         <Totenreich/>
                     }/>
-
                 <Route path='/kowakujo'
                     element={
                         <Kowakujo isKnower={isKnower}/>
                     }/>
-
                 <Route path='/rex'
                     element={
                         <Rex/>
+                    }/>
+                <Route path='/superee'
+                    element={
+                        <SuperEasterEgg/>
                     }/>
             </Routes>
         </BrowserRouter>

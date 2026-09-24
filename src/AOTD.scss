@@ -144,10 +144,11 @@
 
 .coward {
     color: rgb(170, 175, 80);
-    text-shadow:
-        0 0 3px rgb(110, 115, 45),
-        0 0 8px rgb(90, 95, 35);
-    font-weight: 700;
+    text-shadow: 
+        0 1px 0 rgb(255, 255, 255),
+        0 0 5px rgb(110, 115, 45),
+        0 0 12px rgb(90, 95, 35),
+        2px 2px 0 rgb(30, 35, 35);;
     font-style: italic;
     letter-spacing: 0.08em;
 }
@@ -157,23 +158,23 @@
 
     span {
         &:nth-child(1) {
-            top: 80px;
-            left: 250px;
+            top: 25%;
+            left: 52.08%;
         }
 
         &:nth-child(2) {
-            top: 110px;
-            right: 160px;
+            top: 34.38%;
+            right: 33.33%;
         }
 
         &:nth-child(3) {
-            top: 100px;
-            left: 140px;
+            top: 31.25%;
+            left: 29.17%;
         }
 
         &:nth-child(4) {
-            top: 100px;
-            right: 110px;
+            top: 31.25%;
+            right: 22.92%;
         }
     }
 }
