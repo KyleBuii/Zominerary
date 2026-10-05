@@ -134,6 +134,15 @@
     }
 }
 
+.title-aotd {
+    color: rgb(142, 143, 137);
+    text-shadow:
+        0 0 4px rgb(75, 63, 46),
+        0 0 8px rgb(146, 151, 157),
+        0 0 12px rgb(142, 143, 137),
+        0 3px 0 rgb(75, 63, 46);
+}
+
 .note-plants {
     color: rgb(0, 165, 0);
 }

@@ -26,7 +26,7 @@ const Boarding = ({ setterSolo, setterKnower }) => {
             {(settedSolo)
                 ? <></>
                 : <>
-                    <span>Are you solo?</span>
+                    <span className='title'>Are you solo?</span>
                     <div className='choices'>
                         <button className='symbol'
                             onClick={() => handleSolo(true)}>Yes</button>
@@ -37,7 +37,7 @@ const Boarding = ({ setterSolo, setterKnower }) => {
             {(settedKnower)
                 ? <></>
                 : <>
-                    <span>Do you know what to do?</span>
+                    <span className='title'>Do you know what to do?</span>
                     <div className='choices'>
                         <button className='symbol'
                             onClick={() => handleKnower(true)}>Yes</button>

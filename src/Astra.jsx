@@ -80,6 +80,7 @@ const Astra = ({ isKnower }) => {
 
     return (
         <section className='page'>
+            <span className='main-title title-astra'>Astra Malorum</span>
             {(isKnower)
                 ? <>
                     <div className='title'>
@@ -375,6 +376,13 @@ const Astra = ({ isKnower }) => {
                         <div className='title'>
                             <span>Starting Room</span>
                         </div>
+                        <ul>
+                            <img className='big-image'
+                                src='/astra/labled-spawn.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                        </ul>
                         <ol>
                             <li>Shoot Free Bonus Points</li>
                             <li>Travel to Luminarium</li>
@@ -394,18 +402,25 @@ const Astra = ({ isKnower }) => {
                             </div>
                         </div>
                         <ul>
-                            <li>Disk Side Easter Egg</li>
+                            <img className='big-image'
+                                src='/astra/labled-luminarium.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Disk Side Easter Egg at Luminarium</li>
                             <ul>
+                                <li>Grab Disc</li>
+                                <li>Put Disc in Gramophone</li>
                                 <li>Kills with Field Upgrade</li>
                             </ul>
                         </ul>
                         <ol>
                             <li>Grab Harmonic Component</li>
-                            <li>Read Paper</li>
+                            <li>Read Page</li>
                             {(selectedPlanets.length >= 1) && (selectedPlanetsDir.length >= 2)
                                 ? <></>
                                 : <ul>
-                                    <li>What was on the paper?</li>
+                                    <li>What was on the Page?</li>
                                     {(selectedPlanets.length >= 1)
                                         ? <></>
                                         : <div className='codes'>
@@ -448,32 +463,56 @@ const Astra = ({ isKnower }) => {
                             <div className='note'>
                                 <span>[</span>
                                 <div className='subnote'>
+                                    <span>Museum</span>
+                                    <span className='normal'>= Museum Infinitum</span>
+                                </div>
+                                <div className='subnote'>
                                     <span>Machina</span>
                                     <span className='normal'>= Machina Astralis</span>
+                                </div>
+                                <div className='subnote'>
+                                    <span>Dome</span>
+                                    <span className='normal'>= Observatory Dome</span>
                                 </div>
                                 <span>]</span>
                             </div>
                         </div>
                         <ul>
-                            <li>Disk Side Easter Egg</li>
+                            <img className='big-image'
+                                src='/astra/labled-museum.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Disk Side Easter Egg at Museum</li>
                             <ul>
                                 <li>Kills with Melee</li>
+                            </ul>
+                            <li>Disk Side Easter Egg at Machina</li>
+                            <ul>
+                                <li>Kills with Equipment</li>
                             </ul>
                             <li>Sisters Side Easter Egg</li>
                         </ul>
                         <ol>
                             <li>Get Saw</li>
                             <li>Travel to Machina</li>
+                            <img className='big-image'
+                                src='/astra/labled-machina.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Grab Harmonic Component</li>
-                            <li>Disk Side Easter Egg</li>
-                            <ul>
-                                <li>Kills with Equipment</li>
-                            </ul>
-                            <li>Read Paper</li>
+                            <li>Travel to Archive</li>
+                            <img className='big-image'
+                                src='/astra/labled-archive.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Read Page</li>
                             {(selectedPlanets.length >= 2) && (selectedPlanetsDir.length >= 4)
                                 ? <></>
                                 : <ul>
-                                    <li>What was on the paper?</li>
+                                    <li>What was on the Page?</li>
                                     {(selectedPlanets.length >= 2)
                                         ? <></>
                                         : <div className='codes'>
@@ -506,6 +545,12 @@ const Astra = ({ isKnower }) => {
                                             </button>
                                         </div>}
                                 </ul>}
+                            <li>Travel to Dome</li>
+                            <img className='big-image'
+                                src='/astra/labled-dome.webp'
+                                alt='Labled dome'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Turn on Power </li>
                         </ol>
                     </div>
@@ -523,8 +568,26 @@ const Astra = ({ isKnower }) => {
                             </div>
                         </div>
                         <ol>
-                            <li>Shoot panels [5]</li>
-                            <li>Use telescope</li>
+                            <div className='codes wrap'>
+                                <img className='small-image'
+                                    src='/astra/labled-panels-left.webp'
+                                    alt='Labled panels left side'
+                                    decoding='async'
+                                    loading='lazy'/>
+                                <img className='small-image'
+                                    src='/astra/labled-panels-right.webp'
+                                    alt='Labled panels right side'
+                                    decoding='async'
+                                    loading='lazy'/>
+                            </div>
+                            <li>Shoot 1 smoking Panel</li>
+                            <li>
+                                When
+                                <span className='high-value-target'> OSCAR </span>
+                                Teleports, Wait 30s~
+                            </li>
+                            <li>Shoot smoking Panels [5]</li>
+                            <li>Use Telescope and Find Mars</li>
                             {(codeMars.length >= 4)
                                 ? <></>
                                 : <ul>
@@ -553,7 +616,12 @@ const Astra = ({ isKnower }) => {
                                         0
                                     </button>
                                 </ul>}
-                            <li>Read symbols</li>
+                            <li>Find the Sun</li>
+                            <li>
+                                Beam
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
+                            <li>Read Symbols [5]</li>
                                 {(codePillar.length === 5)
                                     ? <></>
                                     : <ul>
@@ -585,33 +653,54 @@ const Astra = ({ isKnower }) => {
                                             </button>
                                         </div>
                                     </ul>}
-                            <li>
-                                Beam
-                                <span className='high-value-target'> OSCAR</span>
-                            </li>
+                            <li>Buy Cyro Freeze</li>
                             <li>Get Fragments [3]</li>
                             <ul>
                                 <li>Shoot Purple Crystals with Cyro Freeze</li>
                             </ul>
                             <li>Shoot blinking Lamp</li>
+                            <li>Push a Round</li>
+                            <li>
+                                Travel to Museum and Bring
+                                <span className='high-value-target'> OSCAR</span>
+                            </li>
+                            <img className='big-image'
+                                src='/astra/labled-museum.webp'
+                                alt='Labled museum'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>
                                 Shoot
                                 <span className='high-value-target'> OSCAR's </span>
                                 UFO
                             </li>
                             <li>
-                                Beam
-                                <span className='high-value-target'> OSCAR</span>
+                                Toast
+                                <span className='high-value-target'> OSCAR </span>
+                                under the Rocket
                             </li>
-                            <li>Get Car Battery</li>
-                            <ul>
-                                <li>Shoot Tessie with PAP gun</li>
-                            </ul>
+                            <li>Push a Round</li>
+                            <li>Travel to Spawn</li>
+                            <img className='big-image'
+                                src='/astra/labled-spawn.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Shoot Tessie with a PAP gun</li>
+                            <li>Grab Car Battery</li>
                             <li>Travel to Luminarium</li>
+                            <img className='big-image'
+                                src='/astra/labled-luminarium.webp'
+                                alt='Labled luminarium'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>
-                                Use trap on
+                                Use Trap on
                                 <span className='high-value-target'> OSCAR</span>
                             </li>
+                            <ul>
+                                <li>It shouldn't cost Money</li>
+                            </ul>
                             <li>
                                 Grab
                                 <span className='high-value-weapon'> Wonder Weapon</span>
@@ -636,21 +725,23 @@ const Astra = ({ isKnower }) => {
                             </div>
                         </div>
                         <ol>
-                            <li>
-                                Respawn
-                                <span className='high-value-target'> OSCAR</span>
-                            </li>
+                            <li>Push 2~ Rounds</li>
                             <li>
                                 <span className='note-oscar'>
                                     Don't let OSCAR see you
                                 </span>
                             </li>
                             <li>Travel to Machina</li>
-                            <li>Read last paper</li>
+                            <img className='big-image'
+                                src='/astra/labled-machina.webp'
+                                alt='Labled machina'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Read last Page</li>
                             {(selectedPlanets.length >= 3) && (selectedPlanetsDir.length >= 6)
                                 ? <></>
                                 : <ul>
-                                    <li>What was on the paper?</li>
+                                    <li>What was on the Page?</li>
                                     {(selectedPlanets.length >= 3)
                                         ? <></>
                                         : <div className='codes'>
@@ -709,6 +800,11 @@ const Astra = ({ isKnower }) => {
                                     </div>
                                 </ul>}
                             <li>Travel to Dome</li>
+                            <img className='big-image'
+                                src='/astra/labled-dome.webp'
+                                alt='Labled dome'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Input code</li>
                             <div className='codes'>
                                 {codeOscar.map((number) => {
@@ -736,14 +832,29 @@ const Astra = ({ isKnower }) => {
                         </div>
                         <ol>
                             <li>Travel to Machina</li>
+                            <img className='big-image'
+                                src='/astra/labled-scholar.webp'
+                                alt='Labled scholar'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Get Brain</li>
                             <li>Travel to Luminarium</li>
+                            <img className='big-image'
+                                src='/astra/labled-luminarium.webp'
+                                alt='Labled luminarium'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Place Brain</li>
                             <li>Pick up Brain</li>
                             <li>Travel to Machina</li>
+                            <img className='big-image'
+                                src='/astra/labled-machina.webp'
+                                alt='Labled machina'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Install Brain</li>
                             <ul>
-                                <li>What books?</li>
+                                <li>What Books are shown?</li>
                                 {Object.entries(books).map(([category, book]) => (
                                     <div className='codes wrap'
                                         key={category}>
@@ -779,6 +890,11 @@ const Astra = ({ isKnower }) => {
                             <span>O.S.C.A.R.'s Torment</span>
                         </div>
                         <ol>
+                            <img className='big-image'
+                                src='/astra/labled-machina.webp'
+                                alt='Labled machina'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Input code</li>
                             <div className='codes'>
                                 <button className='symbol'>

@@ -158,6 +158,15 @@ $paw-color: rgb(193, 154, 92);
     }
 }
 
+.title-kowakujo {
+    color: rgb(251, 204, 90);
+    text-shadow:
+        0 0 4px rgb(185, 202, 217),
+        0 0 8px rgb(254, 191, 52),
+        0 0 12px rgb(251, 204, 90),
+        0 3px 0 rgb(251, 204, 90);
+}
+
 .poster {
     background-image: url(/kowakujo/poster.webp);
 

@@ -389,3 +389,12 @@ $color-glow: rgb(104, 220, 255);
         }
     }
 }
+
+.title-rex {
+    color: rgb(72, 90, 96);
+    text-shadow:
+        0 0 4px rgb(185, 202, 217),
+        0 0 8px rgb(78, 96, 102),
+        0 0 12px rgb(128, 44, 19),
+        0 3px 0 rgb(128, 44, 19);
+}

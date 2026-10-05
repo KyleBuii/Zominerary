@@ -3,6 +3,120 @@ import { memo } from 'react';
 const superEasterEgg = () => {
     return (
         <section className='page'>
+            <div className='main-title title-super-easter-egg'>
+                <div>
+                    <span className='title-aotd'>Su</span>
+                    <span className='title-astra'>per</span>
+                </div>
+                <div style={{ display: 'flex' }}>
+                    <div className='title-paradox'>
+                        <span>Ea</span>
+                        <span>s</span>
+                    </div>
+                    <span className='title-totenreich'>ter</span>
+                </div>
+                <div>
+                    <span className='title-kowakujo'>E</span>
+                    <span className='title-rex'>gg</span>
+                </div>
+            </div>
+            {/* Ashes of the Damned */}
+            <div>
+                <div className='title'>
+                    <span>Ashes of the Damned</span>
+                </div>
+                <ul>
+                    <li>
+                        Need
+                        <span className='tesla-storm'> Tesla Storm</span>
+                    </li>
+                </ul>
+                <ol>
+                    <li>Grab Canister</li>
+                    <li>Find Twins</li>
+                    <ul>
+                        <li>Lost Cabins - Behind Cabin</li>
+                        <li>Ashwood - End of zipline</li>
+                        <li>Grounded Ship - Near the top</li>
+                    </ul>
+                    <li>Get Wonder Weapon</li>
+                    <li>Travel to Farm</li>
+                    <li>Pull Toy Box on Windmill with Wonder Weapon</li>
+                    <li>
+                        Use
+                        <span className='tesla-storm'> Tesla Storm </span>
+                        on Toy Box
+                    </li>
+                    <li>Travel to Monolith Forest</li>
+                    <li>Pull and Interact with 3 Crystals</li>
+                    <li>Travel to Lake</li>
+                    <li>Interact with Meteor</li>
+                    <li>End round</li>
+                    <li>Grab Shard from Meteor</li>
+                    <li>Put Shard in Toy Box</li>
+                    <li>Grab Tessie Toy</li>
+                    <li>Exfil</li>
+                </ol>
+            </div>
+            {/* Astra Malorum */}
+            <div>
+                <div className='title'>
+                    <span>Astra Malorum</span>
+                </div>
+                <ul>
+                    <li>
+                        Need
+                        <span className='explosive'> Explosives</span>
+                    </li>
+                </ul>
+                <ol>
+                    <li>Travel to Luminarium</li>
+                    <li>
+                        Throw
+                        <span className='explosive'> Explosives </span>
+                        at Toy Box
+                    </li>
+                    <ul>
+                        <li>Luminarium right side of Arsenal - Outside Window</li>
+                        <li>Luminarium left side - Where the free zombie kill is</li>
+                    </ul>
+                    <li>Travel to Spawn</li>
+                    <li>
+                        Throw
+                        <span className='kazimir'> Kazimir </span>
+                        near the back wall
+                    </li>
+                    <li>Do Tessie Side Easter Egg</li>
+                    <li>Get Wonder Weapon</li>
+                    <li>Do Wisp Side Easter Egg</li>
+                    <li>Unlock Mars</li>
+                    <li>Activate Pillars</li>
+                    <li>Travel to Spawn</li>
+                    <li>Kill OSCAR with Tessie Turret</li>
+                    <li>Travel to Observatory Dome</li>
+                    <li>Use Telescope to see the Comet</li>
+                    <li>Do Slow Motion Clock Side Easter Egg</li>
+                    <li>When time is slowed, Travel to Observatory Dome</li>
+                    <li>Use Telescope and look at the UFO</li>
+                    <li>Get 2 Shock Charges</li>
+                    <li>Get 5 Upgraded Wisp</li>
+                    <li>Travel to Mars</li>
+                    <li>Use Shock Charges on Circles near Eye</li>
+                    <li>Read Moorse Code from UFO</li>
+                    <ul>
+                        <li>Lava Lamp</li>
+                        <li>Flamingo</li>
+                        <li>Toilet</li>
+                        <li>Spacesuit</li>
+                    </ul>
+                    <li>Go to the items</li>
+                    <li>Melee items</li>
+                    <li>Grab Alien</li>
+                    <li>Put in Toy Box</li>
+                    <li>Grab Catheris Toy</li>
+                    <li>Exfil</li>
+                </ol>
+            </div>
             {/* Paradox Junction */}
             <div>
                 <div className='title'>
@@ -93,20 +207,20 @@ const superEasterEgg = () => {
                     <li>Turn on PAP</li>
                     <li>Melee Cherry Tree</li>
                     <li>Travel to Tenshu Rooftops right next to the Kite</li>
-                    <li>Spin</li>
+                    <li>Create Cherry Tornado</li>
                     <li>Bird will Fly to the Roof</li>
                     <li>Travel to Kitchens</li>
                     <li>Melee Cherry Tree</li>
-                    <li>Bird will Fly to Roof</li>
+                    <li>Wait for Bird</li>
                     <li>Travel to Staging Area</li>
                     <li>Melee Cherry Tree</li>
-                    <li>Bird will Fly Roof</li>
+                    <li>Wait for Bird</li>
                     <li>Travel to Training Area</li>
                     <li>Melee Cherry Tree</li>
-                    <li>Bird Fly</li>
+                    <li>Wait for Bird</li>
                     <li>Travel to Courtyard near the Rock</li>
                     <li>Spin</li>
-                    <li>Bird</li>
+                    <li>Wait for Bird</li>
                     <li>Grab Bird</li>
                     <li>Put in Toy Box</li>
                     <li>Grab T-Rex Toy</li>

@@ -16,6 +16,7 @@ const Totenreich = () => {
 
     return (
         <section className='page'>
+            <span className='main-title title-totenreich'>Totenreich</span>
             <div>
                 <div className='title'>
                     <span>Starting Room</span>

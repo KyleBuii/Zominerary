@@ -215,6 +215,7 @@ const Kowakujo = ({ isKnower }) => {
 
     return (
         <section className='page'>
+            <span className='main-title title-kowakujo'>Kowakujo</span>
             {(isKnower)
                 ? <>
                     <div className='title'>
@@ -542,7 +543,7 @@ const Kowakujo = ({ isKnower }) => {
                         : <Draggable nodeRef={refSideActivities}
                             cancel='button, .collapsible'>
                             <div ref={refSideActivities}
-                                className={`side-activities ${(isSideOpen) ? 'open' : ''}`}>
+                                className={`side-activities ${(isSideOpen) ? 'close' : ''}`}>
                                 <span className='collapsible'
                                     onClick={() => setIsSideOpen(!isSideOpen)}>
                                     Side Activities

@@ -16,18 +16,21 @@
     flex-direction: column;
     max-width: 60rem;
     width: 100%;
-    min-height: calc(100vh - 2rem);
+    min-height: 100vh;
 }
 
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    background-color: rgb(66, 100, 95);
-    margin: 1rem;
+    background-color: rgb(82, 74, 91);
+    background: linear-gradient(0deg,rgba(141, 124, 132, 1) 0%, rgba(82, 74, 91, 1) 43%, rgba(48, 48, 66, 1) 100%);
+    margin: 0;
     color: rgb(225, 220, 195);
     font-size: 1.5rem;
     font-weight: bold;
+    overflow-x: hidden;
 }
 
 footer {
@@ -36,8 +39,17 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+    width: 100%;
     margin-top: auto;
     color: rgb(165, 175, 165);
+    background-color: rgb(41, 38, 42);
+    background: linear-gradient(
+        0deg
+        , rgba(20, 18, 18, 1) 0%
+        , rgba(41, 38, 42, 1) 100%
+    );
+    padding: 1rem;
+    border-top: 4px solid rgb(61, 58, 58);
     font-size: 1rem;
     font-weight: normal;
 
@@ -54,6 +66,7 @@ a {
     display: inline-flex;
     transition: color 0.3s;
     text-decoration: none;
+    color: rgb(205, 197, 226);
 
     &:hover {
         color: rgb(127, 135, 127);
@@ -75,7 +88,7 @@ button {
     align-items: center;
     min-width: 3rem;
     min-height: 2rem;
-    background-color: rgb(69, 114, 107);
+    background-color: rgb(105, 94, 119);
     border: 4px solid rgb(var(--button-border-color));
     border-radius: 10px;
     color: rgb(178, 174, 153);
@@ -85,11 +98,11 @@ button {
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: rgb(89, 147, 137);
+        background-color: rgb(125, 112, 141);
     }
 
     &:active {
-        background-color: rgb(45, 72, 68);
+        background-color: rgb(68, 61, 76);
     }
 
     &.symbol {
@@ -105,6 +118,53 @@ button {
     &.image {
         width: 12rem;
         height: 12rem;
+    }
+}
+
+.background-images {
+    img {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        opacity: 0.5;
+    }
+    
+    .sky {
+        top: 0;
+        left: 0;
+        mask-image: linear-gradient(
+            to bottom
+            , black 50%
+            , transparent 100%
+        );
+    }
+
+    .fog {
+        left: 0;
+        bottom: 0;
+    }
+
+    .forest-container {
+        z-index: -2;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .forest {
+        display: block;
+        position: relative;
+        opacity: 0.2;
+    }
+
+    .forest-foot-stool {
+        position: relative;
+        width: 100%;
+        height: 6rem;
+        background-color: rgba(69, 78, 89, 0.4);
     }
 }
 
@@ -124,7 +184,7 @@ button {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .skull {
@@ -220,6 +280,23 @@ button {
     }
 }
 
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.title-super-easter-egg {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
 .choices-list-item {
     display: block;
     list-style: none;
@@ -244,6 +321,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin: 1rem;
 }
 
 .title {
@@ -281,7 +359,6 @@ button {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 .side-activities {
@@ -293,14 +370,19 @@ button {
     flex-direction: column;
     align-items: center;
     width: 20rem;
-    max-height: 2rem;
-    background-color: rgba(38, 62, 56, 0.8);
+    max-height: 20rem;
+    background-color: rgba(47, 42, 53, 0.8);
     border: 4px solid rgb(var(--button-border-color));
     border-radius: 25px;
     padding: 1rem;
     overflow: hidden;
+    overflow-y: auto;
     scrollbar-width: none;
     transition: max-height 0.5s;
+
+    > span {
+        color: rgb(194, 157, 83);
+    }
 
     &::before, &::after {
         content: '';
@@ -311,7 +393,7 @@ button {
         transform: translate(-50%, 0);
         width: 4rem;
         height: 2.5rem;
-        background-color: rgba(35, 56, 50, 0.8);
+        background-color: rgba(41, 37, 47, 0.8);
         border: 4px solid rgba(var(--button-border-color), 0.5);
         border-radius: 15px;
     }
@@ -321,9 +403,9 @@ button {
         right: -1.5rem;
     }
 
-    &.open {
-        max-height: 20rem;
-        overflow-y: auto;
+    &.close {
+        max-height: 2rem;
+        overflow-y: hidden;
     }
 }
 
@@ -426,6 +508,15 @@ button {
     span {
         position: absolute;
     }
+
+    &.stacked {
+        margin: 0 0 1rem;
+    }
+}
+
+.small-image {
+    @extend .big-image;
+    width: 26.7rem;
 }
 
 .tomahawk {
@@ -460,6 +551,18 @@ button {
     color: rgb(255, 85, 20);
 }
 
+.tesla-storm {
+    color: rgb(155, 75, 220);
+}
+
+.explosive {
+    color: rgb(190, 70, 25);
+}
+
+.kazimir {
+    color: rgb(115, 65, 180);
+}
+
 .high-value-target {
     font-weight: bolder;
     color: rgb(255, 220, 80);
@@ -481,4 +584,14 @@ button {
         0 0 12px rgb(80, 90, 85),
         2px 2px 0 rgb(30, 35, 35);
     letter-spacing: 0.1rem;
+}
+
+.spread {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 100%;
+    width: 30rem;
+    margin-bottom: 1rem;
 }

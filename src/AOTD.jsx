@@ -27,6 +27,7 @@ const mapSymbolSoulsCosmodrone = {
     engine: [4 , 13, 6 , 8 , 13, 4 ],
     weapon: [22, 4 , 0 , 15, 14, 13],
 };
+const lakeSoulsLocations = ['tool', 'front', 'back', 'shed'];
 
 const AOTD = ({ isSolo, isKnower }) => {
     const [isSideOpen, setIsSideOpen] = useState(false);
@@ -66,6 +67,7 @@ const AOTD = ({ isSolo, isKnower }) => {
 
     return (
         <section className='page'>
+            <span className='main-title title-aotd'>Ashes of the Damned</span>
             {(isKnower)
                 ? <>
                     <div className='title'>
@@ -249,7 +251,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                         : <Draggable nodeRef={refSideActivities}
                             cancel='button, .collapsible'>
                             <div ref={refSideActivities}
-                                className={`side-activities ${(isSideOpen) ? 'open' : ''}`}>
+                                className={`side-activities ${(isSideOpen) ? 'close' : ''}`}>
                                 <span className='collapsible'
                                     onClick={() => setIsSideOpen(!isSideOpen)}>
                                     Side Activities
@@ -287,7 +289,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                         </Draggable>}
                     {(selectedPerk === '')
                         ? <div className='popup'>
-                            <span>What free perk?</span>
+                            <span className='title'>Free Perk Choice</span>
                             <div className='choices'>
                                 <button className='symbol' 
                                     onClick={() => setSelectedPerk('speed-cola')}>Speed Cola</button>
@@ -317,6 +319,11 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </div>
                         </div>
                         <ul>
+                            <img className='big-image'
+                                src='/aotd/labled-spawn.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
                             {(selectedPerk.match(/juggernaut|quick-revive/)) ? <li>Free Perk Part</li> : <></>}
                             <ul>
                                 {(selectedPerk === 'juggernaut') ? <li>Juggernaut — Leaf</li> : <></>}
@@ -332,11 +339,11 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </ul>
                             {(isSolo)
                                 ? <li>
-                                    Look for
+                                    For later step, look for
                                     <span className='tomahawk'> Tomahawk</span>
                                 </li>
                                 : <li>
-                                    Look for
+                                    For later step, look for
                                     <span className='tomahawk'> Tomahawk </span>
                                     —
                                     <span className='molotov'> Molotov </span>
@@ -345,7 +352,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 </li>}
                         </ul>
                         <ol>
-                            <li>Install T.E.D.D.'s Head</li>
+                            <li>Travel to Server Room</li>
                             {(isSolo)
                                 ? <></>
                                 : <ul>
@@ -353,13 +360,14 @@ const AOTD = ({ isSolo, isKnower }) => {
                                         <span className='stun'>Stuns</span> in this room
                                     </li>
                                 </ul>}
+                            <li>Grab and Install T.E.D.D.'s Head</li>
                             <li>Drive to Lake</li>
                             <ul>
                                 <li>
                                     Don't activate
                                     <span className='high-value-target'> Uber Klaus</span>
                                 </li>
-                                <li>Driving over Green Spores heal Tessie and gives Essence or Salvage</li>
+                                <li>Drive over Green Spores to heal Tessie</li>
                             </ul>
                         </ol>
                     </div>
@@ -370,6 +378,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                             <div className='note'>
                                 <span>[</span>
                                 <div className='subnote'>
+                                    <span>Lake</span>
+                                    <span className='normal'>= Blackwater Lake</span>
+                                </div>
+                                <div className='subnote'>
                                     <span>Plaza</span>
                                     <span className='normal'>= Janus Towers Plaza</span>
                                 </div>
@@ -377,13 +389,18 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </div>
                         </div>
                         <ul>
-                            <li><span className='note-plants'>Don't forget to grow plants if Toxic Growth!</span></li>
+                            <img className='big-image'
+                                src='/aotd/labled-lake.webp'
+                                alt='Labled lake'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li><span className='note-plants'>Don't forget to grow plants if you have Toxic Growth!</span></li>
                             {(selectedPerk.match(/speed-cola|quick-revive/)) ? <li>Free Perk Part</li> : <></>}
                             <ul>
                                 {(selectedPerk === 'speed-cola') ? <li>Speed Cola — Herb</li> : <></>}
                                 {(selectedPerk === 'quick-revive') ? <li>Quick Revive — Fish</li> : <></>}
                             </ul>
-                            {(isSolo) ? <></> : <li>Canister [1]</li>}
+                            {(isSolo) ? <></> : <li>Extra Canister at Lake</li>}
                             <li>
                                 <span className='tomahawk'>Tomahawk </span>
                                 Side Easter Egg
@@ -415,12 +432,17 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </div>
                         </div>
                         <ul>
+                            <img className='big-image'
+                                src='/aotd/labled-farm.webp'
+                                alt='Labled farm'
+                                decoding='async'
+                                loading='lazy'/>
                             {(selectedPerk.match(/juggernaut|stamin-up/)) ? <li>Free Perk Part</li> : <></>}
                             <ul>
                                 {(selectedPerk === 'juggernaut') ? <li>Juggernaut — Jar</li> : <></>}
                                 {(selectedPerk === 'stamin-up') ? <li>Stamin-Up — Box of Ingredients</li> : <></>}
                             </ul>
-                            {(isSolo) ? <></> : <li>Canister [1]</li>}
+                            {(isSolo) ? <></> : <li>Extra Canister at Farm</li>}
                         </ul>
                         <ol>
                             <li>Place Jar</li>
@@ -469,7 +491,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                                     {(codeFarm[0] != -1) && (codeFarm[1] != -1) && (codeFarm[2] != -1)
                                         ? <></>
                                         : <ul className='choices-code'>
-                                            <li>What are the symbols?</li>
+                                            <li>Look at the roofs at Farm, what symbols do you see?</li>
                                             {(codeFarm[0] != -1)
                                                 ? <></>
                                                 : <div className='choices'>
@@ -531,12 +553,21 @@ const AOTD = ({ isSolo, isKnower }) => {
                                                     </button>
                                                 </div>}
                                         </ul>}
+                                    <img className='big-image'
+                                        src='/aotd/labled-spawn.webp'
+                                        alt='Labled exit spawn'
+                                        decoding='async'
+                                        loading='lazy'/>
                                     <li>
                                         Activate
                                         <span className='high-value-target'> Uber Klaus</span>
                                     </li>
                                     <li>Jump pad to Farm</li>
                                     <li>Shoot free Insta-Kill</li>
+                                    <li>
+                                        Kill
+                                        <span className='high-value-target'> Uber Klaus</span>
+                                    </li>
                                     <li>Grab Stabilizer Chip</li>
                                 </>
                                 : <></>}
@@ -557,12 +588,17 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </div>
                         </div>
                         <ul>
+                            <img className='big-image'
+                                src='/aotd/labled-ashwood.webp'
+                                alt='Labled ashwood'
+                                decoding='async'
+                                loading='lazy'/>
                             {(selectedPerk.match(/stamin-up|speed-cola/)) ? <li>Free Perk Part</li> : <></>}
                             <ul>
                                 {(selectedPerk === 'stamin-up') ? <li>Stamin-Up — Bag of Beans</li> : <></>}
                                 {(selectedPerk === 'speed-cola') ? <li>Speed Cola — Nuts</li> : <></>}
                             </ul>
-                            {(isSolo) ? <></> : <li>Canister [1]</li>}
+                            {(isSolo) ? <></> : <li>Extra Canister at Ashwood</li>}
                         </ul>
                         <ol>
                             {(isSolo)
@@ -586,6 +622,11 @@ const AOTD = ({ isSolo, isKnower }) => {
                             <ul>
                                 <li>Vending machine here</li>
                             </ul>
+                            <img className='big-image'
+                                src='/aotd/labled-exit-115.webp'
+                                alt='Labled exit 114'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Shoot free Bonus Points</li>
                             {(selectedPerk.match(/juggernaut|stamin-up|speed-cola/)) ? <li>Free Perk Part</li> : <></>}
                             <ul>
@@ -596,7 +637,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                             <li>Get Freezer Key</li>
                             <li>Grab Carcass</li>
                             <li>Jump pad to Ashwood</li>
-                            <li>Install Carcass</li>
+                            <li>Install Carcass on Tessie</li>
                         </ol>
                     </div>
                     {/* UBERKLAUS */}
@@ -614,6 +655,13 @@ const AOTD = ({ isSolo, isKnower }) => {
                                     <span>]</span>
                                 </div>
                             </div>
+                            <ul>
+                                <img className='big-image'
+                                    src='/aotd/labled-spawn.webp'
+                                    alt='Labled spawn'
+                                    decoding='async'
+                                    loading='lazy'/>
+                            </ul>
                             <ol>
                                 <li>Drive to Farm</li>
                                 <li>Grab Jar</li>
@@ -621,7 +669,7 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 {(codeFarm[0] != -1) && (codeFarm[1] != -1) && (codeFarm[2] != -1)
                                     ? <></>
                                     : <ul className='choices-code'>
-                                        <li>What are the symbols?</li>
+                                        <li>Look at the roofs at Farm, what symbols do you see?</li>
                                         {(codeFarm[0] != -1)
                                             ? <></>
                                             : <div className='choices'>
@@ -689,6 +737,10 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 </li>
                                 <li>Jump pad to Farm</li>
                                 <li>Shoot free Insta-Kill</li>
+                                <li>
+                                    Kill
+                                    <span className='high-value-target'> Uber Klaus</span>
+                                </li>
                                 <li>Grab Stabilizer Chip</li>
                                 <li>Jump pad to Ashwood</li>
                             </ol>
@@ -706,14 +758,29 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 <span>]</span>
                             </div>
                         </div>
+                        <ul>
+                            <img className='big-image'
+                                src='/aotd/labled-ashwood.webp'
+                                alt='Labled ashwood'
+                                decoding='async'
+                                loading='lazy'/>
+                        </ul>
                         <ol>
+                            <li>Travel to Ashwood Sheriff's Office</li>
                             <li>
                                 <span className='stun'>Stun </span>
                                 Klaus
                             </li>
                             {(canXKlaus === 'no') ? <li>Teleport Tessie</li> : <></>}
                             <li>Drive to Cosmodrone</li>
-                            <li>Activate Barrel</li>
+                            <img className='big-image'
+                                src='/aotd/labled-cosmodrone.webp'
+                                alt='Labled cosmodrone'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Command Klaus on the Panel</li>
+                            <li>Interact with Panel</li>
+                            <li>Get Barrel</li>
                             <li>Put Barrel on top of Tessie</li>
                             <li>Buy Wisp Tea</li>
                             <li>Jump pad to Ashwood</li>
@@ -749,13 +816,21 @@ const AOTD = ({ isSolo, isKnower }) => {
                         <div className='title'>
                             <span>Cocaine & Blood</span>
                         </div>
+                        <ul>
+                            <img className='big-image'
+                                src='/aotd/labled-cosmodrone.webp'
+                                alt='Labled cosmodrone'
+                                decoding='async'
+                                loading='lazy'/>
+                        </ul>
                         <ol>
                             <li>
-                                Shoot mirror with
+                                Shoot Mirror with
                                 <span className='high-value-weapon'> Wonder Weapon</span>
                             </li>
                             <li>Grab Powder</li>
                             <li>Drive to Cosmodrone</li>
+                            <li>Travel to Yuri's Lab</li>
                             <li>Put Powder</li>
                             {(codeLab.length >= 3)
                                 ? <></>
@@ -829,21 +904,51 @@ const AOTD = ({ isSolo, isKnower }) => {
                         <ol>
                             <li>Get Yellow Key</li>
                             <ul>
-                                <li>Ashwood — Cosmodrone</li>
+                                <li>Ashwood &#8596; Cosmodrone</li>
                             </ul>
+                            <img className='big-image'
+                                src='/aotd/yellow-key-1-2.webp'
+                                alt='Yellow key spots 1 and 2'
+                                decoding='async'
+                                loading='lazy'/>
+                            <img className='big-image stacked'
+                                src='/aotd/yellow-key-3.webp'
+                                alt='Yellow key spot 3'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Put in Cube</li>
                             <li>Get Green Key</li>
                             <ul>
-                                <li>Ashwood — Farm</li>
+                                <li>Ashwood &#8596; Farm</li>
                             </ul>
+                            <img className='big-image'
+                                src='/aotd/green-key-1-2.webp'
+                                alt='Green key spots 1 and 2'
+                                decoding='async'
+                                loading='lazy'/>
+                            <img className='big-image stacked'
+                                src='/aotd/green-key-3.webp'
+                                alt='Green key spot 3'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Put in Cube</li>
                             <li>Get Red Key</li>
                             <ul>
-                                <li>Ashwood — Exit 115</li>
+                                <li>Ashwood &#8596; Exit 115</li>
                             </ul>
+                            <img className='big-image'
+                                src='/aotd/red-key-1-2.webp'
+                                alt='Red key spots 1 and 2'
+                                decoding='async'
+                                loading='lazy'/>
+                            <img className='big-image stacked'
+                                src='/aotd/red-key-3.webp'
+                                alt='Red key spot 3'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Put in Cube</li>
                             <li>Grab Turret</li>
-                            <li>Install Turret</li>
+                            <li>Install Turret on Tessie</li>
                         </ol>
                     </div>
                     {/* The Souls That Were Lost */}
@@ -860,21 +965,31 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </div>
                         </div>
                         <ol>
-                            <li>Shoot Clock with Turret</li>
-                            <li>Turn Purple</li>
+                            <li>Shoot floating Clock with Turret</li>
+                            <li>Shoot one of the Clock's side to turn Purple</li>
                             <li>Jump pad to Cosmodrone</li>
+                            <img className='big-image'
+                                src='/aotd/labled-cosmodrone.webp'
+                                alt='Labled cosmodrone'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Shoot a Tower</li>
                             <li>Jump pad to Ashwood</li>
                             <li>Turn Purple</li>
                             <li>Jump pad to Farm</li>
-                            <li>Shoot Clock</li>
-                            <li>Stand on the time shown</li>
-                            <li>Shoot the head once turned</li>
+                            <img className='big-image'
+                                src='/aotd/labled-farm.webp'
+                                alt='Labled farm'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Look at the Clock on the wall</li>
+                            <li>Stand on the hour shown</li>
+                            <li>Shoot the head once the eyes glow</li>
                             <li>Grab parts</li>
                             <li>Place and activate the parts</li>
                             <li>Protect the parts</li>
                             <ul>
-                                <li>Can use free Nuke to skip ~30s at Ashwood</li>
+                                <li>Can use free Nuke at Ashwood to skip ~30s</li>
                             </ul>
                             <li>Jump pad to Ashwood</li>
                             <li>
@@ -882,10 +997,15 @@ const AOTD = ({ isSolo, isKnower }) => {
                             </li>
                             <li>Turn Purple</li>
                             <li>Drive to Exit 115</li>
+                            <img className='big-image'
+                                src='/aotd/labled-exit-115.webp'
+                                alt='Labled exit 115'
+                                decoding='async'
+                                loading='lazy'/>
                             <li>Put Tessie against the Truck</li>
                             <li>Jump pad to Cosmodrone</li>
                             <li>Shoot last Tower</li>
-                            <li>Read screen</li>
+                            <li>Read monitor</li>
                             {(codeSoulsCosmodrone.length === 0)
                                 ? <ul>
                                     <li>Look at the first monitor only, what is the symbol?</li>
@@ -914,13 +1034,22 @@ const AOTD = ({ isSolo, isKnower }) => {
                             <li>Jump pad to Ashwood</li>
                             <li>Turn Purple</li>
                             <li>Teleport to Tessie</li>
-                            <li>Shoot Clock</li>
+                            <li>Shoot Clock on top of Service Station</li>
                             <li>Put Klaus on the Mechanic</li>
+                            <li>Actviate the Cashier by Meleeing the Cash Register</li>
                             <li>Dunk the Cashier</li>
+                            <li>Activate the Trucker</li>
                             <li>Dunk the Trucker</li>
+                            <li>Activate the Mechanic</li>
                             <li>Dunk the Mechanic</li>
                             <li>Jump pad to Ashwood</li>
                             <li>Jump pad to Lake</li>
+                            <img className='big-image'
+                                src='/aotd/labled-lake.webp'
+                                alt='Labled lake'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Interact with Soul in the back</li>
                             <li>Shoot Projector</li>
                             <li>Read Pictures</li>
                             {(codeSoulsLake.length >= 4)
@@ -928,30 +1057,42 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 : <ul>
                                     <li>Click the pictures in order.</li>
                                     <div className='codes wrap'>
-                                        <button className='image'
-                                            style={{ backgroundImage: 'url(/aotd/lake-souls-front.webp)' }}
-                                            onClick={(event) => {
-                                                event.currentTarget.style.display = 'none';
-                                                handleCodeSoulsLake(1);
-                                            }}></button>
-                                        <button className='image'
-                                            style={{ backgroundImage: 'url(/aotd/lake-souls-back.webp)' }}
-                                            onClick={(event) => {
-                                                event.currentTarget.style.display = 'none';
-                                                handleCodeSoulsLake(2);
-                                            }}></button>
-                                        <button className='image'
-                                            style={{ backgroundImage: 'url(/aotd/lake-souls-tool.webp)' }}
-                                            onClick={(event) => {
-                                                event.currentTarget.style.display = 'none';
-                                                handleCodeSoulsLake(3);
-                                            }}></button>
-                                        <button className='image'
-                                            style={{ backgroundImage: 'url(/aotd/lake-souls-shed.webp)' }}
-                                            onClick={(event) => {
-                                                event.currentTarget.style.display = 'none';
-                                                handleCodeSoulsLake(4);
-                                            }}></button>
+                                        <div className='side-activity horizontal'>
+                                            <button className='image'
+                                                style={{ backgroundImage: 'url(/aotd/lake-souls-tool.webp)' }}
+                                                onClick={(event) => {
+                                                    event.currentTarget.style.display = 'none';
+                                                    handleCodeSoulsLake(3);
+                                                }}></button>
+                                            <button className='symbol long'>Tool</button>
+                                        </div>
+                                        <div className='side-activity horizontal'>
+                                            <button className='image'
+                                                style={{ backgroundImage: 'url(/aotd/lake-souls-front.webp)' }}
+                                                onClick={(event) => {
+                                                    event.currentTarget.style.display = 'none';
+                                                    handleCodeSoulsLake(1);
+                                                }}></button>
+                                            <button className='symbol long'>Front</button>
+                                        </div>
+                                        <div className='side-activity horizontal'>
+                                            <button className='image'
+                                                style={{ backgroundImage: 'url(/aotd/lake-souls-back.webp)' }}
+                                                onClick={(event) => {
+                                                    event.currentTarget.style.display = 'none';
+                                                    handleCodeSoulsLake(2);
+                                                }}></button>
+                                            <button className='symbol long'>Back</button>
+                                        </div>
+                                        <div className='side-activity horizontal'>
+                                            <button className='image'
+                                                style={{ backgroundImage: 'url(/aotd/lake-souls-shed.webp)' }}
+                                                onClick={(event) => {
+                                                    event.currentTarget.style.display = 'none';
+                                                    handleCodeSoulsLake(4);
+                                                }}></button>
+                                            <button className='symbol long'>Shed</button>
+                                        </div>
                                     </div>
                                 </ul>}
                             <li>Shoot Reels</li>
@@ -960,6 +1101,14 @@ const AOTD = ({ isSolo, isKnower }) => {
                                 <span>{codeSoulsLake.indexOf(2) + 1}</span>
                                 <span>{codeSoulsLake.indexOf(3) + 1}</span>
                                 <span>{codeSoulsLake.indexOf(4) + 1}</span>
+                            </div>
+                            <div className='spread'>
+                                {lakeSoulsLocations.map((location) => {
+                                    return <button className='symbol long'
+                                        key={`lake-souls-location-${location}`}>
+                                        {location.replace(/^./, (char) => char.toUpperCase())}
+                                    </button>
+                                })}
                             </div>
                             <li>Activate Box and put Klaus on it</li>
                         </ol>
