@@ -113,6 +113,10 @@ button {
         &.long {
             width: 12rem;
         }
+
+        &.fill {
+            width: 100%;
+        }
     }
 
     &.image {
@@ -517,6 +521,13 @@ button {
 .small-image {
     @extend .big-image;
     width: 26.7rem;
+}
+
+.smaller-image {
+    @extend .big-image;
+    width: 17.4rem;
+    height: 14rem;
+    margin: 0;
 }
 
 .tomahawk {

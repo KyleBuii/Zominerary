@@ -9,7 +9,7 @@ const Footer = () => {
                 <span>Background images from pngtree</span>
                 <span>&#8226;</span>
                 <div>
-                    <a href='https://pndgtree.com/freepng/starry-night-sky-a-outer-space-transparent-background-with-a-star-field-texture-overlay_15229671.html'>Sky</a>
+                    <a href='https://pngtree.com/freepng/starry-night-sky-a-outer-space-transparent-background-with-a-star-field-texture-overlay_15229671.html'>Sky</a>
                     <span>&#8226;</span>
                     <a href='https://pngtree.com/freepng/white-fog-background_7961573.html'>Fog</a>
                     <span>&#8226;</span>

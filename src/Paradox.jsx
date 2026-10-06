@@ -18,6 +18,17 @@ const mapCorruptedWall = {
 const Paradox = () => {
     const [corruptedWall, setCorruptedWall] = useState('');
     const [mannequin, setMannequin] = useState(-1);
+    const [musicNotes, setMusicNotes] = useState([...Array(8).fill(-1)]);
+    const [musicNotesNumber, setMusicNotesNumber] = useState([...Array.from({length: 8}, (_, i) => i + 1)]);
+
+    const handleMusicNotes = (position, number) => {
+        setMusicNotes((prev) => {
+            const newNotes = [...prev];
+            newNotes[position] = number;
+            return newNotes;
+        });
+        setMusicNotesNumber((prev) => prev.filter((noteNumber) => noteNumber !== number))
+    };
 
     return (
         <section className='page'>
@@ -166,28 +177,28 @@ const Paradox = () => {
                     <li>Find and Interact with RC-XD Controller</li>
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
-                            <button className='image'
-                                style={{
-                                    backgroundImage: 'url(/paradox/labled-yellow-house-garage.webp)'
-                                }}></button>
-                            <button className='symbol long'>Yellow House Garage</button>
+                            <img className='smaller-image'
+                                src='/paradox/labled-yellow-house-garage.webp'
+                                alt='Labled yellow house garage'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Yellow House Garage</button>
                         </div>
                         <div className='side-activity horizontal'>
-                            <button className='image'
-                                style={{
-                                    backgroundImage: 'url(/paradox/labled-trinity-ave-2.webp)',
-                                    backgroundPosition: 'left'
-                                }}></button>
-                            <button className='symbol long'>Trinity Ave</button>
+                            <img className='smaller-image'
+                                src='/paradox/labled-trinity-ave-2.webp'
+                                alt='Labled trinity ave 2'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Trinity Ave</button>
                         </div>
                         <div className='side-activity horizontal'>
-                            <button className='image'
-                                style={{
-                                    backgroundImage: 'url(/paradox/labled-green-house-backyard.webp)'
-                                    , backgroundPosition: 'left'
-                                }}
-                                onClick={() => setCorruptedWall('green')}></button>
-                            <button className='symbol long'>Green House Backyard</button>
+                            <img className='smaller-image'
+                                src='/paradox/labled-green-house-backyard.webp'
+                                alt='Labled green house backyard'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Green House Backyard</button>
                         </div>
                     </div>
                     <li>Use the Ramp to Jump over the Fence and Blow up the Door</li>
@@ -257,27 +268,60 @@ const Paradox = () => {
                     <li>Find Headphones</li>
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
-                            <button className='image headphones-yellow'></button>
-                            <button className='symbol long'>Yellow House Backyard</button>
+                            <img className='smaller-image'
+                                src='/paradox/labled-yellow-house-backyard.webp'
+                                alt='Labled yellow house backyard'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Yellow House Backyard</button>
                         </div>
                         <div className='side-activity horizontal'>
-                            <button className='image headphones-green'></button>
-                            <button className='symbol long'>Green House Upstairs</button>
+                            <img className='smaller-image'
+                                src='/paradox/labled-green-house-upstairs.webp'
+                                alt='Labled green house upstairs'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Green House Upstairs</button>
                         </div>
                         <div className='side-activity horizontal'>
-                            <button className='image headphones-spawn'></button>
-                            <button className='symbol long'>Spawn</button>
+                            <img className='smaller-image'
+                                src='/paradox/labled-spawn.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Spawn</button>
                         </div>
                     </div>
-                    <li>Find Tortured Zombie
-                        <ul>
-                            <li>Green House Backyard</li>
-                            <li>Yellow House Backyard</li>
-                            <li>Trinity Ave</li>
-                        </ul>
-                    </li>
+                    <li>Find Tortured Zombie</li>
+                    <div className='codes wrap'>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/tortured-green-house-backyard.webp'
+                                alt='Tortured green house backyard'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Green House Backyard</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/tortured-yellow-house-backyard.webp'
+                                alt='Tortured yellow house backyard'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Yellow House Backyard</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/tortured-trinity-ave.webp'
+                                alt='Tortured trinity ave'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Trinity Ave</button>
+                        </div>
+                    </div>
                     <li>Bring and Kill Tortured Zombie at Truck</li>
                     <li>Travel to Green House Backyard</li>
+                    <li>Find Piano Teacher</li>
                     <li>Use Brain Rot on Piano Teacher</li>
                     <li>Wait for Piano Teacher to go to the Piano</li>
                     <img className='big-image'
@@ -285,23 +329,107 @@ const Paradox = () => {
                         alt='Labled green house'
                         decoding='async'
                         loading='lazy'/>
-                    <li>Teleport to Past</li>
-                    <li>Travel to Trinity Ave</li>
-                    <li>Plant Seeds</li>
-                    <li>Get Kills with Wonder Weapon</li>
-                    <li>Teleport to Future</li>
+                    <li>Teleport to the Past</li>
                     <li>Travel to Trinity Ave</li>
                     <img className='big-image'
                         src='/paradox/labled-trinity-ave-1.webp'
                         alt='Labled trinity ave 1'
                         decoding='async'
                         loading='lazy'/>
+                    <li>Plant Seeds</li>
+                    <li>Get Kills with Wonder Weapon</li>
+                    <li>Teleport to the Future</li>
+                    <li>Travel to Trinity Ave</li>
                     <li>Tomahawk the Tree 3 times</li>
                     <li>Grab Firewood</li>
                     <li>Shoot the top of the Speaker Pole</li>
                     <li>Activate Wisp Tea</li>
                     <li>Grab Goggles</li>
                     <li><span className='note-tortured-zombie'>DO TORTURED ZOMBIE IF YOU SEE ONE</span></li>
+                    <li>Interact with 8 Blue Music Notes in order</li>
+                    <div className='codes wrap'>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/labled-green-house-backyard.webp'
+                                alt='Labled green house backyard'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Green House Backyard</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/labled-spawn.webp'
+                                alt='Labled spawn'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Spawn</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/labled-yellow-house-backyard.webp'
+                                alt='Labled yellow house backyard'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Yellow House Backyard</button>
+                        </div>
+                    </div>
+                    <div className='codes wrap'>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/labled-trinity-ave-2.webp'
+                                alt='Labled trinity ave 2'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Trinity Ave</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/labled-trinity-ave-1.webp'
+                                alt='Labled trinity ave 1'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Trinity Ave</button>
+                        </div>
+                    </div>
+                    <img className='map'
+                        src='/paradox/music-note-helper.webp'
+                        alt='Labled trinity ave 1'
+                        decoding='async'
+                        loading='lazy'/>
+                    {[...Array(8).keys()].map((numberNote) => {
+                        return (musicNotes[numberNote] === -1)
+                            ? <div className='codes'
+                                key={`music-note-${numberNote}`}>
+                                <button className='symbol long'>Music Note #{numberNote + 1}</button>
+                                {musicNotesNumber.map((number) => {
+                                    return <button className='symbol'
+                                        onClick={() => handleMusicNotes(numberNote, number)}
+                                        key={`music-note-buttons-${numberNote}-${number}`}>
+                                        {number}
+                                    </button>
+                                })}
+                            </div>
+                            : null
+                    })}
+                    <li>Interact in order.</li>
+                    <div className='codes wrap'>
+                        {[...Array(8).keys()].map((number) => {
+                            return <button className='symbol'
+                                key={`music-note-number-${number}`}>
+                                #{number + 1}
+                            </button>
+                        })}
+                    </div>
+                    <div className='codes wrap'>
+                        {musicNotes.map((number, numberIndex) => {
+                            return <button className='symbol'
+                                key={`music-note-order-number-${numberIndex}`}>
+                                {number}
+                            </button>
+                        })}
+                    </div>
+                    <li>Bring and Kill Final Tortured Mimic to Truck</li>
+                    <li>Teleport to the Past</li>
                 </ol>
             </div>
         </section>
