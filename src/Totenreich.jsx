@@ -19,18 +19,26 @@ const Totenreich = () => {
             <span className='main-title title-totenreich'>Totenreich</span>
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Starting Room</span>
-                    <div className='note'>
-                        <span>[</span>
-                        <div className='subnote'>
-                            <span>PAP</span>
-                            <span className='normal'>= Pack-a-Punch</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <div>
+                        <span>Steps</span>
+                        <div className='note'>
+                            <span>[</span>
+                            <div className='subnote'>
+                                <span>PAP</span>
+                                <span className='normal'>= Pack-a-Punch</span>
+                            </div>
+                            <span>]</span>
                         </div>
-                        <span>]</span>
                     </div>
+                    <div></div>
                 </div>
                 <ol>
-                    <li>Repair boxes</li>
+                    <li>Repair Boxes</li>
                     <li>Enter Tyr's Head</li>
                     <li>Grab Admin Card</li>
                     <li>Travel to War Factory</li>
@@ -42,12 +50,18 @@ const Totenreich = () => {
             </div>
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Crowbar</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
                     {(codeNote === '')
                         ? <>
-                            <li>What is the second word on the note?</li>
+                            <li>What is the second Word on the Note?</li>
                             <div className='codes'>
                                 <button className='symbol'
                                     onClick={() => handleCodeNote('switch')}>

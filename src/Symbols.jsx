@@ -482,8 +482,8 @@ export const symbolEngine = <svg viewBox='0 0 100 100'>
 
 export const symbolRocket = <svg viewBox='0 0 100 100'>
     <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M25 25 H75 V75'/>
-        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+        <path d='M75 25 H25 V75'/>
+        <circle cx='45' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
     </g>
 </svg>;
 

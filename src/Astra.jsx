@@ -374,53 +374,66 @@ const Astra = ({ isKnower }) => {
                     {/* Starting Room */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Starting Room</span>
+                            <span></span>
                         </div>
-                        <ul>
-                            <img className='big-image'
-                                src='/astra/labled-spawn.webp'
-                                alt='Labled spawn'
-                                decoding='async'
-                                loading='lazy'/>
-                        </ul>
+                        <img className='big-image'
+                            src='/astra/labled-spawn.webp'
+                            alt='Labled spawn'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
+                        </div>
                         <ol>
-                            <li>Shoot Free Bonus Points</li>
                             <li>Travel to Luminarium</li>
                         </ol>
                     </div>
                     {/* Power 1/2 */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Power 1/2</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>Museum</span>
-                                    <span className='normal'>= Museum Infinitum</span>
-                                </div>
-                                <span>]</span>
-                            </div>
+                            <span></span>
+                        </div>
+                        <img className='big-image'
+                            src='/astra/labled-luminarium.webp'
+                            alt='Labled spawn'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <span>Tips & Tricks</span>
+                            <div></div>
                         </div>
                         <ul>
-                            <img className='big-image'
-                                src='/astra/labled-luminarium.webp'
-                                alt='Labled spawn'
-                                decoding='async'
-                                loading='lazy'/>
                             <li>Disk Side Easter Egg at Luminarium</li>
                             <ul>
-                                <li>Grab Disc</li>
-                                <li>Put Disc in Gramophone</li>
                                 <li>Kills with Field Upgrade</li>
                             </ul>
                         </ul>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Museum</span>
+                                        <span className='normal'>= Museum Infinitum</span>
+                                    </div>
+                                    <span>]</span>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
                         <ol>
-                            <li>Grab Harmonic Component</li>
+                            <li>Grab Fuse</li>
                             <li>Read Page</li>
                             {(selectedPlanets.length >= 1) && (selectedPlanetsDir.length >= 2)
                                 ? <></>
                                 : <ul>
-                                    <li>What was on the Page?</li>
+                                    <li>What is on the Page?</li>
                                     {(selectedPlanets.length >= 1)
                                         ? <></>
                                         : <div className='codes'>
@@ -459,30 +472,34 @@ const Astra = ({ isKnower }) => {
                     {/* Power 2/2 */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Power 2/2</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>Museum</span>
-                                    <span className='normal'>= Museum Infinitum</span>
+                            <span></span>
+                        </div>
+                        <img className='big-image'
+                            src='/astra/labled-museum.webp'
+                            alt='Labled spawn'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Tips & Tricks</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Museum</span>
+                                        <span className='normal'>= Museum Infinitum</span>
+                                    </div>
+                                    <div className='subnote'>
+                                        <span>Machina</span>
+                                        <span className='normal'>= Machina Astralis</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <div className='subnote'>
-                                    <span>Machina</span>
-                                    <span className='normal'>= Machina Astralis</span>
-                                </div>
-                                <div className='subnote'>
-                                    <span>Dome</span>
-                                    <span className='normal'>= Observatory Dome</span>
-                                </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ul>
-                            <img className='big-image'
-                                src='/astra/labled-museum.webp'
-                                alt='Labled spawn'
-                                decoding='async'
-                                loading='lazy'/>
                             <li>Disk Side Easter Egg at Museum</li>
                             <ul>
                                 <li>Kills with Melee</li>
@@ -493,15 +510,29 @@ const Astra = ({ isKnower }) => {
                             </ul>
                             <li>Sisters Side Easter Egg</li>
                         </ul>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Dome</span>
+                                        <span className='normal'>= Observatory Dome</span>
+                                    </div>
+                                    <span>]</span>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
                         <ol>
-                            <li>Get Saw</li>
+                            <li>Get Saw by Breaking the Glass</li>
                             <li>Travel to Machina</li>
                             <img className='big-image'
                                 src='/astra/labled-machina.webp'
                                 alt='Labled spawn'
                                 decoding='async'
                                 loading='lazy'/>
-                            <li>Grab Harmonic Component</li>
+                            <li>Grab Fuse</li>
                             <li>Travel to Archive</li>
                             <img className='big-image'
                                 src='/astra/labled-archive.webp'
@@ -512,7 +543,7 @@ const Astra = ({ isKnower }) => {
                             {(selectedPlanets.length >= 2) && (selectedPlanetsDir.length >= 4)
                                 ? <></>
                                 : <ul>
-                                    <li>What was on the Page?</li>
+                                    <li>What is on the Page?</li>
                                     {(selectedPlanets.length >= 2)
                                         ? <></>
                                         : <div className='codes'>
@@ -551,42 +582,49 @@ const Astra = ({ isKnower }) => {
                                 alt='Labled dome'
                                 decoding='async'
                                 loading='lazy'/>
+                            <li>Install Fuses at Power</li>
                             <li>Turn on Power </li>
                         </ol>
                     </div>
                     {/* O.S.C.A.R.'s Nightmare */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>O.S.C.A.R.'s Nightmare</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>PAP</span>
-                                    <span className='normal'>= Pack-a-Punch</span>
+                            <span></span>
+                        </div>
+                        <img className='big-image'
+                            src='/astra/labled-panels-left.webp'
+                            alt='Labled panels left side'
+                            decoding='async'
+                            loading='lazy'/>
+                        <img className='big-image'
+                            src='/astra/labled-panels-right.webp'
+                            alt='Labled panels right side'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>PAP</span>
+                                        <span className='normal'>= Pack-a-Punch</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ol>
-                            <div className='codes wrap'>
-                                <img className='small-image'
-                                    src='/astra/labled-panels-left.webp'
-                                    alt='Labled panels left side'
-                                    decoding='async'
-                                    loading='lazy'/>
-                                <img className='small-image'
-                                    src='/astra/labled-panels-right.webp'
-                                    alt='Labled panels right side'
-                                    decoding='async'
-                                    loading='lazy'/>
-                            </div>
-                            <li>Shoot 1 smoking Panel</li>
+                            <li>Shoot 1 Smoking Panel</li>
                             <li>
                                 When
                                 <span className='high-value-target'> OSCAR </span>
-                                Teleports, Wait 30s~
+                                Teleports, Wait for Panels to Restart in 30s~
                             </li>
-                            <li>Shoot smoking Panels [5]</li>
+                            <li>Shoot Smoking Panels [5]</li>
                             <li>Use Telescope and Find Mars</li>
                             {(codeMars.length >= 4)
                                 ? <></>
@@ -616,16 +654,17 @@ const Astra = ({ isKnower }) => {
                                         0
                                     </button>
                                 </ul>}
-                            <li>Find the Sun</li>
+                            <li><span className='note-sun'>BEFORE LOOKING AT THE SUN, MAKE SURE OSCAR IS NEAR PAP</span></li>
+                            <li>Find and Look at the Sun</li>
                             <li>
                                 Beam
                                 <span className='high-value-target'> OSCAR</span>
                             </li>
-                            <li>Read Symbols [5]</li>
+                            <li>Interact and Read Symbols [5]</li>
                                 {(codePillar.length === 5)
                                     ? <></>
                                     : <ul>
-                                        <li>Click the symbols in order.</li>
+                                        <li>Click the Symbols in Order</li>
                                         <div className='codes'>
                                             <button className='symbol'
                                                 onClick={(event) => handleCodePillar('diamond', event)}>
@@ -653,13 +692,35 @@ const Astra = ({ isKnower }) => {
                                             </button>
                                         </div>
                                     </ul>}
-                            <li>Buy Cyro Freeze</li>
+                            <li>
+                                <div className='image-list'>
+                                    <span>Buy Cyro Freeze</span>
+                                    <img className='ammo-mod'
+                                        src='/ammo-mods/cryo-freeze.webp'
+                                        alt='Ammo mod cyro freeze'
+                                        decoding='async'
+                                        loading='lazy'/>
+                                </div>
+                            </li>
                             <li>Get Fragments [3]</li>
                             <ul>
-                                <li>Shoot Purple Crystals with Cyro Freeze</li>
+                                <li>
+                                    <div className='image-list'>
+                                        <span>Shoot Purple Crystals with Cyro Freeze</span>
+                                        <img className='ammo-mod'
+                                            src='/ammo-mods/cryo-freeze.webp'
+                                            alt='Ammo mod cyro freeze'
+                                            decoding='async'
+                                            loading='lazy'/>
+                                    </div>
+                                </li>
                             </ul>
-                            <li>Shoot blinking Lamp</li>
-                            <li>Push a Round</li>
+                            <li>Find and Shoot Blinking Lamp Around the Map</li>
+                            <li>
+                                Respawn
+                                <span className='high-value-target'> OSCAR </span>
+                                by Pushing a Round after Killing it
+                            </li>
                             <li>
                                 Travel to Museum and Bring
                                 <span className='high-value-target'> OSCAR</span>
@@ -679,16 +740,16 @@ const Astra = ({ isKnower }) => {
                                 <span className='high-value-target'> OSCAR </span>
                                 under the Rocket
                             </li>
-                            <li>Push a Round</li>
+                            <li>Respawn <span className='high-value-target'>OSCAR</span></li>
                             <li>Travel to Spawn</li>
                             <img className='big-image'
                                 src='/astra/labled-spawn.webp'
                                 alt='Labled spawn'
                                 decoding='async'
                                 loading='lazy'/>
-                            <li>Shoot Tessie with a PAP gun</li>
+                            <li>Shoot Tessie with a PAP gun to Teleport <span className='high-value-target'>OSCAR</span></li>
                             <li>Grab Car Battery</li>
-                            <li>Travel to Luminarium</li>
+                            <li>Travel to Luminarium and Bring <span className='high-value-target'>OSCAR</span></li>
                             <img className='big-image'
                                 src='/astra/labled-luminarium.webp'
                                 alt='Labled luminarium'
@@ -699,7 +760,7 @@ const Astra = ({ isKnower }) => {
                                 <span className='high-value-target'> OSCAR</span>
                             </li>
                             <ul>
-                                <li>It shouldn't cost Money</li>
+                                <li>It shouldn't Cost Money</li>
                             </ul>
                             <li>
                                 Grab
@@ -710,33 +771,41 @@ const Astra = ({ isKnower }) => {
                     {/* Test your Patience */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Test your Patience</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>Dome</span>
-                                    <span className='normal'>= Observatory Dome</span>
+                            <span></span>
+                        </div>
+                        <img className='big-image'
+                            src='/astra/labled-machina.webp'
+                            alt='Labled machina'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Dome</span>
+                                        <span className='normal'>= Observatory Dome</span>
+                                    </div>
+                                    <div className='subnote'>
+                                        <span>Machina</span>
+                                        <span className='normal'>= Machina Astralis</span>
+                                    </div>
+                                    <div className='subnote'>
+                                        <span>PAP</span>
+                                        <span className='normal'>= Pack-a-Punch</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <div className='subnote'>
-                                    <span>Machina</span>
-                                    <span className='normal'>= Machina Astralis</span>
-                                </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ol>
-                            <li>Push 2~ Rounds</li>
-                            <li>
-                                <span className='note-oscar'>
-                                    Don't let OSCAR see you
-                                </span>
-                            </li>
+                            <li>Respawn <span className='high-value-target'>OSCAR</span> by Pushing 2~ Rounds</li>
+                            <li><span className='note-oscar'>Don't let OSCAR see you</span></li>
                             <li>Travel to Machina</li>
-                            <img className='big-image'
-                                src='/astra/labled-machina.webp'
-                                alt='Labled machina'
-                                decoding='async'
-                                loading='lazy'/>
                             <li>Read last Page</li>
                             {(selectedPlanets.length >= 3) && (selectedPlanetsDir.length >= 6)
                                 ? <></>
@@ -776,7 +845,9 @@ const Astra = ({ isKnower }) => {
                                 </ul>}
                             <li>
                                 Tail
-                                <span className='high-value-target'> OSCAR</span>
+                                <span className='high-value-target'> OSCAR </span>
+                                and
+                                <span className='note-oscar'> Don't let it see you</span>
                             </li>
                             <li>
                                 <span>Wait for Thurston to say, </span>
@@ -785,7 +856,7 @@ const Astra = ({ isKnower }) => {
                             {(codeOscar.length === 3)
                                 ? <></>
                                 : <ul>
-                                    <li>What planets to remember?</li>
+                                    <li>What Planets to Remember?</li>
                                     <div className='codes wrap'>
                                         {Object.entries(mapPlanets).map(([planet, element]) => {
                                             return <button className='symbol'
@@ -805,7 +876,7 @@ const Astra = ({ isKnower }) => {
                                 alt='Labled dome'
                                 decoding='async'
                                 loading='lazy'/>
-                            <li>Input code</li>
+                            <li>Input <span className='high-value-target'>OSCAR's</span> Code</li>
                             <div className='codes'>
                                 {codeOscar.map((number) => {
                                     return <button className='symbol'
@@ -814,30 +885,39 @@ const Astra = ({ isKnower }) => {
                                     </button>
                                 })}
                             </div>
-                            <li>Grab Key</li>
+                            <li>Grab Key from Lowering Belt near PAP</li>
                         </ol>
                     </div>
                     {/* Steal the Neptune */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Steal the Neptune</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>Machina</span>
-                                    <span className='normal'>= Machina Astralis</span>
+                            <span></span>
+                        </div>
+                        <img className='big-image'
+                            src='/astra/labled-scholar.webp'
+                            alt='Labled scholar'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Machina</span>
+                                        <span className='normal'>= Machina Astralis</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Travel to Machina</li>
-                            <img className='big-image'
-                                src='/astra/labled-scholar.webp'
-                                alt='Labled scholar'
-                                decoding='async'
-                                loading='lazy'/>
-                            <li>Get Brain</li>
+                            <li>Interact with Brain</li>
+                            <li>Once Open, Hold Interact to Get Brain</li>
                             <li>Travel to Luminarium</li>
                             <img className='big-image'
                                 src='/astra/labled-luminarium.webp'
@@ -845,7 +925,8 @@ const Astra = ({ isKnower }) => {
                                 decoding='async'
                                 loading='lazy'/>
                             <li>Place Brain</li>
-                            <li>Pick up Brain</li>
+                            <li>Interact and Protect Brain</li>
+                            <li>Once Finished, Pick up Brain</li>
                             <li>Travel to Machina</li>
                             <img className='big-image'
                                 src='/astra/labled-machina.webp'
@@ -854,7 +935,7 @@ const Astra = ({ isKnower }) => {
                                 loading='lazy'/>
                             <li>Install Brain</li>
                             <ul>
-                                <li>What Books are shown?</li>
+                                <li>Look at the Monitor, What Books are Shown?</li>
                                 {Object.entries(books).map(([category, book]) => (
                                     <div className='codes wrap'
                                         key={category}>
@@ -871,7 +952,13 @@ const Astra = ({ isKnower }) => {
                                     </div>
                                 ))}
                             </ul>
-                            <li>Turn statues</li>
+                            <li>Travel to Archive</li>
+                            <img className='big-image'
+                                src='/astra/labled-archive.webp'
+                                alt='Labled archive'
+                                decoding='async'
+                                loading='lazy'/>
+                            <li>Turn Statues</li>
                             <div className='codes'>
                                 {Object.values(codeStatues).map((number, numberIndex) => {
                                     return <button className='symbol'
@@ -882,26 +969,38 @@ const Astra = ({ isKnower }) => {
                             </div>
                             <li>Grab Neptune</li>
                             <li>Insert Neptune</li>
+                            <img className='big-image'
+                                style={{ margin: '1rem 0' }}
+                                src='/astra/labled-machina.webp'
+                                alt='Labled machina'
+                                decoding='async'
+                                loading='lazy'/>
                         </ol>
                     </div>
                     {/* O.S.C.A.R.'s Torment */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>O.S.C.A.R.'s Torment</span>
+                            <span></span>
+                        </div>
+                        <img className='big-image'
+                            src='/astra/labled-machina.webp'
+                            alt='Labled machina'
+                            decoding='async'
+                            loading='lazy'/>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
-                            <img className='big-image'
-                                src='/astra/labled-machina.webp'
-                                alt='Labled machina'
-                                decoding='async'
-                                loading='lazy'/>
                             <li>Input code</li>
                             <div className='codes'>
                                 <button className='symbol'>
                                     {codeMars.join('')}
                                 </button>
                             </div>
-                            <li>Shoot planets</li>
+                            <li>Shoot Planets According to the Compass in the Middle</li>
                             <div className='codes'>
                                 {selectedPlanets.map((planet) => {
                                     return <button className='symbol'
@@ -920,20 +1019,31 @@ const Astra = ({ isKnower }) => {
                                     </button>
                                 })}
                             </div>
+                            <li>Once Alligned, Interact with Monitor</li>
                             <li>
                                 Torment
                                 <span className='high-value-target'> OSCAR</span>
                             </li>
+                            <ul>
+                                <li>Shoot UFOs when they Fly to the Middle</li>
+                            </ul>
                         </ol>
                     </div>
                     {/* The Vampire Cosmonaut */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>The Vampire Cosmonaut</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Install Barrel</li>
-                            <li>Shoot Towers</li>
+                            <li>Shoot Towers and Wait for Bird</li>
+                            <li>Shoot Middle Tower to Reset Bird's Position</li>
                             <li>Grab Bird</li>
                             <li>Insert Bird</li>
                             <li>
@@ -943,8 +1053,9 @@ const Astra = ({ isKnower }) => {
                             {(codeMarsPillar.length === 5)
                                 ? <></>
                                 : <ul>
-                                    <li>Starting from the right pillar, what are the symbols?</li>
-                                    <div className='big-image mars right-pillar'>
+                                    <li>Starting from Right Pillar, what are the Symbols?</li>
+                                    <div className='big-image mars right-pillar'
+                                        style={{ margin: '1rem 0' }}>
                                         <span>&#8592; START</span>
                                         <span>&#8595;</span>
                                         <span>&#8594;</span>
@@ -972,7 +1083,7 @@ const Astra = ({ isKnower }) => {
                                         </button>
                                     </div>
                                 </ul>}
-                            <li>Input code</li>
+                            <li>Interact with Pillars in Order</li>
                             <div className='big-image mars'>
                                 <span>{codePillar.indexOf(codeMarsPillar[0]) + 1 || 'S'}</span>
                                 <span>{codePillar.indexOf(codeMarsPillar[1]) + 1 || 'S'}</span>

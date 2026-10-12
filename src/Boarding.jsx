@@ -1,10 +1,11 @@
 import { memo, useState } from 'react';
 import { useNavigate } from 'react-router';
 
-const Boarding = ({ setterSolo, setterKnower }) => {
+const Boarding = ({ setterSolo, setterKnower, setterSolver }) => {
     const [setted, setSetted] = useState({
         solo: false,
         knower: false,
+        solver: false,
     });
 
     const navigate = useNavigate();
@@ -18,6 +19,7 @@ const Boarding = ({ setterSolo, setterKnower }) => {
 
         if (type === 'solo') setterSolo(boolean);
         if (type === 'knower') setterKnower(boolean);
+        if (type === 'solver') setterSolver(boolean);
     };
 
     return (
@@ -42,6 +44,17 @@ const Boarding = ({ setterSolo, setterKnower }) => {
                             onClick={() => handleAnswer('knower', true)}>Yes</button>
                         <button className='symbol'
                             onClick={() => handleAnswer('knower', false)}>No</button>
+                    </div>
+                </>}
+            {(setted.solver)
+                ? <></>
+                : <>
+                    <span className='title'>Do you want solvers?</span>
+                    <div className='choices'>
+                        <button className='symbol'
+                            onClick={() => handleAnswer('solver', true)}>Yes</button>
+                        <button className='symbol'
+                            onClick={() => handleAnswer('solver', false)}>No</button>
                     </div>
                 </>}
         </section>

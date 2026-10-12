@@ -23,14 +23,30 @@ const superEasterEgg = () => {
             {/* Ashes of the Damned */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Ashes of the Damned</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Tips & Tricks</span>
+                    <div></div>
                 </div>
                 <ul>
                     <li>
-                        Need
-                        <span className='tesla-storm'> Tesla Storm</span>
+                        <div className='image-list'>
+                            <div>Need <span className='tesla-storm'> Tesla Storm</span></div>
+                            <img className='field-upgrade'
+                                src='/field-upgrades/tesla-storm.webp'
+                                alt='Field upgrade tesla storm'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
                     </li>
                 </ul>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
+                </div>
                 <ol>
                     <li>Grab Canister</li>
                     <li>Find Twins</li>
@@ -43,9 +59,14 @@ const superEasterEgg = () => {
                     <li>Travel to Farm</li>
                     <li>Pull Toy Box on Windmill with Wonder Weapon</li>
                     <li>
-                        Use
-                        <span className='tesla-storm'> Tesla Storm </span>
-                        on Toy Box
+                        <div className='image-list'>
+                            <div>Use <span className='tesla-storm'>Tesla Storm</span> on Toy Box</div>
+                            <img className='field-upgrade'
+                                src='/field-upgrades/tesla-storm.webp'
+                                alt='Field upgrade tesla storm'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
                     </li>
                     <li>Travel to Monolith Forest</li>
                     <li>Pull and Interact with 3 Crystals</li>
@@ -61,7 +82,13 @@ const superEasterEgg = () => {
             {/* Astra Malorum */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Astra Malorum</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Tips & Tricks</span>
+                    <div></div>
                 </div>
                 <ul>
                     <li>
@@ -69,6 +96,10 @@ const superEasterEgg = () => {
                         <span className='explosive'> Explosives</span>
                     </li>
                 </ul>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
+                </div>
                 <ol>
                     <li>Travel to Luminarium</li>
                     <li>
@@ -120,7 +151,13 @@ const superEasterEgg = () => {
             {/* Paradox Junction */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Paradox Junction</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Tips & Tricks</span>
+                    <div></div>
                 </div>
                 <ul>
                     <li>
@@ -128,6 +165,10 @@ const superEasterEgg = () => {
                         <span className='psych-grenade'> Psych Grenade</span>
                     </li>
                 </ul>
+                <div className='sub-title'>
+                    <span>Tips & Tricks</span>
+                    <div></div>
+                </div>
                 <ol>
                     <li>Teleport to Old</li>
                     <li>Interact with ? Box on Red Garage Door</li>
@@ -164,14 +205,30 @@ const superEasterEgg = () => {
             {/* Totenreich */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Totenreich</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Tips & Tricks</span>
+                    <div></div>
                 </div>
                 <ul>
                     <li>
-                        Need
-                        <span className='wildfire'> Wildfire</span>
+                        <div className='image-list'>
+                            <div>Need <span className='wildfire'>Wildfire</span></div>
+                            <img className='field-upgrade'
+                                src='/field-upgrades/wild-fire.webp'
+                                alt='Field upgrade wild fire'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
                     </li>
                 </ul>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
+                </div>
                 <ol>
                     <li>Get access to the Lighthouse [Wonder Weapon]</li>
                     <li>On the second floor, go to the corner and look in the broken building</li>
@@ -182,8 +239,14 @@ const superEasterEgg = () => {
                     <li>Grab Fishing Rod</li>
                     <li>Travel to Eidskallen Square</li>
                     <li>
-                        Fish on the Fence and Activate
-                        <span className='wildfire'> Wildfire</span>
+                        <div className='image-list'>
+                            <div>Fish on Fence and Activate <span className='wildfire'>Wildfire</span></div>
+                            <img className='field-upgrade'
+                                src='/field-upgrades/wild-fire.webp'
+                                alt='Field upgrade wild fire'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
                     </li>
                     <li>Travel to Burial Grounds</li>
                     <li>
@@ -201,7 +264,13 @@ const superEasterEgg = () => {
             {/* Kowakujo */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Kowakujo</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
                     <li>Turn on PAP</li>
@@ -219,7 +288,7 @@ const superEasterEgg = () => {
                     <li>Melee Cherry Tree</li>
                     <li>Wait for Bird</li>
                     <li>Travel to Courtyard near the Rock</li>
-                    <li>Spin</li>
+                    <li>Create Cherry Tornado</li>
                     <li>Wait for Bird</li>
                     <li>Grab Bird</li>
                     <li>Put in Toy Box</li>
@@ -230,16 +299,46 @@ const superEasterEgg = () => {
             {/* Rex Infernus */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Rex Infernus</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Tips & Tricks</span>
+                    <div></div>
+                </div>
+                <ul>
+                    <li>
+                        <div className='image-list'>
+                            <div>Need <span className='aether-shroud'>Aether Shroud</span></div>
+                            <img className='field-upgrade'
+                                src='/field-upgrades/aether-shroud.webp'
+                                alt='Field upgrade aether shroud'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
+                </ul>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
                     <li>Upgrade Grapple</li>
-                    <li>Need Aether Shroud</li>
                     <li>Travel to Nyxara Passage</li>
                     <li>Grapple to spot under the Passage</li>
                     <li>Play Obstacle Course</li>
                     <li>Stand on rock with Box to make it fall</li>
-                    <li>Use Aether Shroud to Interact with Box</li>
+                    <li>
+                        <div className='image-list'>
+                            <div>Use <span className='aether-shroud'>Aether Shroud</span> to Interact with Box</div>
+                            <img className='field-upgrade'
+                                src='/field-upgrades/aether-shroud.webp'
+                                alt='Field upgrade aether shroud'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
                     <li>Melee 3 Floating Horses</li>
                     <ul>
                         <li>Spira Insula - Floating Rock near Jugganaut

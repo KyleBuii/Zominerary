@@ -39,7 +39,13 @@ const Paradox = () => {
             {/* Starting Room */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Starting Room</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
                     <li>Shoot Clock Hands</li>
@@ -53,11 +59,17 @@ const Paradox = () => {
             {/* Listening Exam */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Listening Exam</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
-                    <li><span className='note-do-all'>DO ALL THE STEPS BELLOW BEFORE ROUND 6</span></li>
-                    <li>Fill Cyst making Noises</li>
+                    <li><span className='note-do-all'>DO ALL THE STEPS BELOW BEFORE ROUND 6</span></li>
+                    <li>Fill Cyst Making Noises</li>
                     <li>Grab Barrel</li>
                     <li>Travel to Yellow House Backyard</li>
                     <img className='big-image'
@@ -69,7 +81,7 @@ const Paradox = () => {
                     <li>Travel to Yellow House Upstairs</li>
                     <li>Grab SO3</li>
                     <li>
-                        Find Corrupted Wall making Noises
+                        Find Corrupted Wall Making Noises
                         {(corruptedWall === '')
                             ? <ul>
                                 <li>Which Corrupted Wall?</li>
@@ -99,9 +111,9 @@ const Paradox = () => {
                         alt='Labled green house'
                         decoding='async'
                         loading='lazy'/>
-                    <li>Get Solution in the Sink</li>
+                    <li>Get Solution in Sink</li>
                     <li>
-                        Find Mannequin making Noises
+                        Find Mannequin Making Noises
                         {(mannequin === -1)
                             ? <ul>
                                 <li>Where is the Mannequin?</li>
@@ -128,14 +140,38 @@ const Paradox = () => {
             {/* Back to the Past */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Back to the Past</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
-                    <li>Teleport to the Past by ending Round 6</li>
+                    <li>Teleport to the Past by Ending Round 6</li>
                     <li>Travel to Spawn</li>
-                    <li>Loot Clock rewards</li>
-                    <li>Buy Depth Perception</li>
-                    <li>Buy Brain Rot</li>
+                    <li>Loot Clock Rewards</li>
+                    <li>
+                        <div className='image-list'>
+                            <span>Buy Death Perception</span>
+                            <img className='perk'
+                                src='/perks/death-perception.webp'
+                                alt='Perk death perception'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
+                    <li>
+                        <div className='image-list'>
+                            <span>Buy Brain Rot</span>
+                            <img className='ammo-mod'
+                                src='/ammo-mods/brain-rot.webp'
+                                alt='Ammo mod brain rot'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
                     <li>Install Truck Keys</li>
                     <li>Pour Solution on Mannequin</li>
                     <div className='map-container'>
@@ -170,7 +206,13 @@ const Paradox = () => {
             {/* Back to the Future */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Back to the Future</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
                     <li>Teleport to the Future</li>
@@ -213,7 +255,7 @@ const Paradox = () => {
                         alt='Labled trinity ave 1'
                         decoding='async'
                         loading='lazy'/>
-                    <li>Grab the Chalk</li>
+                    <li>Grab Chalk</li>
                     <li>Travel to Yellow House Backyard</li>
                     <img className='big-image'
                         src='/paradox/labled-yellow-house-backyard.webp'
@@ -221,7 +263,7 @@ const Paradox = () => {
                         decoding='async'
                         loading='lazy'/>
                     <li>Place Swing Seat</li>
-                    <li>Grab The Stock</li>
+                    <li>Grab Stock</li>
                     {(corruptedWall === '')
                         ? <></>
                         : <div className='codes'>
@@ -230,7 +272,7 @@ const Paradox = () => {
                                 <button className='symbol long'>{mapCorruptedWall[corruptedWall].name}</button>
                             </div>
                         </div>}
-                    <li>Grab The Hammer</li>
+                    <li>Grab Hammer</li>
                     <div className='map-container'>
                         <img className='map'
                             src='/paradox/map-mannequin.webp'
@@ -254,7 +296,13 @@ const Paradox = () => {
             {/* Torture */}
             <div>
                 <div className='title'>
+                    <span></span>
                     <span>Torture</span>
+                    <span></span>
+                </div>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
                 </div>
                 <ol>
                     <li>Travel to Yellow House Garage</li>
@@ -322,8 +370,17 @@ const Paradox = () => {
                     <li>Bring and Kill Tortured Zombie at Truck</li>
                     <li>Travel to Green House Backyard</li>
                     <li>Find Piano Teacher</li>
-                    <li>Use Brain Rot on Piano Teacher</li>
-                    <li>Wait for Piano Teacher to go to the Piano</li>
+                    <li>
+                        <div className='image-list'>
+                            <span>Use Brain Rot on Piano Teacher</span>
+                            <img className='ammo-mod'
+                                src='/ammo-mods/brain-rot.webp'
+                                alt='Ammo mod brain rot'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
+                    <li>Wait for Piano Teacher at Piano</li>
                     <img className='big-image'
                         src='/paradox/labled-green-house.webp'
                         alt='Labled green house'
@@ -340,13 +397,32 @@ const Paradox = () => {
                     <li>Get Kills with Wonder Weapon</li>
                     <li>Teleport to the Future</li>
                     <li>Travel to Trinity Ave</li>
+                    <li>
+                        <div className='image-list'>
+                            <span>Buy Wisp Tea</span>
+                            <img className='perk'
+                                src='/perks/wisp-tea.webp'
+                                alt='Perk wisp tea'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
                     <li>Tomahawk the Tree 3 times</li>
                     <li>Grab Firewood</li>
-                    <li>Shoot the top of the Speaker Pole</li>
-                    <li>Activate Wisp Tea</li>
+                    <li>Shoot the Top of the Speaker Pole</li>
+                    <li>
+                        <div className='image-list'>
+                            <span>Activate Wisp Tea</span>
+                            <img className='perk'
+                                src='/perks/wisp-tea.webp'
+                                alt='Perk wisp tea'
+                                decoding='async'
+                                loading='lazy'/>
+                        </div>
+                    </li>
                     <li>Grab Goggles</li>
                     <li><span className='note-tortured-zombie'>DO TORTURED ZOMBIE IF YOU SEE ONE</span></li>
-                    <li>Interact with 8 Blue Music Notes in order</li>
+                    <li>Interact with 8 Blue Music Notes in Order</li>
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
@@ -411,7 +487,7 @@ const Paradox = () => {
                             </div>
                             : null
                     })}
-                    <li>Interact in order.</li>
+                    <li>Interact in Order</li>
                     <div className='codes wrap'>
                         {[...Array(8).keys()].map((number) => {
                             return <button className='symbol'

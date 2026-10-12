@@ -609,11 +609,18 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Starting Room */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Starting Room</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Tips & Tricks</span>
+                            <div></div>
                         </div>
                         <ul>
                             <li>
-                                Look for
+                                <span className='optional'>[Optional] </span>
+                                For Later Steps, Look for
                                 <span className='impact'> Impact </span>
                                 —
                                 <span className='semtex'> Semtex </span>
@@ -621,6 +628,10 @@ const Kowakujo = ({ isKnower }) => {
                                 <span className='c4'> C4 </span>
                             </li>
                         </ul>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
+                        </div>
                         <ol>
                             <li>Grab Carrot 1/4</li>
                             <li>Travel to Staging Area</li>
@@ -632,7 +643,13 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Capture the Flag 1/2 */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Capture the Flag 1/2</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Travel to Stables</li>
@@ -657,15 +674,23 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Capture the Flag 2/2 */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Capture the Flag 2/2</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>Garden</span>
-                                    <span className='normal'>= Flower Garden</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Garden</span>
+                                        <span className='normal'>= Flower Garden</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Travel to Garden</li>
@@ -689,23 +714,40 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Power */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Power</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>PHD</span>
-                                    <span className='normal'>= PHD Flopper</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>PHD</span>
+                                        <span className='normal'>= PHD Flopper</span>
+                                    </div>
+                                    <div className='subnote'>
+                                        <span>PAP</span>
+                                        <span className='normal'>= Pack-a-Punch</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <div className='subnote'>
-                                    <span>PAP</span>
-                                    <span className='normal'>= Pack-a-Punch</span>
-                                </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Travel to Storage Rooms</li>
-                            <li>Buy PHD</li>
+                            <li>
+                                <div className='image-list'>
+                                    <span>Buy PHD</span>
+                                    <img className='perk'
+                                        src='/perks/phd-flopper.webp'
+                                        alt='Perk phd flopper'
+                                        decoding='async'
+                                        loading='lazy'/>
+                                </div>
+                            </li>
                             <li>Travel to Workshop</li>
                             <li>Grab Doll</li>
                             <li>Grab Carrot 4/4</li>
@@ -722,7 +764,13 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Animal Violence */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Animal Violence</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Get Cage</li>
@@ -742,7 +790,16 @@ const Kowakujo = ({ isKnower }) => {
                                     </div>
                                 </ul>
                                 : <></>}
-                            <li>Buy Depth Perception</li>
+                            <li>
+                                <div className='image-list'>
+                                    <span>Buy Death Perception</span>
+                                    <img className='perk'
+                                        src='/perks/death-perception.webp'
+                                        alt='Perk death perception'
+                                        decoding='async'
+                                        loading='lazy'/>
+                                </div>
+                            </li>
                             <li>Spill Blood on Paw Prints</li>
                             <div className='codes'>
                                 <button className='symbol long'>{locationPaw}</button>
@@ -761,7 +818,13 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Light the Way */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Light the Way</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Light Lanterns</li>
@@ -783,7 +846,13 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Mask */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Mask</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Kite to the right</li>
@@ -850,7 +919,13 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Suspect */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Suspect</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Get Suspect Items [3]</li>
@@ -860,15 +935,23 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Accomplice */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Accomplice</span>
-                            <div className='note'>
-                                <span>[</span>
-                                <div className='subnote'>
-                                    <span>Garden</span>
-                                    <span className='normal'>= Flower Garden</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <div>
+                                <span>Steps</span>
+                                <div className='note'>
+                                    <span>[</span>
+                                    <div className='subnote'>
+                                        <span>Garden</span>
+                                        <span className='normal'>= Flower Garden</span>
+                                    </div>
+                                    <span>]</span>
                                 </div>
-                                <span>]</span>
                             </div>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Get Coin on Mystery Box</li>
@@ -906,11 +989,17 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Poison */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Poison</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Travel to Storage Rooms</li>
-                            <li>Melee scrolls</li>
+                            <li>Melee Scrolls</li>
                             <li>Solve Lights Out</li>
                             <ul>
                                 <li>Chase the Lights</li>
@@ -962,14 +1051,20 @@ const Kowakujo = ({ isKnower }) => {
                             <li>Melee Cherry Blossom Tree</li>
                             <li>Travel to Tenshu Entrance</li>
                             <li>Place Flower and Ash</li>
-                            <li>Twirl.</li>
+                            <li>Create Cherry Tornado</li>
                             <li>Put on Evidence Table</li>
                         </ol>
                     </div>
                     {/* Location */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Location</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             <li>Pick up Ceramic</li>
@@ -992,7 +1087,13 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Motive */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Motive</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
                         </div>
                         <ol>
                             {(!hasShard)
@@ -1138,9 +1239,22 @@ const Kowakujo = ({ isKnower }) => {
                     {/* Solve */}
                     <div>
                         <div className='title'>
+                            <span></span>
                             <span>Solve</span>
+                            <span></span>
+                        </div>
+                        <div className='sub-title'>
+                            <span>Tips & Tricks</span>
+                            <div></div>
                         </div>
                         <ul>
+                            <li>Use Left Incense if Needed</li>
+                        </ul>
+                        <div className='sub-title'>
+                            <span>Steps</span>
+                            <div></div>
+                        </div>
+                        <ol>
                             {(!locationAccomplice)
                                 ? <div className='parent-note-bag'>
                                     <span className='note-bag'>
@@ -1165,11 +1279,6 @@ const Kowakujo = ({ isKnower }) => {
                                     </div>
                                 </div>
                                 : <></>}
-                        </ul>
-                        <ul>
-                            <li>Use Left Incense if needed</li>
-                        </ul>
-                        <ol>
                             <li>Look at the far left note.</li>
                             <ul>
                                 {(zodiacAnimal === '')

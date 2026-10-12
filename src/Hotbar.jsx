@@ -14,6 +14,7 @@ const Hotbar = () => {
     const [activeButton, setActiveButton] = useState('aotd');
     const [isSolo, setIsSolo] = useState(false);
     const [isKnower, setIsKnower] = useState(false);
+    const [showSolver, setShowSolver] = useState(false);
 
     const handleClick = (name) => {
         if (name === activeButton) return;
@@ -200,12 +201,14 @@ const Hotbar = () => {
                 <Route path='/'
                     element={
                         <Boarding setterSolo={setIsSolo}
-                            setterKnower={setIsKnower}/>
+                            setterKnower={setIsKnower}
+                            setterSolver={setShowSolver}/>
                     }/>
                 <Route path='/aotd'
                     element={
                         <AOTD isSolo={isSolo}
-                            isKnower={isKnower}/>
+                            isKnower={isKnower}
+                            showSolver={showSolver}/>
                     }/>
                 <Route path='/astra'
                     element={
