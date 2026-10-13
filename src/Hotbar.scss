@@ -621,6 +621,11 @@ button {
     height: 2rem;
     margin: 0;
     border: none;
+    filter:
+        drop-shadow( 1px 0 rgb(var(--button-border-color)))
+        drop-shadow(-1px 0 rgb(var(--button-border-color)))
+        drop-shadow(0  1px rgb(var(--button-border-color)))
+        drop-shadow(0 -1px rgb(var(--button-border-color)));
 }
 
 .tomahawk {
