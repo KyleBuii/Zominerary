@@ -1,6 +1,6 @@
 import { memo, useRef, useState } from 'react';
 import Draggable from 'react-draggable';
-import { maskWoman, maskRed, maskHorn, maskHair, maskOni, ichi, ni, san, yon } from './Symbols.jsx';
+import { ichi, ni, san, yon } from './Symbols.jsx';
 
 const locationsMystery = [
     'Spawn',
@@ -19,13 +19,6 @@ const locationsFissure = [
     'Stables',
     'Kitchens',
 ];
-const mapMasks = {
-    woman: maskWoman,
-    red: maskRed,
-    horn: maskHorn,
-    hair: maskHair,
-    oni: maskOni,
-};
 const mapNumbers = {
     1: ichi,
     2: ni,
@@ -219,7 +212,9 @@ const Kowakujo = ({ isKnower }) => {
             {(isKnower)
                 ? <>
                     <div className='title'>
+                        <span></span>
                         <span>Paw</span>
+                        <span></span>
                     </div>
                     {(locationPaw === '')
                         ? <div className='codes wrap'>
@@ -236,30 +231,52 @@ const Kowakujo = ({ isKnower }) => {
                         <button className='symbol long'>{locationPaw}</button>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Mask</span>
+                        <span></span>
                     </div>
                     {(selectedMasks.length >= 12)
                         ? <></>
                         : <div className='codes'>
                             <button className='symbol'
                                 onClick={() => handleSelectMask('horn')}>
-                                {maskHorn}
+                                <img className='mask'
+                                    src='/kowakujo/mask-horn.webp'
+                                    alt='Mask horn'
+                                    decoding='async'
+                                    loading='lazy'/>
                             </button>
                             <button className='symbol'
                                 onClick={() => handleSelectMask('red')}>
-                                {maskRed}
+                                <img className='mask'
+                                    src='/kowakujo/mask-red.webp'
+                                    alt='Mask red'
+                                    decoding='async'
+                                    loading='lazy'/>
                             </button>
                             <button className='symbol'
                                 onClick={() => handleSelectMask('woman')}>
-                                {maskWoman}
+                                <img className='mask'
+                                    src='/kowakujo/mask-woman.webp'
+                                    alt='Mask woman'
+                                    decoding='async'
+                                    loading='lazy'/>
                             </button>
                             <button className='symbol'
                                 onClick={() => handleSelectMask('hair')}>
-                                {maskHair}
+                                <img className='mask'
+                                    src='/kowakujo/mask-hair.webp'
+                                    alt='Mask hair'
+                                    decoding='async'
+                                    loading='lazy'/>
                             </button>
                             <button className='symbol'
                                 onClick={() => handleSelectMask('oni')}>
-                                {maskOni}
+                                <img className='mask'
+                                    src='/kowakujo/mask-oni.webp'
+                                    alt='Mask oni'
+                                    decoding='async'
+                                    loading='lazy'/>
                             </button>
                         </div>}
                     <div>
@@ -267,7 +284,11 @@ const Kowakujo = ({ isKnower }) => {
                             {selectedMasks.slice(0, 3).map((mask, maskIndex) => {
                                 return <button className='symbol'
                                     key={`selected-masks-first-${mask}-${maskIndex}`}>
-                                    {mapMasks[mask]}
+                                    <img className='mask'
+                                        src={`/kowakujo/mask-${mask}.webp`}
+                                        alt={`Mask ${mask}`}
+                                        decoding='async'
+                                        loading='lazy'/>
                                 </button>
                             })}
                         </div>
@@ -275,7 +296,11 @@ const Kowakujo = ({ isKnower }) => {
                             {selectedMasks.slice(3, 7).map((mask, maskIndex) => {
                                 return <button className='symbol'
                                     key={`selected-masks-second-${mask}-${maskIndex}`}>
-                                    {mapMasks[mask]}
+                                    <img className='mask'
+                                        src={`/kowakujo/mask-${mask}.webp`}
+                                        alt={`Mask ${mask}`}
+                                        decoding='async'
+                                        loading='lazy'/>
                                 </button>
                             })}
                         </div>
@@ -283,13 +308,19 @@ const Kowakujo = ({ isKnower }) => {
                             {selectedMasks.slice(7, 12).map((mask, maskIndex) => {
                                 return <button className='symbol'
                                     key={`selected-masks-third-${mask}-${maskIndex}`}>
-                                    {mapMasks[mask]}
+                                    <img className='mask'
+                                        src={`/kowakujo/mask-${mask}.webp`}
+                                        alt={`Mask ${mask}`}
+                                        decoding='async'
+                                        loading='lazy'/>
                                 </button>
                             })}
                         </div>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Mystery Box</span>
+                        <span></span>
                     </div>
                     {(locationMystery === '')
                         ? <div className='codes wrap'>
@@ -315,7 +346,9 @@ const Kowakujo = ({ isKnower }) => {
                     {(locationAccomplice === '')
                         ? <>
                             <div className='title'>
+                                <span></span>
                                 <span>Accomplice</span>
+                                <span></span>
                             </div>
                             <div className='codes'>
                                 <button className='symbol long'
@@ -328,7 +361,9 @@ const Kowakujo = ({ isKnower }) => {
                         </>
                         : <></>}
                     <div className='title'>
+                        <span></span>
                         <span>Lights Out</span>
+                        <span></span>
                     </div>
                     <div>
                         <div className='codes wrap'>
@@ -348,7 +383,9 @@ const Kowakujo = ({ isKnower }) => {
                         ? <></>
                         : <>
                             <div className='title'>
+                                <span></span>
                                 <span>Clock</span>
+                                <span></span>
                             </div>
                             <div className='codes wrap'>
                                 {[...Array(6).keys()].map((number) => {
@@ -419,7 +456,9 @@ const Kowakujo = ({ isKnower }) => {
                             : <></>}
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Flag</span>
+                        <span></span>
                     </div>
                     {(flagNumbers.length >= 6)
                         ? <></>
@@ -454,7 +493,9 @@ const Kowakujo = ({ isKnower }) => {
                     {(zodiacAnimal === '') || (lastWord === '') || (symptomHours === 0)
                         ? <>
                             <div className='title'>
+                                <span></span>
                                 <span>Note</span>
+                                <span></span>
                             </div>
                             {(zodiacAnimal === '')
                                 ? <div className='codes wrap'>
@@ -495,7 +536,9 @@ const Kowakujo = ({ isKnower }) => {
                     {(posterWord === '')
                         ? <>
                             <div className='title'>
+                                <span></span>
                                 <span>Poster</span>
+                                <span></span>
                             </div>
                             {(posterWord === '')
                                 ? <div className='codes'>
@@ -510,11 +553,14 @@ const Kowakujo = ({ isKnower }) => {
                         </>
                         : <></>}
                     <div className='title'>
+                        <span></span>
                         <span>Solve</span>
+                        <span></span>
                     </div>
                     <div>
                         <div className='big-image poster'></div>
-                        <div className='codes image'>
+                        <div className='codes fill'
+                            style={{ margin: '0 1rem' }}>
                             <button className='symbol'>Comb</button>
                             <button className='symbol'>{locationAccompliceItem[locationAccomplice]?.item.replace(/^./, (char) => char.toUpperCase())}</button>
                             <button className='symbol'>{lastWordItem[lastWord]?.filter((item) => item === locationAccompliceItem[locationAccomplice]?.not)[0]?.replace(/^./, (char) => char.toUpperCase())}</button>
@@ -861,29 +907,49 @@ const Kowakujo = ({ isKnower }) => {
                             <li>Go to Storage Rooms</li>
                             <li>Place Mask</li>
                             <li>Begin Game</li>
-                            <li>What masks?</li>
+                            <li>What Masks?</li>
                             {(selectedMasks.length >= 12)
                                 ? <></>
                                 : <div className='codes'>
                                     <button className='symbol'
                                         onClick={() => handleSelectMask('horn')}>
-                                        {maskHorn}
+                                        <img className='mask'
+                                            src='/kowakujo/mask-horn.webp'
+                                            alt='Mask horn'
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                     <button className='symbol'
                                         onClick={() => handleSelectMask('red')}>
-                                        {maskRed}
+                                        <img className='mask'
+                                            src='/kowakujo/mask-red.webp'
+                                            alt='Mask red'
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                     <button className='symbol'
                                         onClick={() => handleSelectMask('woman')}>
-                                        {maskWoman}
+                                        <img className='mask'
+                                            src='/kowakujo/mask-woman.webp'
+                                            alt='Mask woman'
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                     <button className='symbol'
                                         onClick={() => handleSelectMask('hair')}>
-                                        {maskHair}
+                                        <img className='mask'
+                                            src='/kowakujo/mask-hair.webp'
+                                            alt='Mask hair'
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                     <button className='symbol'
                                         onClick={() => handleSelectMask('oni')}>
-                                        {maskOni}
+                                        <img className='mask'
+                                            src='/kowakujo/mask-oni.webp'
+                                            alt='Mask oni'
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                 </div>}
                             <li>Round 1</li>
@@ -891,7 +957,11 @@ const Kowakujo = ({ isKnower }) => {
                                 {selectedMasks.slice(0, 3).map((mask, maskIndex) => {
                                     return <button className='symbol'
                                         key={`selected-masks-first-${mask}-${maskIndex}`}>
-                                        {mapMasks[mask]}
+                                        <img className='mask'
+                                            src={`/kowakujo/mask-${mask}.webp`}
+                                            alt={`Mask ${mask}`}
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                 })}
                             </div>
@@ -900,7 +970,11 @@ const Kowakujo = ({ isKnower }) => {
                                 {selectedMasks.slice(3, 7).map((mask, maskIndex) => {
                                     return <button className='symbol'
                                         key={`selected-masks-second-${mask}-${maskIndex}`}>
-                                        {mapMasks[mask]}
+                                        <img className='mask'
+                                            src={`/kowakujo/mask-${mask}.webp`}
+                                            alt={`Mask ${mask}`}
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                 })}
                             </div>
@@ -909,7 +983,11 @@ const Kowakujo = ({ isKnower }) => {
                                 {selectedMasks.slice(7, 12).map((mask, maskIndex) => {
                                     return <button className='symbol'
                                         key={`selected-masks-third-${mask}-${maskIndex}`}>
-                                        {mapMasks[mask]}
+                                        <img className='mask'
+                                            src={`/kowakujo/mask-${mask}.webp`}
+                                            alt={`Mask ${mask}`}
+                                            decoding='async'
+                                            loading='lazy'/>
                                     </button>
                                 })}
                             </div>
@@ -1338,7 +1416,8 @@ const Kowakujo = ({ isKnower }) => {
                                 : <></>}
                             <li>Input parts</li>
                             <div className='big-image poster'></div>
-                            <div className='codes image'>
+                            <div className='codes fill'
+                                style={{ margin: '1rem' }}>
                                 <button className='symbol'>Comb</button>
                                 <button className='symbol'>{locationAccompliceItem[locationAccomplice]?.item.replace(/^./, (char) => char.toUpperCase())}</button>
                                 <button className='symbol'>{lastWordItem[lastWord]?.filter((item) => item === locationAccompliceItem[locationAccomplice]?.not)[0]?.replace(/^./, (char) => char.toUpperCase())}</button>

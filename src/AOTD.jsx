@@ -71,7 +71,9 @@ const AOTD = ({ isSolo, isKnower, showSolver }) => {
             {(isKnower)
                 ? <>
                     <div className='title'>
+                        <span></span>
                         <span>Farm</span>
+                        <span></span>
                     </div>
                     <div>
                         {(codeFarm[0] != -1) && (codeFarm[1] != -1) && (codeFarm[2] != -1)
@@ -148,7 +150,9 @@ const AOTD = ({ isSolo, isKnower, showSolver }) => {
                         </div>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Lab</span>
+                        <span></span>
                     </div>
                     <div>
                         {(codeLab.length >= 3)
@@ -183,7 +187,9 @@ const AOTD = ({ isSolo, isKnower, showSolver }) => {
                         </div>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Cosmodrone</span>
+                        <span></span>
                     </div>
                     <div>
                         {(codeSoulsCosmodrone.length === 0)
@@ -208,41 +214,49 @@ const AOTD = ({ isSolo, isKnower, showSolver }) => {
                         </div>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Lake</span>
+                        <span></span>
                     </div>
                     {(codeSoulsLake.length >= 4)
                         ? <></>
                         : <div className='codes wrap'>
-                            <button className='image'
-                                style={{ backgroundImage: 'url(/aotd/lake-souls-front.webp)' }}
-                                onClick={(event) => {
-                                    event.currentTarget.style.display = 'none';
-                                    handleCodeSoulsLake(1);
-                                }}></button>
-                            <button className='image'
-                                style={{ backgroundImage: 'url(/aotd/lake-souls-back.webp)' }}
-                                onClick={(event) => {
-                                    event.currentTarget.style.display = 'none';
-                                    handleCodeSoulsLake(2);
-                                }}></button>
-                            <button className='image'
-                                style={{ backgroundImage: 'url(/aotd/lake-souls-tool.webp)' }}
-                                onClick={(event) => {
-                                    event.currentTarget.style.display = 'none';
-                                    handleCodeSoulsLake(3);
-                                }}></button>
-                            <button className='image'
-                                style={{ backgroundImage: 'url(/aotd/lake-souls-shed.webp)' }}
-                                onClick={(event) => {
-                                    event.currentTarget.style.display = 'none';
-                                    handleCodeSoulsLake(4);
-                                }}></button>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/aotd/lake-souls-tool.webp)' }}
+                                    onClick={(event) => handleCodeSoulsLake(event, 'tool')}></button>
+                                <button className='symbol long'>Tool</button>
+                            </div>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/aotd/lake-souls-front.webp)' }}
+                                    onClick={(event) => handleCodeSoulsLake(event, 'front')}></button>
+                                <button className='symbol long'>Front</button>
+                            </div>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/aotd/lake-souls-back.webp)' }}
+                                    onClick={(event) => handleCodeSoulsLake(event, 'back')}></button>
+                                <button className='symbol long'>Back</button>
+                            </div>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/aotd/lake-souls-shed.webp)' }}
+                                    onClick={(event) => handleCodeSoulsLake(event, 'shed')}></button>
+                                <button className='symbol long'>Shed</button>
+                            </div>
                         </div>}
-                    <div className='big-image lake'>
-                        <span>{codeSoulsLake.indexOf(1) + 1}</span>
-                        <span>{codeSoulsLake.indexOf(2) + 1}</span>
-                        <span>{codeSoulsLake.indexOf(3) + 1}</span>
-                        <span>{codeSoulsLake.indexOf(4) + 1}</span>
+                    <div className='codes wrap'>
+                        {codeSoulsLake.map((location) => {
+                            return <div className='side-activity horizontal'
+                                key={`lake-souls-location-${location}`}>
+                                <button className='image'
+                                    style={{ backgroundImage: `url(/aotd/lake-souls-${location}.webp)` }}></button>
+                                <button className='symbol long'>
+                                    {location.replace(/^./, (char) => char.toUpperCase())}
+                                </button>
+                            </div>
+                        })}
                     </div>
                 </>
                 : <>

@@ -615,6 +615,14 @@ button {
     border: none;
 }
 
+.mask {
+    @extend .big-image;
+    width: unset;
+    height: 2rem;
+    margin: 0;
+    border: none;
+}
+
 .tomahawk {
     color: rgb(140, 140, 140);
 }

@@ -84,7 +84,9 @@ const Astra = ({ isKnower }) => {
             {(isKnower)
                 ? <>
                     <div className='title'>
+                        <span></span>
                         <span>Planet</span>
+                        <span></span>
                     </div>
                     {((selectedPlanets.length >= 3) && (selectedPlanetsDir.length >= 6))
                         ? <></>
@@ -210,7 +212,9 @@ const Astra = ({ isKnower }) => {
                         </div>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Mars Code</span>
+                        <span></span>
                     </div>
                     {(codeMars.length >= 4)
                         ? <></>
@@ -245,7 +249,9 @@ const Astra = ({ isKnower }) => {
                         </button>
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Oscar Planets</span>
+                        <span></span>
                     </div>
                     {(codeOscar.length === 3)
                         ? <></>
@@ -270,7 +276,9 @@ const Astra = ({ isKnower }) => {
                         })}
                     </div>
                     <div className='title'>
+                        <span></span>
                         <span>Books</span>
+                        <span></span>
                     </div>
                     <div>
                         {Object.entries(books).map(([category, book]) => (
@@ -297,9 +305,10 @@ const Astra = ({ isKnower }) => {
                             </button>
                         })}
                     </div>
-
                     <div className='title'>
+                        <span></span>
                         <span>Mars Symbols</span>
+                        <span></span>
                     </div>
                     {(codePillar.length === 5)
                         ? <></>
@@ -339,7 +348,8 @@ const Astra = ({ isKnower }) => {
                                 <span>&#8595;</span>
                                 <span>&#8594;</span>
                             </div>
-                            <div className='codes'>
+                            <div className='codes'
+                                style={{ margin: '0 1rem' }}>
                                 <button className='symbol'
                                     onClick={(event) => handleCodeMarsPillar('diamond', event)}>
                                     {symbolDiamond}
