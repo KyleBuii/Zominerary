@@ -640,6 +640,7 @@ const Astra = ({ isKnower }) => {
                                 ? <></>
                                 : <ul>
                                     <li>Where is Mars?</li>
+                                    <li>EX: 177 = 1707 or 7013 = 7013</li>
                                     <div className='codes'>
                                         {Array.from({ length: 5 }, (_, i) => i + 1).map((number) => {
                                             return <button className='symbol'
@@ -927,7 +928,7 @@ const Astra = ({ isKnower }) => {
                         <ol>
                             <li>Travel to Machina</li>
                             <li>Interact with Brain</li>
-                            <li>Once Open, Hold Interact to Get Brain</li>
+                            <li>Once Open, Interact to Get Brain</li>
                             <li>Travel to Luminarium</li>
                             <img className='big-image'
                                 src='/astra/labled-luminarium.webp'
@@ -1051,6 +1052,7 @@ const Astra = ({ isKnower }) => {
                             <div></div>
                         </div>
                         <ol>
+                            <li>Grab Barrel in Middle</li>
                             <li>Install Barrel</li>
                             <li>Shoot Towers and Wait for Bird</li>
                             <li>Shoot Middle Tower to Reset Bird's Position</li>

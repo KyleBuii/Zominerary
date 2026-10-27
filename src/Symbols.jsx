@@ -327,174 +327,6 @@ export const symbolStatic = <svg viewBox='0 0 100 100'>
 </svg>;
 //#endregion
 
-//#region Symbols Farm
-export const symbolMale = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <circle cx='38' cy='62' r='25'/>
-        <path d='M56 44 L78 22'/>
-        <path d='M66 22 H78 V34'/>
-    </g>
-</svg>;
-
-export const symbolUmbrella = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M20 50 L40 30 L60 50 L40 70 Z'/>
-        <path d='M60 50 H85'/>
-        <circle cx='84' cy='57' r='7'/>
-    </g>
-</svg>;
-
-export const symbolTriangle = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M15 32 H85 L50 78 Z'/>
-        <path d='M38 55 L50 43 L62 55'/>
-    </g>
-</svg>;
-
-export const symbolFemale = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
-        <circle cx='50' cy='43' r='23'/>
-        <path d='M50 66 V87'/>
-        <path d='M40 78 H60'/>
-    </g>
-</svg>;
-
-export const symbolCircle = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <circle cx='50' cy='50' r='29'/>
-        <path d='M30 33 L38 41'/>
-        <path d='M70 33 L62 41'/>
-        <path d='M30 67 L38 59'/>
-        <path d='M70 67 L62 59'/>
-    </g>
-</svg>;
-
-export const symbolCircleDot = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7'>
-        <circle cx='50' cy='50' r='29'/>
-    </g>
-
-    <circle cx='50' cy='50' r='8' fill='rgb(37, 44, 45)'/>
-</svg>;
-
-export const symbolCross = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
-        <circle cx='50' cy='50' r='29'/>
-        <path d='M50 21 V79'/>
-        <path d='M21 50 H79'/>
-    </g>
-</svg>;
-
-export const symbolLine = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
-        <circle cx='50' cy='50' r='29'/>
-        <path d='M21 50 H79'/>
-    </g>
-</svg>;
-
-export const symbolHook = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
-        <circle cx='43' cy='48' r='27'/>
-        <path d='M63 67 L77 81'/>
-    </g>
-</svg>;
-
-export const symbolThreeCircles = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6'>
-        <circle cx='50' cy='30' r='11'/>
-        <circle cx='28' cy='63' r='11'/>
-        <circle cx='72' cy='63' r='11'/>
-    </g>
-</svg>;
-
-export const symbolHalfCircle = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M20 63 H80'/>
-        <path d='M28 63 V53'/>
-        <path d='M72 63 V53'/>
-        <path d='M30 53 H38'/>
-        <path d='M62 53 H70'/>
-        <path d='M38 53 C38 35 62 35 62 53'/>
-    </g>
-</svg>;
-
-export const symbolStar = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M50 15 V85 M47 15 H53 M47 85 H53'/>
-        <path d='M15 50 H85 M15 47 V53 M85 47 V53'/>
-        <path d='M25 25 L75 75 M22 28 L28 22 M72 78 L78 72'/>
-        <path d='M75 25 L25 75 M72 22 L78 28 M22 72 L28 78'/>
-    </g>
-</svg>;
-//#endregion
-
-//#region Symbols Lab
-export const symbolFeet = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M30 25 L70 50 L30 75'/>
-    </g>
-</svg>;
-
-export const symbolChunk = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M25 25 V75 H75'/>
-    </g>
-</svg>;
-
-export const symbolWidow = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M30 25 V75'/>
-        <path d='M30 25 H70'/>
-        <path d='M30 75 H70'/>
-    </g>
-</svg>;
-
-export const symbolEye = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M30 25 V75'/>
-        <path d='M30 25 H70'/>
-        <path d='M30 75 H70'/>
-        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
-    </g>
-</svg>;
-
-export const symbolLimb = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M25 25 V75 H75'/>
-        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
-    </g>
-</svg>;
-//#endregion
-
-//#region Symbols Cosmodrone
-export const symbolLaunch = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M25 25 V75 H75'/>
-        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
-    </g>
-</svg>;
-
-export const symbolEngine = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <rect x='25' y='25' width='50' height='50'/>
-    </g>
-</svg>;
-
-export const symbolRocket = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M75 25 H25 V75'/>
-        <circle cx='45' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
-    </g>
-</svg>;
-
-export const symbolWeapon = <svg viewBox='0 0 100 100'>
-    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
-        <path d='M25 25 L50 75 L75 25'/>
-        <circle cx='50' cy='43' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
-    </g>
-</svg>;
-//#endregion
-
 //#region Japanese Numbers
 export const ichi = (
     <svg viewBox='0 0 100 100'>
@@ -546,4 +378,204 @@ export const yon = (
         </text>
     </svg>
 );
+//#endregion
+
+//#region Symbols Ashes of the Damned
+export const symbolRightArrow = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M30 25 L70 50 L30 75'/>
+    </g>
+</svg>;
+export const symbolHL = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M75 25 V75 H25'/>
+    </g>
+</svg>;
+export const symbolLDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 25 V75 H75'/>
+        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolLeftArrow = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M70 25 L30 50 L70 75'/>
+    </g>
+</svg>;
+export const symbolV = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 25 L50 75 L75 25'/>
+    </g>
+</svg>;
+export const symbolVDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 25 L50 75 L75 25'/>
+        <circle cx='50' cy='43' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolL = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 25 V75 H75'/>
+    </g>
+</svg>;
+export const symbolCDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M30 25 V75'/>
+        <path d='M30 25 H70'/>
+        <path d='M30 75 H70'/>
+        <circle cx='55' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolSquare = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <rect x='25' y='25' width='50' height='50'/>
+    </g>
+</svg>;
+export const symbolSquareDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <rect x='25' y='25' width='50' height='50'/>
+        <circle cx='50' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolArch = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 75 V25 H75 V75'/>
+    </g>
+</svg>;
+export const symbolVArchDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 25 V75 H75 V25'/>
+        <circle cx='50' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolVArch = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 25 V75 H75 V25'/>
+    </g>
+</svg>;
+export const symbolC = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M30 25 V75'/>
+        <path d='M30 25 H70'/>
+        <path d='M30 75 H70'/>
+    </g>
+</svg>;
+export const symbolVHL = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M75 75 V25 H25'/>
+    </g>
+</svg>;
+export const symbolVHLDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M75 75 V25 H25'/>
+        <circle cx='50' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolVL = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 75 V25 H75'/>
+    </g>
+</svg>;
+export const symbolVLDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M25 75 V25 H75'/>
+        <circle cx='50' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+export const symbolHCDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M70 25 V75'/>
+        <path d='M70 25 H30'/>
+        <path d='M70 75 H30'/>
+        <circle cx='45' cy='50' r='5' fill='rgb(37, 44, 45)' stroke='none'/>
+    </g>
+</svg>;
+
+export const symbolMale = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <circle cx='38' cy='62' r='25'/>
+        <path d='M56 44 L78 22'/>
+        <path d='M66 22 H78 V34'/>
+    </g>
+</svg>;
+export const symbolUmbrella = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M20 50 L40 30 L60 50 L40 70 Z'/>
+        <path d='M60 50 H85'/>
+        <circle cx='84' cy='57' r='7'/>
+    </g>
+</svg>;
+export const symbolTriangle = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M15 32 H85 L50 78 Z'/>
+        <path d='M38 55 L50 43 L62 55'/>
+    </g>
+</svg>;
+export const symbolFemale = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
+        <circle cx='50' cy='43' r='23'/>
+        <path d='M50 66 V87'/>
+        <path d='M40 78 H60'/>
+    </g>
+</svg>;
+export const symbolCircle = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round' strokeLinejoin='round'>
+        <circle cx='50' cy='50' r='29'/>
+        <path d='M30 33 L38 41'/>
+        <path d='M70 33 L62 41'/>
+        <path d='M30 67 L38 59'/>
+        <path d='M70 67 L62 59'/>
+    </g>
+</svg>;
+export const symbolCircleDot = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7'>
+        <circle cx='50' cy='50' r='29'/>
+    </g>
+
+    <circle cx='50' cy='50' r='8' fill='rgb(37, 44, 45)'/>
+</svg>;
+export const symbolCross = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
+        <circle cx='50' cy='50' r='29'/>
+        <path d='M50 21 V79'/>
+        <path d='M21 50 H79'/>
+    </g>
+</svg>;
+export const symbolLine = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
+        <circle cx='50' cy='50' r='29'/>
+        <path d='M21 50 H79'/>
+    </g>
+</svg>;
+export const symbolHook = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='7' strokeLinecap='round'>
+        <circle cx='43' cy='48' r='27'/>
+        <path d='M63 67 L77 81'/>
+    </g>
+</svg>;
+export const symbolThreeCircles = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6'>
+        <circle cx='50' cy='30' r='11'/>
+        <circle cx='28' cy='63' r='11'/>
+        <circle cx='72' cy='63' r='11'/>
+    </g>
+</svg>;
+export const symbolHalfCircle = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M20 63 H80'/>
+        <path d='M28 63 V53'/>
+        <path d='M72 63 V53'/>
+        <path d='M30 53 H38'/>
+        <path d='M62 53 H70'/>
+        <path d='M38 53 C38 35 62 35 62 53'/>
+    </g>
+</svg>;
+export const symbolStar = <svg viewBox='0 0 100 100'>
+    <g fill='none' stroke='rgb(37, 44, 45)' strokeWidth='6' strokeLinecap='round' strokeLinejoin='round'>
+        <path d='M50 15 V85 M47 15 H53 M47 85 H53'/>
+        <path d='M15 50 H85 M15 47 V53 M85 47 V53'/>
+        <path d='M25 25 L75 75 M22 28 L28 22 M72 78 L78 72'/>
+        <path d='M75 25 L25 75 M72 22 L78 28 M22 72 L28 78'/>
+    </g>
+</svg>;
 //#endregion

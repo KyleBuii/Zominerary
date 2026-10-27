@@ -52,9 +52,9 @@ const Boarding = ({ setterSolo, setterKnower, setterSolver }) => {
                     <span className='title'>Do you want solvers?</span>
                     <div className='choices'>
                         <button className='symbol'
-                            onClick={() => handleAnswer('solver', true)}>Yes</button>
+                            onClick={() => handleAnswer('solver', false)}>Yes</button>
                         <button className='symbol'
-                            onClick={() => handleAnswer('solver', false)}>No</button>
+                            onClick={() => handleAnswer('solver', true)}>No</button>
                     </div>
                 </>}
         </section>

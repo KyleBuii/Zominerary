@@ -27,6 +27,11 @@ const superEasterEgg = () => {
                     <span>Ashes of the Damned</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/aotd/spawn.webp'
+                    alt='Super easter egg ashes of the damned spawn'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Tips & Tricks</span>
                     <div></div>
@@ -48,16 +53,35 @@ const superEasterEgg = () => {
                     <div></div>
                 </div>
                 <ol>
-                    <li>Grab Canister</li>
                     <li>Find Twins</li>
-                    <ul>
-                        <li>Lost Cabins - Behind Cabin</li>
-                        <li>Ashwood - End of zipline</li>
-                        <li>Grounded Ship - Near the top</li>
-                    </ul>
+                    <div className='codes'>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/aotd/super-easter-egg/sisters-spot-1.webp'
+                                alt='Ashes of the damned super easter egg sisters spot 1'/>
+                            <button className='symbol fill'>Lost Cabins</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/aotd/super-easter-egg/sisters-spot-2.webp'
+                                alt='Ashes of the damned super easter egg sisters spot 2'/>
+                            <button className='symbol fill'>Ashwood</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/aotd/super-easter-egg/sisters-spot-3.webp'
+                                alt='Ashes of the damned super easter egg sisters spot 3'/>
+                            <button className='symbol fill'>Grounded Ship</button>
+                        </div>
+                    </div>
                     <li>Get Wonder Weapon</li>
                     <li>Travel to Farm</li>
                     <li>Pull Toy Box on Windmill with Wonder Weapon</li>
+                    <img className='big-image'
+                        src='/aotd/super-easter-egg/toy-box.webp'
+                        alt='Super easter egg ashes of the damned toy box'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>
                         <div className='image-list'>
                             <div>Use <span className='tesla-storm'>Tesla Storm</span> on Toy Box</div>
@@ -69,9 +93,40 @@ const superEasterEgg = () => {
                         </div>
                     </li>
                     <li>Travel to Monolith Forest</li>
-                    <li>Pull and Interact with 3 Crystals</li>
+                    <li>Find, Pull, and Interact with 3 Crystals</li>
+                    <div className='codes'>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/aotd/super-easter-egg/crystal-spot-1.webp'
+                                alt='Super easter egg ashes of the damned crystal spot 1'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Example Spot 1</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/aotd/super-easter-egg/crystal-spot-2.webp'
+                                alt='Super easter egg ashes of the damned crystal spot 2'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Example Spot 2</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/aotd/super-easter-egg/crystal-spot-3.webp'
+                                alt='Super easter egg ashes of the damned crystal spot 3'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Example Spot 3</button>
+                        </div>
+                    </div>
                     <li>Travel to Lake</li>
                     <li>Interact with Meteor</li>
+                    <img className='big-image'
+                        src='/aotd/super-easter-egg/meteor.webp'
+                        alt='Super easter egg ashes of the damned meteor'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>End round</li>
                     <li>Grab Shard from Meteor</li>
                     <li>Put Shard in Toy Box</li>

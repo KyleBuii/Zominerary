@@ -124,8 +124,16 @@ button {
     }
 
     &.image {
-        width: 12rem;
-        height: 12rem;
+        width: 17.4rem;
+        height: 14rem;
+
+        &.indented {
+            width: 16.6rem;
+        }
+
+        &.small {
+            width: 12.8rem;
+        }
     }
 }
 
@@ -323,6 +331,7 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .page {
@@ -420,6 +429,10 @@ button {
     border: 4px solid rgb(var(--button-border-color));
     border-radius: 25px;
     padding: 1rem;
+
+    .choices {
+        justify-content: center;
+    }
 }
 
 .side-activities {
@@ -590,6 +603,20 @@ button {
     width: 17.4rem;
     height: 14rem;
     margin: 0;
+}
+
+.sticker-container {
+    position: relative;
+}
+
+.sticker {
+    z-index: 1;
+    position: absolute;
+    width: 5rem;
+    margin: 1rem;
+    border: 5px solid rgb(49, 57, 58);
+    transform: rotate(10deg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .perk {

@@ -54,6 +54,7 @@ const Paradox = () => {
                         alt='Clock spawn'
                         decoding='async'
                         loading='lazy'/>
+                    <li>Travel to Yellow House Backyard</li>
                 </ol>
             </div>
             {/* Listening Exam */}
@@ -63,48 +64,20 @@ const Paradox = () => {
                     <span>Listening Exam</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/paradox/labled-yellow-house-backyard.webp'
+                    alt='Labled yellow house backyard'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Steps</span>
                     <div></div>
                 </div>
                 <ol>
                     <li><span className='note-do-all'>DO ALL THE STEPS BELOW BEFORE ROUND 6</span></li>
-                    <li>Fill Cyst Making Noises</li>
-                    <li>Grab Barrel</li>
-                    <li>Travel to Yellow House Backyard</li>
-                    <img className='big-image'
-                        src='/paradox/labled-yellow-house-backyard.webp'
-                        alt='Labled yellow house backyard'
-                        decoding='async'
-                        loading='lazy'/>
                     <li>Grab Truck Keys</li>
                     <li>Travel to Yellow House Upstairs</li>
                     <li>Grab SO3</li>
-                    <li>
-                        Find Corrupted Wall Making Noises
-                        {(corruptedWall === '')
-                            ? <ul>
-                                <li>Which Corrupted Wall?</li>
-                                <div className='codes wrap'>
-                                    <div className='side-activity horizontal'>
-                                        <button className='image corrupted-wall-yellow'
-                                            onClick={() => setCorruptedWall('yellow')}></button>
-                                        <button className='symbol long'>Yellow House Garage</button>
-                                    </div>
-                                    <div className='side-activity horizontal'>
-                                        <button className='image corrupted-wall-green'
-                                            onClick={() => setCorruptedWall('green')}></button>
-                                        <button className='symbol long'>Green House Upstairs</button>
-                                    </div>
-                                    <div className='side-activity horizontal'>
-                                        <button className='image corrupted-wall-trinity'
-                                            onClick={() => setCorruptedWall('trinity')}></button>
-                                        <button className='symbol long'>Trinity Ave</button>
-                                    </div>
-                                </div>
-                            </ul>
-                            : <></>}
-                    </li>
                     <li>Travel to Green House</li>
                     <img className='big-image'
                         src='/paradox/labled-green-house.webp'
@@ -112,11 +85,38 @@ const Paradox = () => {
                         decoding='async'
                         loading='lazy'/>
                     <li>Get Solution in Sink</li>
+                    <li>Fill Yellow Cyst Making Noises</li>
+                    <li>Grab Barrel</li>
+                    <li>
+                        Find Corrupted Wall Making Noises
+                        {(corruptedWall === '')
+                            ? <ul>
+                                <li>Which Corrupted Wall?</li>
+                                <div className='codes wrap'>
+                                    <div className='side-activity horizontal'>
+                                        <button className='image indented corrupted-wall-yellow'
+                                            onClick={() => setCorruptedWall('yellow')}></button>
+                                        <button className='symbol fill'>Yellow House Garage</button>
+                                    </div>
+                                    <div className='side-activity horizontal'>
+                                        <button className='image indented corrupted-wall-green'
+                                            onClick={() => setCorruptedWall('green')}></button>
+                                        <button className='symbol fill'>Green House Upstairs</button>
+                                    </div>
+                                    <div className='side-activity horizontal'>
+                                        <button className='image indented corrupted-wall-trinity'
+                                            onClick={() => setCorruptedWall('trinity')}></button>
+                                        <button className='symbol fill'>Trinity Ave</button>
+                                    </div>
+                                </div>
+                            </ul>
+                            : <></>}
+                    </li>
                     <li>
                         Find Mannequin Making Noises
                         {(mannequin === -1)
                             ? <ul>
-                                <li>Where is the Mannequin?</li>
+                                <li>Which Mannequin?</li>
                                 <div className='map-container'>
                                     <img className='map'
                                         src='/paradox/map-mannequin.webp'
@@ -135,6 +135,8 @@ const Paradox = () => {
                             : <></>}
                     </li>
                     <li><span className='note-do-all'>DO ALL THE STEPS ABOVE BEFORE ROUND 6</span></li>
+                    <li>Teleport to the Past by Ending Round 6</li>
+                    <li>Travel to Spawn</li>
                 </ol>
             </div>
             {/* Back to the Past */}
@@ -144,13 +146,16 @@ const Paradox = () => {
                     <span>Back to the Past</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/paradox/labled-spawn.webp'
+                    alt='Labled yellow house backyard'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Steps</span>
                     <div></div>
                 </div>
                 <ol>
-                    <li>Teleport to the Past by Ending Round 6</li>
-                    <li>Travel to Spawn</li>
                     <li>Loot Clock Rewards</li>
                     <li>
                         <div className='image-list'>
@@ -201,6 +206,7 @@ const Paradox = () => {
                         decoding='async'
                         loading='lazy'/>
                     <li>Shoot and Grab Swing Seat</li>
+                    <li>Teleport to the Future</li>
                 </ol>
             </div>
             {/* Back to the Future */}
@@ -215,7 +221,6 @@ const Paradox = () => {
                     <div></div>
                 </div>
                 <ol>
-                    <li>Teleport to the Future</li>
                     <li>Find and Interact with RC-XD Controller</li>
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
@@ -290,7 +295,9 @@ const Paradox = () => {
                         decoding='async'
                         loading='lazy'/>
                     <li>Go in the Truck</li>
+                    <li>Melee Crafting Spot</li>
                     <li>Craft Wonder Weapon</li>
+                    <li>Travel to Yellow House Garage</li>
                 </ol>
             </div>
             {/* Torture */}
@@ -300,17 +307,16 @@ const Paradox = () => {
                     <span>Torture</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/paradox/labled-yellow-house-garage.webp'
+                    alt='Labled spawn'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Steps</span>
                     <div></div>
                 </div>
                 <ol>
-                    <li>Travel to Yellow House Garage</li>
-                    <img className='big-image'
-                        src='/paradox/labled-yellow-house-garage.webp'
-                        alt='Labled spawn'
-                        decoding='async'
-                        loading='lazy'/>
                     <li>Interact with Red Tool Box</li>
                     <li>Grab Seeds</li>
                     <li>Find Headphones</li>
