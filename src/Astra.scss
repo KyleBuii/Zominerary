@@ -156,50 +156,6 @@
     color: rgb(235, 170, 90);
 }
 
-.mars {
-    height: 35rem;
-    background-image: url('/astra/mars.webp');
-
-    span {
-        &:nth-child(1) {
-            top: 34.38%;
-            right: 3.13%;
-        }
-
-        &:nth-child(2) {
-            top: 34.38%;
-            left: 30.21%;
-        }
-
-        &:nth-child(3) {
-            top: 34.38%;
-            left: 18.75%;
-        }
-
-        &:nth-child(4) {
-            bottom: 3.13%;
-            left: 2.08%;
-        }
-
-        &:nth-child(5) {
-            right: 2.08%;
-            bottom: 3.13%;
-        }
-    }
-
-    &.right-pillar {
-        span {
-            &:nth-child(1) {
-                top: 34.38%;
-                right: 3.13%;
-                left: unset;
-            }
-
-            &:nth-child(3) {
-                top: unset;
-                bottom: 3.13%;
-                left: 2.08%;
-            }
-        }
-    }
+.note-bird {
+    color: rgb(198, 147, 89);
 }
