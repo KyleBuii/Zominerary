@@ -141,6 +141,11 @@ const superEasterEgg = () => {
                     <span>Astra Malorum</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/astra/spawn.webp'
+                    alt='Super easter egg ashes of the damned spawn'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Tips & Tricks</span>
                     <div></div>
@@ -160,21 +165,79 @@ const superEasterEgg = () => {
                     <li>
                         Throw
                         <span className='explosive'> Explosives </span>
-                        at Toy Box
+                        at Toy Box in Order
                     </li>
-                    <ul>
-                        <li>Luminarium right side of Arsenal - Outside Window</li>
-                        <li>Luminarium left side - Where the free zombie kill is</li>
-                    </ul>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/box-1.webp'
+                        alt='Super easter egg astra malorum box 1'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/box-2.webp'
+                        alt='Super easter egg astra malorum box 2'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Travel to Spawn</li>
                     <li>
                         Throw
                         <span className='kazimir'> Kazimir </span>
-                        near the back wall
+                        Near the Back Wall to Pull Toy Box
                     </li>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/box-3.webp'
+                        alt='Super easter egg astra malorum box 3'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Do Tessie Side Easter Egg</li>
+                    <ul>
+                        <li>Throw Semtex at Rock</li>
+                    </ul>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/side-easter-egg-rock.webp'
+                        alt='Super easter egg astra malorum side easter egg rock'
+                        decoding='async'
+                        loading='lazy'/>
+                    <ul>
+                        <li>Wall Bounce Off Rock</li>
+                        <li>When Floating Away, Grab Turret</li>
+                        <li>Install Turret</li>
+                    </ul>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/side-easter-egg-tessie.webp'
+                        alt='Super easter egg astra malorum side easter egg tessie'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Get Wonder Weapon</li>
                     <li>Do Wisp Side Easter Egg</li>
+                    <ul>
+                        <li>Find Shining Lamp</li>
+                    </ul>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/lamps-1.webp'
+                        alt='Super easter egg astra malorum lamps 1'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/lamps-2.webp'
+                        alt='Super easter egg astra malorum lamps 2'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/lamps-3.webp'
+                        alt='Super easter egg astra malorum lamps 3'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/lamps-4.webp'
+                        alt='Super easter egg astra malorum lamps 4'
+                        decoding='async'
+                        loading='lazy'/>
+                    <ul>
+                        <li>Once Found, ADS Lamp Until it Transfers</li>
+                        <li>Light Other 8 Lamps by Meleeing while Looking at Lamp</li>
+                        <li>Retrieve Wisp with ADS</li>
+                        <li>Push a Round to Fill Lamps with Upgraded Wisps</li>
+                    </ul>
                     <li>Unlock Mars</li>
                     <li>Activate Pillars</li>
                     <li>Travel to Spawn</li>
@@ -182,23 +245,73 @@ const superEasterEgg = () => {
                     <li>Travel to Observatory Dome</li>
                     <li>Use Telescope to see the Comet</li>
                     <li>Do Slow Motion Clock Side Easter Egg</li>
-                    <li>When time is slowed, Travel to Observatory Dome</li>
-                    <li>Use Telescope and look at the UFO</li>
-                    <li>Get 2 Shock Charges</li>
-                    <li>Get 5 Upgraded Wisp</li>
-                    <li>Travel to Mars</li>
-                    <li>Use Shock Charges on Circles near Eye</li>
-                    <li>Read Moorse Code from UFO</li>
                     <ul>
-                        <li>Lava Lamp</li>
-                        <li>Flamingo</li>
-                        <li>Toilet</li>
-                        <li>Spacesuit</li>
+                        <li>Melee Each Clock Quickly</li>
                     </ul>
-                    <li>Go to the items</li>
-                    <li>Melee items</li>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/clock-1.webp'
+                        alt='Super easter egg astra malorum clock 1'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/clock-2.webp'
+                        alt='Super easter egg astra malorum clock 2'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/clock-3.webp'
+                        alt='Super easter egg astra malorum clock 3'
+                        decoding='async'
+                        loading='lazy'/>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/clock-4.webp'
+                        alt='Super easter egg astra malorum clock 4'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>When Time is Slowed, Travel to Observatory Dome</li>
+                    <li>Use Telescope and Look at UFO</li>
+                    <li>Get Shock Charges [2]</li>
+                    <li>Get Upgraded Wisps with ADS [5]</li>
+                    <li>Travel to Mars</li>
+                    <li>Use Shock Charge in Middle of Circle to Summon UFO [2]</li>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/mars-circle.webp'
+                        alt='Super easter egg astra malorum side easter egg tessie'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Read and Note Moorse Code from UFO</li>
+                    <div className='codes'>
+                        <button className='symbol long'>Lava Lamp</button>
+                        <button className='symbol long'>&#8226; &#8722; &#8226; &#8226;</button>
+                    </div>
+                    <div className='codes'>
+                        <button className='symbol long'>Flamingo</button>
+                        <button className='symbol long'>&#8226; &#8226; &#8722; &#8226;</button>
+                    </div>
+                    <div className='codes'>
+                        <button className='symbol long'>Toilet</button>
+                        <button className='symbol long'>&#8722;</button>
+                    </div>
+                    <div className='codes'>
+                        <button className='symbol long'>Spacesuit</button>
+                        <button className='symbol long'>&#8226; &#8226; &#8226;</button>
+                    </div>
+                    <li>Go to Items</li>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/mars-items.webp'
+                        alt='Super easter egg astra malorum mars items'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Melee Item with Upgraded Wisp According to Moorse Code</li>
+                    <li>Wait for Animation</li>
+                    <li>Do the Same for Other Items</li>
                     <li>Grab Alien</li>
                     <li>Put in Toy Box</li>
+                    <img className='big-image'
+                        src='/astra/super-easter-egg/toy-box.webp'
+                        alt='Super easter egg astra malorum toy box'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Grab Catheris Toy</li>
                     <li>Exfil</li>
                 </ol>
