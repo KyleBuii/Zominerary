@@ -605,6 +605,13 @@ button {
     margin: 0;
 }
 
+.buttons-smaller-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    width: 17.4rem;
+}
+
 .sticker-container {
     position: relative;
 }
@@ -733,4 +740,8 @@ button {
 .optional {
     font-weight: bolder;
     color: rgb(0, 174, 183);
+}
+
+.warning {
+    color: rgb(211, 78, 78);
 }

@@ -14,18 +14,20 @@ const mapCorruptedWall = {
         nameImage: 'labled-trinity-ave-2',
     },
 };
+const mapMusicNotes = ['Trinity Ave', 'Trinity Ave', 'Trinity Ave', 'Trinity Ave', 'Spawn', 'Spawn', 'Green House Backyard', 'Yellow House Backyard'];
 
 const Paradox = () => {
     const [corruptedWall, setCorruptedWall] = useState('');
     const [mannequin, setMannequin] = useState(-1);
-    const [musicNotes, setMusicNotes] = useState([...Array(8).fill(-1)]);
+    const [musicNotes, setMusicNotes] = useState(Object.fromEntries(Array.from({ length: 8 }, (_, i) => [i + 1, -1])));
     const [musicNotesNumber, setMusicNotesNumber] = useState([...Array.from({length: 8}, (_, i) => i + 1)]);
 
     const handleMusicNotes = (position, number) => {
         setMusicNotes((prev) => {
-            const newNotes = [...prev];
-            newNotes[position] = number;
-            return newNotes;
+            return {
+                ...prev,
+                [position]: number,
+            }
         });
         setMusicNotesNumber((prev) => prev.filter((noteNumber) => noteNumber !== number))
     };
@@ -36,6 +38,7 @@ const Paradox = () => {
                 <span>Paradox</span>
                 <span>Junction</span>
             </div>
+            <span className='warning'>Images Shown May or May Not be In the Correct Version of Nuketown, Ignore It and Follow the Guide</span>
             {/* Starting Room */}
             <div>
                 <div className='title'>
@@ -43,6 +46,11 @@ const Paradox = () => {
                     <span>Starting Room</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/paradox/starting-room/spawn-tips-and-tricks.webp'
+                    alt='Starting room spawn tips and tricks'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Steps</span>
                     <div></div>
@@ -65,8 +73,8 @@ const Paradox = () => {
                     <span></span>
                 </div>
                 <img className='big-image'
-                    src='/paradox/labled-yellow-house-backyard.webp'
-                    alt='Labled yellow house backyard'
+                    src='/paradox/listening-exam/yellow-house-backyard-tips-and-tricks.webp'
+                    alt='Listening exam yellow house backyard tips and tricks'
                     decoding='async'
                     loading='lazy'/>
                 <div className='sub-title'>
@@ -77,63 +85,61 @@ const Paradox = () => {
                     <li><span className='note-do-all'>DO ALL THE STEPS BELOW BEFORE ROUND 6</span></li>
                     <li>Grab Truck Keys</li>
                     <li>Travel to Yellow House Upstairs</li>
+                    <img className='big-image'
+                        src='/paradox/listening-exam/yellow-house-upstairs-steps.webp'
+                        alt='Listening exam yellow house upstairs steps'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Grab SO3</li>
                     <li>Travel to Green House</li>
                     <img className='big-image'
-                        src='/paradox/labled-green-house.webp'
-                        alt='Labled green house'
+                        src='/paradox/listening-exam/green-house-steps.webp'
+                        alt='Listening exam green house steps'
                         decoding='async'
                         loading='lazy'/>
                     <li>Get Solution in Sink</li>
                     <li>Fill Yellow Cyst Making Noises</li>
                     <li>Grab Barrel</li>
-                    <li>
-                        Find Corrupted Wall Making Noises
-                        {(corruptedWall === '')
-                            ? <ul>
-                                <li>Which Corrupted Wall?</li>
-                                <div className='codes wrap'>
-                                    <div className='side-activity horizontal'>
-                                        <button className='image indented corrupted-wall-yellow'
-                                            onClick={() => setCorruptedWall('yellow')}></button>
-                                        <button className='symbol fill'>Yellow House Garage</button>
-                                    </div>
-                                    <div className='side-activity horizontal'>
-                                        <button className='image indented corrupted-wall-green'
-                                            onClick={() => setCorruptedWall('green')}></button>
-                                        <button className='symbol fill'>Green House Upstairs</button>
-                                    </div>
-                                    <div className='side-activity horizontal'>
-                                        <button className='image indented corrupted-wall-trinity'
-                                            onClick={() => setCorruptedWall('trinity')}></button>
-                                        <button className='symbol fill'>Trinity Ave</button>
-                                    </div>
-                                </div>
-                            </ul>
-                            : <></>}
-                    </li>
-                    <li>
-                        Find Mannequin Making Noises
-                        {(mannequin === -1)
-                            ? <ul>
-                                <li>Which Mannequin?</li>
-                                <div className='map-container'>
-                                    <img className='map'
-                                        src='/paradox/map-mannequin.webp'
-                                        alt='Map mannequin'
-                                        decoding='async'
-                                        loading='lazy'/>
-                                    <div className='map-buttons'>
-                                        {[...Array(12).keys()].map((number) => {
-                                            return <button className={`map-button-${number}`}
-                                                onClick={() => setMannequin(number)}
-                                                key={`map-button-${number}`}></button>
-                                        })}
-                                    </div>
-                                </div>
-                            </ul>
-                            : <></>}
-                    </li>
+                    <li>Find and Click Corrupted Wall Making Noises</li>
+                    {(corruptedWall === '')
+                        ? <div className='codes wrap'>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/paradox/corrupted-wall-yellow.webp)' }}
+                                    onClick={() => setCorruptedWall('yellow')}></button>
+                                <button className='symbol fill'>Yellow House Garage</button>
+                            </div>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/paradox/corrupted-wall-green.webp)' }}
+                                    onClick={() => setCorruptedWall('green')}></button>
+                                <button className='symbol fill'>Green House Upstairs</button>
+                            </div>
+                            <div className='side-activity horizontal'>
+                                <button className='image'
+                                    style={{ backgroundImage: 'url(/paradox/corrupted-wall-trinity.webp)' }}
+                                    onClick={() => setCorruptedWall('trinity')}></button>
+                                <button className='symbol fill'>Trinity Ave</button>
+                            </div>
+                        </div>
+                        : <></>}
+                    <li>Find and Click Mannequin Making Noises</li>
+                    {(mannequin === -1)
+                        ? <div className='map-container'>
+                            <img className='map'
+                                src='/paradox/map-mannequin.webp'
+                                alt='Map mannequin'
+                                decoding='async'
+                                loading='lazy'/>
+                            <div className='map-buttons'>
+                                {[...Array(12).keys()].map((number) => {
+                                    return <button className={`map-button-${number}`}
+                                        onClick={() => setMannequin(number)}
+                                        key={`map-button-${number}`}></button>
+                                })}
+                            </div>
+                        </div>
+                        : <></>}
                     <li><span className='note-do-all'>DO ALL THE STEPS ABOVE BEFORE ROUND 6</span></li>
                     <li>Teleport to the Past by Ending Round 6</li>
                     <li>Travel to Spawn</li>
@@ -147,8 +153,8 @@ const Paradox = () => {
                     <span></span>
                 </div>
                 <img className='big-image'
-                    src='/paradox/labled-spawn.webp'
-                    alt='Labled yellow house backyard'
+                    src='/paradox/back-to-the-past/clock-rewards.webp'
+                    alt='Back to the past clock rewards'
                     decoding='async'
                     loading='lazy'/>
                 <div className='sub-title'>
@@ -178,6 +184,11 @@ const Paradox = () => {
                         </div>
                     </li>
                     <li>Install Truck Keys</li>
+                    <img className='big-image'
+                        src='/paradox/back-to-the-past/install-keys.webp'
+                        alt='Back to the past install keys'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Pour Solution on Mannequin</li>
                     <div className='map-container'>
                         <img className='map'
@@ -190,19 +201,25 @@ const Paradox = () => {
                         </div>
                     </div>
                     <li>Turn on PAP</li>
+                    <img className='big-image'
+                        src='/paradox/back-to-the-past/pap.webp'
+                        alt='Back to the past pack a punch'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Explode Corrupted Wall</li>
                     {(corruptedWall === '')
                         ? <></>
                         : <div className='codes'>
                             <div className='side-activity horizontal'>
-                                <button className={`image corrupted-wall-${corruptedWall}`}></button>
-                                <button className='symbol long'>{mapCorruptedWall[corruptedWall].name}</button>
+                                <button className={`image corrupted-wall-${corruptedWall}`}
+                                    style={{ backgroundImage: `url(/paradox/corrupted-wall-${corruptedWall}.webp)` }}></button>
+                                <button className='symbol fill'>{mapCorruptedWall[corruptedWall].name}</button>
                             </div>
                         </div>}
                     <li>Travel to Yellow House Backyard</li>
                     <img className='big-image'
-                        src='/paradox/labled-yellow-house-backyard.webp'
-                        alt='Labled yellow house backyard'
+                        src='/paradox/back-to-the-past/swing-set.webp'
+                        alt='Back to the past swing set'
                         decoding='async'
                         loading='lazy'/>
                     <li>Shoot and Grab Swing Seat</li>
@@ -216,6 +233,11 @@ const Paradox = () => {
                     <span>Back to the Future</span>
                     <span></span>
                 </div>
+                <img className='big-image'
+                    src='/paradox/spawn.webp'
+                    alt='Spawn'
+                    decoding='async'
+                    loading='lazy'/>
                 <div className='sub-title'>
                     <span>Steps</span>
                     <div></div>
@@ -225,30 +247,30 @@ const Paradox = () => {
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-yellow-house-garage.webp'
-                                alt='Labled yellow house garage'
+                                src='/paradox/back-to-the-future/rcxd-yellow.webp'
+                                alt='RCXD yellow'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Yellow House Garage</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-trinity-ave-2.webp'
-                                alt='Labled trinity ave 2'
+                                src='/paradox/back-to-the-future/rcxd-trinity.webp'
+                                alt='RCXD trinity'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Trinity Ave</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-green-house-backyard.webp'
-                                alt='Labled green house backyard'
+                                src='/paradox/back-to-the-future/rcxd-green.webp'
+                                alt='RCXD green'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Green House Backyard</button>
                         </div>
                     </div>
-                    <li>Use the Ramp to Jump over the Fence and Blow up the Door</li>
+                    <li>Use Ramp to Jump Over Fence and Blow Up Door</li>
                     <img className='big-image'
                         src='/paradox/labled-rcxd.webp'
                         alt='Labled rcxd'
@@ -256,25 +278,21 @@ const Paradox = () => {
                         loading='lazy'/>
                     <li>Travel to Trinity Ave</li>
                     <img className='big-image'
-                        src='/paradox/labled-trinity-ave-1.webp'
-                        alt='Labled trinity ave 1'
+                        src='/paradox/back-to-the-future/chalk.webp'
+                        alt='Chalk'
                         decoding='async'
                         loading='lazy'/>
                     <li>Grab Chalk</li>
                     <li>Travel to Yellow House Backyard</li>
-                    <img className='big-image'
-                        src='/paradox/labled-yellow-house-backyard.webp'
-                        alt='Labled yellow house backyard'
-                        decoding='async'
-                        loading='lazy'/>
                     <li>Place Swing Seat</li>
                     <li>Grab Stock</li>
                     {(corruptedWall === '')
                         ? <></>
                         : <div className='codes'>
                             <div className='side-activity horizontal'>
-                                <button className={`image corrupted-wall-${corruptedWall}`}></button>
-                                <button className='symbol long'>{mapCorruptedWall[corruptedWall].name}</button>
+                                <button className={`image corrupted-wall-${corruptedWall}`}
+                                    style={{ backgroundImage: `url(/paradox/corrupted-wall-${corruptedWall}.webp)` }}></button>
+                                <button className='symbol fill'>{mapCorruptedWall[corruptedWall].name}</button>
                             </div>
                         </div>}
                     <li>Grab Hammer</li>
@@ -290,12 +308,17 @@ const Paradox = () => {
                     </div>
                     <li>Travel to Spawn</li>
                     <img className='big-image'
-                        src='/paradox/labled-spawn.webp'
-                        alt='Labled spawn'
+                        src='/paradox/back-to-the-future/truck.webp'
+                        alt='Truck'
                         decoding='async'
                         loading='lazy'/>
-                    <li>Go in the Truck</li>
-                    <li>Melee Crafting Spot</li>
+                    <li>Go in Truck</li>
+                    <li>Melee Table</li>
+                    <img className='big-image'
+                        src='/paradox/back-to-the-future/wonder-weapon.webp'
+                        alt='Wonder weapon'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>Craft Wonder Weapon</li>
                     <li>Travel to Yellow House Garage</li>
                 </ol>
@@ -308,8 +331,8 @@ const Paradox = () => {
                     <span></span>
                 </div>
                 <img className='big-image'
-                    src='/paradox/labled-yellow-house-garage.webp'
-                    alt='Labled spawn'
+                    src='/paradox/torture/red-box.webp'
+                    alt='Red box'
                     decoding='async'
                     loading='lazy'/>
                 <div className='sub-title'>
@@ -323,24 +346,24 @@ const Paradox = () => {
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-yellow-house-backyard.webp'
-                                alt='Labled yellow house backyard'
+                                src='/paradox/torture/headphones-yellow.webp'
+                                alt='Headphones yellow'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Yellow House Backyard</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-green-house-upstairs.webp'
-                                alt='Labled green house upstairs'
+                                src='/paradox/torture/headphones-green.webp'
+                                alt='Headphones green'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Green House Upstairs</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-spawn.webp'
-                                alt='Labled spawn'
+                                src='/paradox/torture/headphones-spawn.webp'
+                                alt='Headphones spawn'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Spawn</button>
@@ -350,30 +373,35 @@ const Paradox = () => {
                     <div className='codes wrap'>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/tortured-green-house-backyard.webp'
-                                alt='Tortured green house backyard'
+                                src='/paradox/torture/tortured-green.webp'
+                                alt='Tortured green'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Green House Backyard</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/tortured-yellow-house-backyard.webp'
-                                alt='Tortured yellow house backyard'
+                                src='/paradox/torture/tortured-yellow.webp'
+                                alt='Tortured yellow'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Yellow House Backyard</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/tortured-trinity-ave.webp'
-                                alt='Tortured trinity ave'
+                                src='/paradox/torture/tortured-trinity.webp'
+                                alt='Tortured trinity'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Trinity Ave</button>
                         </div>
                     </div>
-                    <li>Bring and Kill Tortured Zombie at Truck</li>
+                    <li>Bring and Kill Tortured Zombie near Truck</li>
+                    <ul>
+                        <li>Avoid Cysts</li>
+                        <li>Kill Zombies Near Tortured Zombie</li>
+                        <li>Pushing a Round Spawns New Tortured Zombie</li>
+                    </ul>
                     <li>Travel to Green House Backyard</li>
                     <li>Find Piano Teacher</li>
                     <li>
@@ -388,24 +416,24 @@ const Paradox = () => {
                     </li>
                     <li>Wait for Piano Teacher at Piano</li>
                     <img className='big-image'
-                        src='/paradox/labled-green-house.webp'
-                        alt='Labled green house'
+                        src='/paradox/torture/piano.webp'
+                        alt='Piano'
                         decoding='async'
                         loading='lazy'/>
-                    <li>Teleport to the Past</li>
+                    <li>Teleport to the Past Quickly</li>
                     <li>Travel to Trinity Ave</li>
                     <img className='big-image'
-                        src='/paradox/labled-trinity-ave-1.webp'
-                        alt='Labled trinity ave 1'
+                        src='/paradox/torture/seeds.webp'
+                        alt='Seeds'
                         decoding='async'
                         loading='lazy'/>
                     <li>Plant Seeds</li>
-                    <li>Get Kills with Wonder Weapon</li>
+                    <li>Get Kills with Wonder Weapon Near Seeds</li>
                     <li>Teleport to the Future</li>
                     <li>Travel to Trinity Ave</li>
                     <li>
                         <div className='image-list'>
-                            <span>Buy Wisp Tea</span>
+                            <span>Buy Wisp Tea from Der Wunderfizz</span>
                             <img className='perk'
                                 src='/perks/wisp-tea.webp'
                                 alt='Perk wisp tea'
@@ -413,9 +441,14 @@ const Paradox = () => {
                                 loading='lazy'/>
                         </div>
                     </li>
-                    <li>Tomahawk the Tree 3 times</li>
+                    <li>Tomahawk Tree from Seeds [3]</li>
                     <li>Grab Firewood</li>
-                    <li>Shoot the Top of the Speaker Pole</li>
+                    <li>Shoot Top of Speaker Pole until Object Falls</li>
+                    <img className='big-image'
+                        src='/paradox/torture/speaker.webp'
+                        alt='Piano'
+                        decoding='async'
+                        loading='lazy'/>
                     <li>
                         <div className='image-list'>
                             <span>Activate Wisp Tea</span>
@@ -426,92 +459,225 @@ const Paradox = () => {
                                 loading='lazy'/>
                         </div>
                     </li>
+                    <li>Go Near Fallen Object</li>
                     <li>Grab Goggles</li>
-                    <li><span className='note-tortured-zombie'>DO TORTURED ZOMBIE IF YOU SEE ONE</span></li>
-                    <li>Interact with 8 Blue Music Notes in Order</li>
+                    <li><span className='note-tortured-zombie'>DO TORTURED ZOMBIE WHILE DOING STEP BELLOW</span></li>
+                    <li>Count and Click Music Note Blinks</li>
                     <div className='codes wrap'>
+                        {[...Array(9).keys()].map((numberNote, indexNote) => {
+                            return (musicNotes[numberNote] === -1)
+                                ? <div className='side-activity horizontal'
+                                    key={`music-note-${numberNote}`}>
+                                    <div className='side-activity horizontal'>
+                                        <img className='smaller-image'
+                                            src={`/paradox/torture/note-${indexNote}.webp`}
+                                            alt='Labled trinity ave 2'
+                                            decoding='async'
+                                            loading='lazy'/>
+                                        <button className='symbol fill'>{mapMusicNotes[indexNote - 1]}</button>
+                                    </div>
+                                    <div className='buttons-smaller-image'>
+                                        {musicNotesNumber.map((number) => {
+                                            return <button className='symbol'
+                                                onClick={() => handleMusicNotes(numberNote, number)}
+                                                key={`music-note-buttons-${numberNote}-${number}`}>
+                                                {number}
+                                            </button>
+                                        })}
+                                    </div>
+                                </div>
+                                : null})}
+                    </div>
+                    <li>Interact in Order</li>
+                    <div className='codes wrap'>
+                        {Object.entries(musicNotes)
+                            .sort(([, a], [, b]) => a - b)
+                            .map(([index, number]) => {
+                                return <div className='side-activity horizontal'
+                                    key={`music-note-interact-${index}`}>
+                                    <img className='smaller-image'
+                                        src={`/paradox/torture/note-${index}.webp`}
+                                        alt='Labled trinity ave 2'
+                                        decoding='async'
+                                        loading='lazy'/>
+                                    <button className='symbol fill'>
+                                        {number}
+                                    </button>
+                                </div>
+                            })}
+                    </div>
+                    <li>Bring and Kill Final Tortured Zombie to Truck</li>
+                    <li>Teleport to the Past</li>
+                </ol>
+            </div>
+            {/* Pre-game */}
+            <div>
+                <div className='title'>
+                    <span></span>
+                    <span>Pre-game</span>
+                    <span></span>
+                </div>
+                <img className='big-image'
+                    src='/paradox/torture/piano.webp'
+                    alt='Piano'
+                    decoding='async'
+                    loading='lazy'/>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
+                </div>
+                <ol>
+                    <li>Travel to Green House</li>
+                    <li>Play Piano</li>
+                    <img className='big-image'
+                        src='/paradox/pre-game/piano-keys.webp'
+                        alt='Piano keys'
+                        decoding='async'
+                        loading='lazy'/>
+                    <ul>
+                        <li>AFGEFECE</li>
+                        <li>86756535</li>
+                    </ul>
+                    <li>Travel to Trinity Ave</li>
+                    <img className='big-image'
+                        src='/paradox/pre-game/toy-box.webp'
+                        alt='Toy box'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Interact with Toy Box</li>
+                    <li>Travel to Yellow House</li>
+                    <img className='big-image'
+                        src='/paradox/pre-game/fireplace.webp'
+                        alt='Fireplace'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Molotov Fireplace</li>
+                    <li>Travel to Truck</li>
+                    <li>Melee Table and Put Wonder Weapon In</li>
+                    <li>Teleport to Future</li>
+                    <li>Shoot Floating Zombies Outside Map [3]</li>
+                    <div className='codes'>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-green-house-backyard.webp'
-                                alt='Labled green house backyard'
-                                decoding='async'
-                                loading='lazy'/>
-                            <button className='symbol fill'>Green House Backyard</button>
-                        </div>
-                        <div className='side-activity horizontal'>
-                            <img className='smaller-image'
-                                src='/paradox/labled-spawn.webp'
-                                alt='Labled spawn'
-                                decoding='async'
-                                loading='lazy'/>
-                            <button className='symbol fill'>Spawn</button>
-                        </div>
-                        <div className='side-activity horizontal'>
-                            <img className='smaller-image'
-                                src='/paradox/labled-yellow-house-backyard.webp'
-                                alt='Labled yellow house backyard'
+                                src='/paradox/pre-game/yellow-backyard.webp'
+                                alt='Yellow backyard'
                                 decoding='async'
                                 loading='lazy'/>
                             <button className='symbol fill'>Yellow House Backyard</button>
                         </div>
-                    </div>
-                    <div className='codes wrap'>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-trinity-ave-2.webp'
-                                alt='Labled trinity ave 2'
+                                src='/paradox/pre-game/green-backyard.webp'
+                                alt='Green backyard'
                                 decoding='async'
                                 loading='lazy'/>
-                            <button className='symbol fill'>Trinity Ave</button>
+                            <button className='symbol'>Green House Backyard</button>
+                        </div>
+                    </div>
+                    <li>Find Red Ball</li>
+                    <div className='codes'>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/pre-game/red-ball-1.webp'
+                                alt='Red ball 1'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol fill'>Yellow House Backyard</button>
                         </div>
                         <div className='side-activity horizontal'>
                             <img className='smaller-image'
-                                src='/paradox/labled-trinity-ave-1.webp'
-                                alt='Labled trinity ave 1'
+                                src='/paradox/pre-game/red-ball-2.webp'
+                                alt='Red ball 2'
                                 decoding='async'
                                 loading='lazy'/>
-                            <button className='symbol fill'>Trinity Ave</button>
+                            <button className='symbol'>Trinity Ave</button>
+                        </div>
+                        <div className='side-activity horizontal'>
+                            <img className='smaller-image'
+                                src='/paradox/pre-game/red-ball-3.webp'
+                                alt='Red ball 3'
+                                decoding='async'
+                                loading='lazy'/>
+                            <button className='symbol'>Trinity Ave</button>
                         </div>
                     </div>
-                    <img className='map'
-                        src='/paradox/music-note-helper.webp'
-                        alt='Labled trinity ave 1'
+                    <li>Shoot Red Ball</li>
+                    <li>Bring to X in Green House Backyard</li>
+                    <img className='big-image'
+                        src='/paradox/pre-game/x-green.webp'
+                        alt='X green'
                         decoding='async'
                         loading='lazy'/>
-                    {[...Array(8).keys()].map((numberNote) => {
-                        return (musicNotes[numberNote] === -1)
-                            ? <div className='codes'
-                                key={`music-note-${numberNote}`}>
-                                <button className='symbol long'>Music Note #{numberNote + 1}</button>
-                                {musicNotesNumber.map((number) => {
-                                    return <button className='symbol'
-                                        onClick={() => handleMusicNotes(numberNote, number)}
-                                        key={`music-note-buttons-${numberNote}-${number}`}>
-                                        {number}
-                                    </button>
-                                })}
-                            </div>
-                            : null
-                    })}
-                    <li>Interact in Order</li>
-                    <div className='codes wrap'>
-                        {[...Array(8).keys()].map((number) => {
-                            return <button className='symbol'
-                                key={`music-note-number-${number}`}>
-                                #{number + 1}
-                            </button>
-                        })}
-                    </div>
-                    <div className='codes wrap'>
-                        {musicNotes.map((number, numberIndex) => {
-                            return <button className='symbol'
-                                key={`music-note-order-number-${numberIndex}`}>
-                                {number}
-                            </button>
-                        })}
-                    </div>
-                    <li>Bring and Kill Final Tortured Mimic to Truck</li>
+                    <li>Travel to Trinity Ave</li>
+                    <img className='big-image'
+                        src='/paradox/pre-game/x-trinity.webp'
+                        alt='X trinity'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Stand on X</li>
                     <li>Teleport to the Past</li>
+                    <li>Travel to Truck</li>
+                    <li>Melee Table and Grab Upgraded Wonder Weapon</li>
+                    <li>Travel to Trinity Ave</li>
+                </ol>
+            </div>
+            {/* Game */}
+            <div>
+                <div className='title'>
+                    <span></span>
+                    <span>Game</span>
+                    <span></span>
+                </div>
+                <img className='big-image'
+                    src='/paradox/game/hop-scotch.webp'
+                    alt='Hop scotch'
+                    decoding='async'
+                    loading='lazy'/>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
+                </div>
+                <ol>
+                    <li>Complete Hop Scotch Minigame</li>
+                    <li>Complete Bouncing Ball Minigame</li>
+                    <li>Travel to Green House Backyard</li>
+                    <img className='big-image'
+                        src='/paradox/game/bouncing-ball.webp'
+                        alt='Bouncing ball'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Complete Pass the Ball Minigame</li>
+                    <li>Travel to Trinity Ave</li>
+                </ol>
+            </div>
+            {/* Walk the Item */}
+            <div>
+                <div className='title'>
+                    <span></span>
+                    <span>Walk the Item</span>
+                    <span></span>
+                </div>
+                <img className='big-image'
+                    src='/paradox/game/hop-scotch.webp'
+                    alt='Hop scotch'
+                    decoding='async'
+                    loading='lazy'/>
+                <div className='sub-title'>
+                    <span>Steps</span>
+                    <div></div>
+                </div>
+                <ol>
+                    <li>Kill Zombies Near Floating Golden Items with Wonder Weapon [3]</li>
+                    <li>Teleport to the Future</li>
+                    <li>Shoot Clock Hands</li>
+                    <img className='clock'
+                        src='/paradox/clock-boss.webp'
+                        alt='Clock boss'
+                        decoding='async'
+                        loading='lazy'/>
+                    <li>Teleport to the Past</li>
+                    <li>Shoot Clock Hands 2s~ Before Teleporting</li>
+                    <li>Follow White Orb</li>
                 </ol>
             </div>
         </section>
