@@ -110,6 +110,10 @@ button {
         color: rgb(var(--button-border-color));
         font-weight: bolder;
 
+        &.short {
+            width: 10.03rem;
+        }
+
         &.long {
             width: 12rem;
         }
@@ -430,6 +434,11 @@ button {
     border-radius: 25px;
     padding: 1rem;
 
+    &.message {
+        flex-direction: row;
+        text-align: center;
+    }
+
     .choices {
         justify-content: center;
     }
@@ -590,6 +599,11 @@ button {
 
     span {
         position: absolute;
+    }
+
+    &.fill {
+        width: 100%;
+        margin: 1rem 0;
     }
 }
 

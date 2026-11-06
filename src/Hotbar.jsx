@@ -216,7 +216,8 @@ const Hotbar = () => {
                     }/>
                 <Route path='/paradox'
                     element={
-                        <Paradox/>
+                        <Paradox isKnower={isKnower}
+                            showSolver={showSolver}/>
                     }/>
                 <Route path='/totenreich'
                     element={

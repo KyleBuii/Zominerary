@@ -340,16 +340,23 @@ const Astra = ({ isKnower }) => {
                                 </button>
                             </div>
                         </div>}
+                    <div className='side-activity horizontal'
+                        style={{ margin: '-1rem' }}>
+                        <img className='big-image'
+                            src='/astra/the-vampire-cosmonaut/mars-steps-6.webp'
+                            alt='The vampire cosmonaut steps 6 mars'
+                            decoding='async'
+                            loading='lazy'/>
+                        <img className='big-image'
+                            src='/astra/the-vampire-cosmonaut/mars-steps-7.webp'
+                            alt='The vampire cosmonaut steps 7 mars'
+                            decoding='async'
+                            loading='lazy'/>
+                    </div>
                     {(codeMarsPillar.length === 5)
                         ? <></>
-                        : <div>
-                            <div className='big-image mars right-pillar'>
-                                <span>&#8592; START</span>
-                                <span>&#8595;</span>
-                                <span>&#8594;</span>
-                            </div>
-                            <div className='codes'
-                                style={{ margin: '0 1rem' }}>
+                        : <>
+                            <div className='codes'>
                                 <button className='symbol'
                                     onClick={(event) => handleCodeMarsPillar('diamond', event)}>
                                     {symbolDiamond}
@@ -371,13 +378,13 @@ const Astra = ({ isKnower }) => {
                                     {symbolGlobe}
                                 </button>
                             </div>
-                        </div>}
-                    <div className='big-image mars'>
-                        <span>{codePillar.indexOf(codeMarsPillar[0]) + 1 || 'S'}</span>
-                        <span>{codePillar.indexOf(codeMarsPillar[1]) + 1 || 'S'}</span>
-                        <span>{codePillar.indexOf(codeMarsPillar[2]) + 1 || 'S'}</span>
-                        <span>{codePillar.indexOf(codeMarsPillar[3]) + 1 || 'S'}</span>
-                        <span>{codePillar.indexOf(codeMarsPillar[4]) + 1 || 'S'}</span>
+                        </>}
+                    <div className='codes'>
+                        <button className='symbol'>{codePillar.indexOf(codeMarsPillar[0]) + 1 || 'S'}</button>
+                        <button className='symbol'>{codePillar.indexOf(codeMarsPillar[1]) + 1 || 'S'}</button>
+                        <button className='symbol'>{codePillar.indexOf(codeMarsPillar[2]) + 1 || 'S'}</button>
+                        <button className='symbol'>{codePillar.indexOf(codeMarsPillar[3]) + 1 || 'S'}</button>
+                        <button className='symbol'>{codePillar.indexOf(codeMarsPillar[4]) + 1 || 'S'}</button>
                     </div>
                 </>
                 : <>

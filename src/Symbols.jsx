@@ -579,3 +579,41 @@ export const symbolStar = <svg viewBox='0 0 100 100'>
     </g>
 </svg>;
 //#endregion
+
+//#region Symbols Paradox
+export const noteFirst = <svg viewBox='0 0 100 92'>
+    <g strokeLinecap='round'>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(37, 44, 45)' strokeWidth='7'/>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(225, 220, 195)' strokeWidth='3'/>
+        <circle cx='49' cy='10' r='12' fill='rgb(225, 220, 195)' stroke='rgb(37, 44, 45)' strokeWidth='2'/>
+    </g>
+</svg>;
+export const noteSecond = <svg viewBox='0 0 100 92'>
+    <g strokeLinecap='round'>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(37, 44, 45)' strokeWidth='7'/>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(225, 220, 195)' strokeWidth='3'/>
+        <circle cx='49' cy='19' r='12' fill='rgb(225, 220, 195)' stroke='rgb(37, 44, 45)' strokeWidth='2'/>
+    </g>
+</svg>;
+export const noteThird = <svg viewBox='0 0 100 92'>
+    <g strokeLinecap='round'>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(37, 44, 45)' strokeWidth='7'/>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(225, 220, 195)' strokeWidth='3'/>
+        <circle cx='49' cy='55' r='12' fill='rgb(225, 220, 195)' stroke='rgb(37, 44, 45)' strokeWidth='2'/>
+    </g>
+</svg>;
+export const noteFourth = <svg viewBox='0 0 100 92'>
+    <g strokeLinecap='round'>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(37, 44, 45)' strokeWidth='7'/>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(225, 220, 195)' strokeWidth='3'/>
+        <circle cx='49' cy='28' r='12' fill='rgb(225, 220, 195)' stroke='rgb(37, 44, 45)' strokeWidth='2'/>
+    </g>
+</svg>;
+export const noteFifth = <svg viewBox='0 0 100 92'>
+    <g strokeLinecap='round'>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(37, 44, 45)' strokeWidth='7'/>
+        <path d='M4 10 H96 M4 28 H96 M4 46 H96 M4 64 H96 M4 82 H96' stroke='rgb(225, 220, 195)' strokeWidth='3'/>
+        <circle cx='49' cy='37' r='12' fill='rgb(225, 220, 195)' stroke='rgb(37, 44, 45)' strokeWidth='2'/>
+    </g>
+</svg>;
+//#endregion
